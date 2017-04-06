@@ -4,17 +4,104 @@
 target 'MobileTrading' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-
+  inhibit_all_warnings!
+  swift_version = '3.0'
+  
   # Pods for MobileTrading
+  pod 'SignalR-ObjC'
+  
+  pod 'IQKeyboardManagerSwift'
+  pod 'Fabric'
+  pod 'Crashlytics'
+  pod 'Moya'
+  # Main side menu
+  pod 'LGSideMenuController'
+  pod 'TYAlertController'
+  pod 'CNPPopupController'
+  pod 'SCLAlertView'
+  pod 'SwiftMessages'
+  # User CrytoSwift for all encode/decode/hash
+  pod 'CryptoSwift'
+  pod 'Cartography'
+  pod 'Toast'
+  # Use Fashion for define UI style by the fastest way I can.
+  pod 'Fashion'
+  pod 'SwifterSwift'
+  pod 'PromiseKit'
+  pod 'FontasticIcons'
+  pod 'CocoaLumberjack'
+  pod 'CocoaLumberjack/Swift'
+  
+  #27 Pods
+  pod 'DZNEmptyDataSet'
+  pod 'PDTSimpleCalendar'
+  
+  pod 'MagicalRecord'
+  pod 'ChameleonFramework'
+  pod 'TextFieldEffects'
+  pod 'GPUImage'
+  pod 'iRate'
+  #  pod 'GameCenterManager'
+  pod 'PKRevealController'
+  pod 'SlackTextViewController'
+  pod 'PermissionScope'
+  
+  pod 'SVProgressHUD'
+  
+  pod 'MBProgressHUD'
+  
+  pod 'SnapKit'
+  pod 'SVPullToRefresh'
+  pod 'ESPullToRefresh'
+  
+  #Pusher
+  pod 'PusherSwift'
+  
+  pod 'FontAwesomeKit'
+  pod 'MGSwipeTableCell'
+  pod 'IAPHelper'
+  
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'ReSwift'
+  pod 'SwiftyJSON'
+  pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
+  
+  pod 'FontBlaster'
+  pod 'TAPromotee'
+  
+  pod 'KeychainAccess'
+  pod 'Charts'
+  pod 'RealmSwift'
+  pod 'ObjectMapper'
+  pod 'SwiftDate'
+  pod 'SwiftLocation'
+  pod 'Fakery'
+  pod 'Kingfisher'
+  pod 'Reusable'
+  pod 'HTMLAttributedString'
+  pod 'Stripe'
+  pod 'ImageSlideshow/Kingfisher'
+  pod 'DYSlideView'
+  pod 'libPhoneNumber-iOS'
+  pod 'Segmentio'
+  pod 'PopupDialog'
+  pod 'SCSkypeActivityIndicatorView'
 
   target 'MobileTradingTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'Nimble-Snapshots'
   end
 
   target 'MobileTradingUITests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'Nimble-Snapshots'
   end
 
 end
