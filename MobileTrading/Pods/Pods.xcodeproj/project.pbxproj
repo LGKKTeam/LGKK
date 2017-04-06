@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12CA0DD0A23F270BE7D2ACDECE552AD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		228E87F371CCE86A6F4ECE02282B10A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		281BB2023B1AD8B46662F4695E9990F5 /* Pods-MobileTradingUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D18408DEB14B02047F466C405A884D /* Pods-MobileTradingUITests-dummy.m */; };
+		2DE8281B894AF7E0E2BC20A33C2609B3 /* Pods-MobileTrading-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8A1BB4F4A811AFF8BF0428C3C879431 /* Pods-MobileTrading-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		436F064F2FCF1C30EEC9927935FFC0C8 /* Pods-MobileTradingUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41CD3610A37D8595361420EF8E0E7373 /* Pods-MobileTradingUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		673E0658C0A9A88F5F369F7B155A7538 /* Pods-MobileTrading-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D4952B646243BB4AC6E3A6694B2652 /* Pods-MobileTrading-dummy.m */; };
+		939DFBD701C00E450B0E9FDB40410CA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		E291B87FF93F7116B48BD4D46D309BA7 /* Pods-MobileTradingTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2051973B0C6F7546068230A5CA284 /* Pods-MobileTradingTests-dummy.m */; };
+		F50B0737BF2993DD573505093DF4D6D4 /* Pods-MobileTradingTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7A2F865B824471A1110572B70C3574 /* Pods-MobileTradingTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		12B3AA974E9E62CBC13474A4B5ECC2AC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		288CA6BC76A510A037A0B0E2C24DD986 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A6297101BAD661D20DD54750D15A045 /* Pods-MobileTrading-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MobileTrading-acknowledgements.plist"; sourceTree = "<group>"; };
+		3E936CFE62EB9A16BB87FCD20312F3E0 /* Pods-MobileTradingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileTradingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		41CD3610A37D8595361420EF8E0E7373 /* Pods-MobileTradingUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MobileTradingUITests-umbrella.h"; sourceTree = "<group>"; };
+		44A06983CDA7B6112AA3EE75B5583F9E /* Pods-MobileTrading-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MobileTrading-frameworks.sh"; sourceTree = "<group>"; };
+		459E611D8394EB78EC69043077725C83 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		474A6271166FEDE075938BB8D8BBFF61 /* Pods-MobileTradingUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MobileTradingUITests.modulemap"; sourceTree = "<group>"; };
+		49669237E18AAD9BF8E96E7817789E7C /* Pods-MobileTrading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileTrading.release.xcconfig"; sourceTree = "<group>"; };
+		4B9EE70F15BF46BF55605824BB12BB69 /* Pods-MobileTradingTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MobileTradingTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		56D4952B646243BB4AC6E3A6694B2652 /* Pods-MobileTrading-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MobileTrading-dummy.m"; sourceTree = "<group>"; };
+		5C4A51966CFE417DE8140E110F41DEA5 /* Pods-MobileTrading-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MobileTrading-resources.sh"; sourceTree = "<group>"; };
+		696DDFB486261A9D9997BE268BBE602D /* Pods-MobileTrading.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MobileTrading.modulemap"; sourceTree = "<group>"; };
+		69D18408DEB14B02047F466C405A884D /* Pods-MobileTradingUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MobileTradingUITests-dummy.m"; sourceTree = "<group>"; };
+		6C415992C2C003126A3FEA1C64151B7E /* Pods-MobileTradingTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MobileTradingTests-frameworks.sh"; sourceTree = "<group>"; };
+		704FC0A0A9E2FBF4FC1FC676FE4D7155 /* Pods_MobileTradingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MobileTradingUITests.framework; path = "Pods-MobileTradingUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81947B909999AA61B6B9AD104A6FDD90 /* Pods-MobileTradingUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MobileTradingUITests-frameworks.sh"; sourceTree = "<group>"; };
+		84664330CC5D1CDD9FACF1F5FB1FF178 /* Pods-MobileTradingTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MobileTradingTests.modulemap"; sourceTree = "<group>"; };
+		8A87744CEDDD99C5F8080C57A859AF6D /* Pods-MobileTradingUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MobileTradingUITests-resources.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A16410BF209FF0B93047C3AAA12719AF /* Pods_MobileTradingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MobileTradingTests.framework; path = "Pods-MobileTradingTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A350991DEB486C38F0B9FC1AE0082901 /* Pods-MobileTrading-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MobileTrading-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AA3DDD661B42E81098EAED25DDB1C58E /* Pods-MobileTradingUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MobileTradingUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		AA7A2F865B824471A1110572B70C3574 /* Pods-MobileTradingTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MobileTradingTests-umbrella.h"; sourceTree = "<group>"; };
+		B050A0480DB98EF9A335B9DBEB4619BF /* Pods-MobileTradingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileTradingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B9C4251FD06A61EA4CB01F19946DA4BB /* Pods-MobileTradingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileTradingTests.release.xcconfig"; sourceTree = "<group>"; };
+		CB055529A5153F54B01AB611E4BF63CE /* Pods_MobileTrading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MobileTrading.framework; path = "Pods-MobileTrading.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CD3F76CA87CD3C15C6875398FCB4ED8F /* Pods-MobileTradingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileTradingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D1ADE9DBAA1B88281E83FBED9E823296 /* Pods-MobileTradingTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MobileTradingTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		DA2A163D98D0242A8679485951D7E470 /* Pods-MobileTradingUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MobileTradingUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DBDC5978033F1D1760B6FF62E5446AA5 /* Pods-MobileTrading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileTrading.debug.xcconfig"; sourceTree = "<group>"; };
+		F5A170D4B4E9BA52173254EA9A90358F /* Pods-MobileTradingTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MobileTradingTests-resources.sh"; sourceTree = "<group>"; };
+		F7D2051973B0C6F7546068230A5CA284 /* Pods-MobileTradingTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MobileTradingTests-dummy.m"; sourceTree = "<group>"; };
+		F8A1BB4F4A811AFF8BF0428C3C879431 /* Pods-MobileTrading-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MobileTrading-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		314A1B2B55A8D55E269456BE2B6D590C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12CA0DD0A23F270BE7D2ACDECE552AD8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A2B5DAB165DB998B1CC9120A55459CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				939DFBD701C00E450B0E9FDB40410CA8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D53F11051321243E134721D225E60DD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				228E87F371CCE86A6F4ECE02282B10A2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DA737F6AB059E56590EC2262A40C64A /* Pods-MobileTradingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				12B3AA974E9E62CBC13474A4B5ECC2AC /* Info.plist */,
+				474A6271166FEDE075938BB8D8BBFF61 /* Pods-MobileTradingUITests.modulemap */,
+				DA2A163D98D0242A8679485951D7E470 /* Pods-MobileTradingUITests-acknowledgements.markdown */,
+				AA3DDD661B42E81098EAED25DDB1C58E /* Pods-MobileTradingUITests-acknowledgements.plist */,
+				69D18408DEB14B02047F466C405A884D /* Pods-MobileTradingUITests-dummy.m */,
+				81947B909999AA61B6B9AD104A6FDD90 /* Pods-MobileTradingUITests-frameworks.sh */,
+				8A87744CEDDD99C5F8080C57A859AF6D /* Pods-MobileTradingUITests-resources.sh */,
+				41CD3610A37D8595361420EF8E0E7373 /* Pods-MobileTradingUITests-umbrella.h */,
+				3E936CFE62EB9A16BB87FCD20312F3E0 /* Pods-MobileTradingUITests.debug.xcconfig */,
+				CD3F76CA87CD3C15C6875398FCB4ED8F /* Pods-MobileTradingUITests.release.xcconfig */,
+			);
+			name = "Pods-MobileTradingUITests";
+			path = "Target Support Files/Pods-MobileTradingUITests";
+			sourceTree = "<group>";
+		};
+		2FD4562C71CBD7E722CB6E39A0C0CCEE /* Pods-MobileTrading */ = {
+			isa = PBXGroup;
+			children = (
+				288CA6BC76A510A037A0B0E2C24DD986 /* Info.plist */,
+				696DDFB486261A9D9997BE268BBE602D /* Pods-MobileTrading.modulemap */,
+				A350991DEB486C38F0B9FC1AE0082901 /* Pods-MobileTrading-acknowledgements.markdown */,
+				2A6297101BAD661D20DD54750D15A045 /* Pods-MobileTrading-acknowledgements.plist */,
+				56D4952B646243BB4AC6E3A6694B2652 /* Pods-MobileTrading-dummy.m */,
+				44A06983CDA7B6112AA3EE75B5583F9E /* Pods-MobileTrading-frameworks.sh */,
+				5C4A51966CFE417DE8140E110F41DEA5 /* Pods-MobileTrading-resources.sh */,
+				F8A1BB4F4A811AFF8BF0428C3C879431 /* Pods-MobileTrading-umbrella.h */,
+				DBDC5978033F1D1760B6FF62E5446AA5 /* Pods-MobileTrading.debug.xcconfig */,
+				49669237E18AAD9BF8E96E7817789E7C /* Pods-MobileTrading.release.xcconfig */,
+			);
+			name = "Pods-MobileTrading";
+			path = "Target Support Files/Pods-MobileTrading";
+			sourceTree = "<group>";
+		};
+		5EE09E2A9BB9AB8F709F5934066AD432 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB055529A5153F54B01AB611E4BF63CE /* Pods_MobileTrading.framework */,
+				A16410BF209FF0B93047C3AAA12719AF /* Pods_MobileTradingTests.framework */,
+				704FC0A0A9E2FBF4FC1FC676FE4D7155 /* Pods_MobileTradingUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				5EE09E2A9BB9AB8F709F5934066AD432 /* Products */,
+				EC1EF081FD06F8D05881F6C0021205B1 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDB59FBADC843E70AECBEFFFAC16DCA7 /* Pods-MobileTradingTests */ = {
+			isa = PBXGroup;
+			children = (
+				459E611D8394EB78EC69043077725C83 /* Info.plist */,
+				84664330CC5D1CDD9FACF1F5FB1FF178 /* Pods-MobileTradingTests.modulemap */,
+				4B9EE70F15BF46BF55605824BB12BB69 /* Pods-MobileTradingTests-acknowledgements.markdown */,
+				D1ADE9DBAA1B88281E83FBED9E823296 /* Pods-MobileTradingTests-acknowledgements.plist */,
+				F7D2051973B0C6F7546068230A5CA284 /* Pods-MobileTradingTests-dummy.m */,
+				6C415992C2C003126A3FEA1C64151B7E /* Pods-MobileTradingTests-frameworks.sh */,
+				F5A170D4B4E9BA52173254EA9A90358F /* Pods-MobileTradingTests-resources.sh */,
+				AA7A2F865B824471A1110572B70C3574 /* Pods-MobileTradingTests-umbrella.h */,
+				B050A0480DB98EF9A335B9DBEB4619BF /* Pods-MobileTradingTests.debug.xcconfig */,
+				B9C4251FD06A61EA4CB01F19946DA4BB /* Pods-MobileTradingTests.release.xcconfig */,
+			);
+			name = "Pods-MobileTradingTests";
+			path = "Target Support Files/Pods-MobileTradingTests";
+			sourceTree = "<group>";
+		};
+		EC1EF081FD06F8D05881F6C0021205B1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2FD4562C71CBD7E722CB6E39A0C0CCEE /* Pods-MobileTrading */,
+				CDB59FBADC843E70AECBEFFFAC16DCA7 /* Pods-MobileTradingTests */,
+				1DA737F6AB059E56590EC2262A40C64A /* Pods-MobileTradingUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		50A41E8420003B8A2752B68162615361 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DE8281B894AF7E0E2BC20A33C2609B3 /* Pods-MobileTrading-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C12F17BE9F2455A0C08CEE5D87D0FCD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F50B0737BF2993DD573505093DF4D6D4 /* Pods-MobileTradingTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9D505B462F7BC73DAF2B2D16ABAB1E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				436F064F2FCF1C30EEC9927935FFC0C8 /* Pods-MobileTradingUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		45F6256B2498AE11866AC9E0E68269CD /* Pods-MobileTrading */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C192A6492B634CA6D783B512B1C1CA76 /* Build configuration list for PBXNativeTarget "Pods-MobileTrading" */;
+			buildPhases = (
+				18DD05751CC367B89DE19D99BFB39224 /* Sources */,
+				314A1B2B55A8D55E269456BE2B6D590C /* Frameworks */,
+				50A41E8420003B8A2752B68162615361 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MobileTrading";
+			productName = "Pods-MobileTrading";
+			productReference = CB055529A5153F54B01AB611E4BF63CE /* Pods_MobileTrading.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EBBB10940F617E1F04A92673456B1400 /* Pods-MobileTradingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABDB3052613466C1F0D295CD64B98191 /* Build configuration list for PBXNativeTarget "Pods-MobileTradingUITests" */;
+			buildPhases = (
+				D9E667BCF99904BE80993E114C929169 /* Sources */,
+				D53F11051321243E134721D225E60DD4 /* Frameworks */,
+				DE9D505B462F7BC73DAF2B2D16ABAB1E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MobileTradingUITests";
+			productName = "Pods-MobileTradingUITests";
+			productReference = 704FC0A0A9E2FBF4FC1FC676FE4D7155 /* Pods_MobileTradingUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F15706C5796F6BDD0DE9D912B494FB60 /* Pods-MobileTradingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5280967B8F03CA0EB24596D14A81AFCC /* Build configuration list for PBXNativeTarget "Pods-MobileTradingTests" */;
+			buildPhases = (
+				D66C3828EDDB6626AC0080B1B3610027 /* Sources */,
+				9A2B5DAB165DB998B1CC9120A55459CC /* Frameworks */,
+				5C12F17BE9F2455A0C08CEE5D87D0FCD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MobileTradingTests";
+			productName = "Pods-MobileTradingTests";
+			productReference = A16410BF209FF0B93047C3AAA12719AF /* Pods_MobileTradingTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 5EE09E2A9BB9AB8F709F5934066AD432 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45F6256B2498AE11866AC9E0E68269CD /* Pods-MobileTrading */,
+				F15706C5796F6BDD0DE9D912B494FB60 /* Pods-MobileTradingTests */,
+				EBBB10940F617E1F04A92673456B1400 /* Pods-MobileTradingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18DD05751CC367B89DE19D99BFB39224 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				673E0658C0A9A88F5F369F7B155A7538 /* Pods-MobileTrading-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D66C3828EDDB6626AC0080B1B3610027 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E291B87FF93F7116B48BD4D46D309BA7 /* Pods-MobileTradingTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9E667BCF99904BE80993E114C929169 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				281BB2023B1AD8B46662F4695E9990F5 /* Pods-MobileTradingUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		156284431C64CB05C59BDA0595A1E95A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		801B0EC03F0C258D2294A68AAB60A8EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49669237E18AAD9BF8E96E7817789E7C /* Pods-MobileTrading.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MobileTrading/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MobileTrading/Pods-MobileTrading.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MobileTrading;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A8ECB0D9C02FC9A68DA0FEEAA0E9E20A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B050A0480DB98EF9A335B9DBEB4619BF /* Pods-MobileTradingTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MobileTradingTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MobileTradingTests/Pods-MobileTradingTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MobileTradingTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C382132BB6BF8CA1A911872A2062FD0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C62557E6970E6E52D9BCE940C706FBDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBDC5978033F1D1760B6FF62E5446AA5 /* Pods-MobileTrading.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MobileTrading/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MobileTrading/Pods-MobileTrading.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MobileTrading;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C8D4E453800D66BD197BDBA4C9F70784 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C4251FD06A61EA4CB01F19946DA4BB /* Pods-MobileTradingTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MobileTradingTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MobileTradingTests/Pods-MobileTradingTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MobileTradingTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DBDC0D718AD5E926C74616B590D64D4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E936CFE62EB9A16BB87FCD20312F3E0 /* Pods-MobileTradingUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MobileTradingUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MobileTradingUITests/Pods-MobileTradingUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MobileTradingUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F9C1B370145225C7F5753F437CA248CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD3F76CA87CD3C15C6875398FCB4ED8F /* Pods-MobileTradingUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MobileTradingUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MobileTradingUITests/Pods-MobileTradingUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MobileTradingUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C382132BB6BF8CA1A911872A2062FD0D /* Debug */,
+				156284431C64CB05C59BDA0595A1E95A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5280967B8F03CA0EB24596D14A81AFCC /* Build configuration list for PBXNativeTarget "Pods-MobileTradingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8ECB0D9C02FC9A68DA0FEEAA0E9E20A /* Debug */,
+				C8D4E453800D66BD197BDBA4C9F70784 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABDB3052613466C1F0D295CD64B98191 /* Build configuration list for PBXNativeTarget "Pods-MobileTradingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBDC0D718AD5E926C74616B590D64D4E /* Debug */,
+				F9C1B370145225C7F5753F437CA248CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C192A6492B634CA6D783B512B1C1CA76 /* Build configuration list for PBXNativeTarget "Pods-MobileTrading" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C62557E6970E6E52D9BCE940C706FBDA /* Debug */,
+				801B0EC03F0C258D2294A68AAB60A8EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
