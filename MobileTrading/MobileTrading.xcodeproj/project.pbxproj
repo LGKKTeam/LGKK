@@ -17,6 +17,10 @@
 		E525AFA31E95F44B00BAE5C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E525AFA11E95F44B00BAE5C4 /* LaunchScreen.storyboard */; };
 		E525AFAE1E95F44B00BAE5C4 /* MobileTradingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525AFAD1E95F44B00BAE5C4 /* MobileTradingTests.swift */; };
 		E525AFB91E95F44B00BAE5C4 /* MobileTradingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525AFB81E95F44B00BAE5C4 /* MobileTradingUITests.swift */; };
+		E5CABEA21E9682800005933D /* flag-assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E5CABEA11E9682800005933D /* flag-assets.bundle */; };
+		E5CABEA41E9682CB0005933D /* FlagKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CABEA31E9682CB0005933D /* FlagKit.swift */; };
+		E5CABEA81E968DF50005933D /* libcompression.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CABEA71E968DF50005933D /* libcompression.tbd */; };
+		E5CABEAA1E968E2F0005933D /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CABEA91E968E2F0005933D /* Data+Compression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		E525AFB41E95F44B00BAE5C4 /* MobileTradingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileTradingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E525AFB81E95F44B00BAE5C4 /* MobileTradingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileTradingUITests.swift; sourceTree = "<group>"; };
 		E525AFBA1E95F44B00BAE5C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5CABEA11E9682800005933D /* flag-assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "flag-assets.bundle"; sourceTree = "<group>"; };
+		E5CABEA31E9682CB0005933D /* FlagKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagKit.swift; sourceTree = "<group>"; };
+		E5CABEA71E968DF50005933D /* libcompression.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcompression.tbd; path = usr/lib/libcompression.tbd; sourceTree = SDKROOT; };
+		E5CABEA91E968E2F0005933D /* Data+Compression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Compression.swift"; sourceTree = "<group>"; };
 		EDDDBDB3D6558321B3B42B05 /* Pods-MobileTrading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTrading.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTrading/Pods-MobileTrading.debug.xcconfig"; sourceTree = "<group>"; };
 		FAD3A2514DE8E65672C9F0DE /* Pods-MobileTrading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTrading.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTrading/Pods-MobileTrading.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5CABEA81E968DF50005933D /* libcompression.tbd in Frameworks */,
 				2E5ABE482C1AA74FE51A4E55 /* Pods_MobileTrading.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +114,7 @@
 		D3BFF14FF0403CBE4EC2F357 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E5CABEA71E968DF50005933D /* libcompression.tbd */,
 				E2501F4CB39FCC850C7C4425 /* Pods_MobileTrading.framework */,
 				1C90458373B480566F5CB5D9 /* Pods_MobileTradingTests.framework */,
 				5CC78CDF92091C2875F5416A /* Pods_MobileTradingUITests.framework */,
@@ -115,6 +125,7 @@
 		E525AF8C1E95F44B00BAE5C4 = {
 			isa = PBXGroup;
 			children = (
+				E5CABE9E1E96824D0005933D /* Libs */,
 				E525AF971E95F44B00BAE5C4 /* MobileTrading */,
 				E525AFAC1E95F44B00BAE5C4 /* MobileTradingTests */,
 				E525AFB71E95F44B00BAE5C4 /* MobileTradingUITests */,
@@ -163,6 +174,33 @@
 				E525AFBA1E95F44B00BAE5C4 /* Info.plist */,
 			);
 			path = MobileTradingUITests;
+			sourceTree = "<group>";
+		};
+		E5CABE9E1E96824D0005933D /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				E5CABE9F1E9682800005933D /* Modules */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		E5CABE9F1E9682800005933D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E5CABEA01E9682800005933D /* FlagKit */,
+			);
+			name = Modules;
+			path = ../Modules;
+			sourceTree = "<group>";
+		};
+		E5CABEA01E9682800005933D /* FlagKit */ = {
+			isa = PBXGroup;
+			children = (
+				E5CABEA91E968E2F0005933D /* Data+Compression.swift */,
+				E5CABEA11E9682800005933D /* flag-assets.bundle */,
+				E5CABEA31E9682CB0005933D /* FlagKit.swift */,
+			);
+			path = FlagKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5CABEA21E9682800005933D /* flag-assets.bundle in Resources */,
 				E525AFA31E95F44B00BAE5C4 /* LaunchScreen.storyboard in Resources */,
 				E525AFA01E95F44B00BAE5C4 /* Assets.xcassets in Resources */,
 				E525AF9E1E95F44B00BAE5C4 /* Main.storyboard in Resources */,
@@ -448,8 +487,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5CABEAA1E968E2F0005933D /* Data+Compression.swift in Sources */,
 				E525AF9B1E95F44B00BAE5C4 /* ViewController.swift in Sources */,
 				E525AF991E95F44B00BAE5C4 /* AppDelegate.swift in Sources */,
+				E5CABEA41E9682CB0005933D /* FlagKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +749,7 @@
 				E525AFBF1E95F44B00BAE5C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E525AFC01E95F44B00BAE5C4 /* Build configuration list for PBXNativeTarget "MobileTradingTests" */ = {
 			isa = XCConfigurationList;
@@ -716,6 +758,7 @@
 				E525AFC21E95F44B00BAE5C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E525AFC31E95F44B00BAE5C4 /* Build configuration list for PBXNativeTarget "MobileTradingUITests" */ = {
 			isa = XCConfigurationList;
@@ -724,6 +767,7 @@
 				E525AFC51E95F44B00BAE5C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
