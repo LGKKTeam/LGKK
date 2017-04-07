@@ -11,6 +11,7 @@ Most code is compatible with **Xcode 8.2** and **Swift 3**. We'll keep this upda
 :heart_eyes: **Suggestions and contributions are welcome!** :heart_eyes:
 
 ## Important links
+- [Data Compression](https://github.com/leemorgan/NSData-Compression)
 
 ## Where to start?
 
@@ -28,4 +29,4 @@ It is now maintained by [Nguyen Minh](https://github.com/nguyenminhkhmt).
 
 All content is licensed under the terms of the MIT open source license.
 
-By posting here, or by submitting any pull request through this forum, you agree that all content you submit or create, both code and text, is subject to this license.  Razeware, LLC, and others will have all the rights described in the license regarding this content.  The precise terms of this license may be found [here](https://github.com/nguyenminhkhmt).
+By posting here, or by submitting any pull request through this forum, you agree that all content you submit or create, both code and text, is subject to this license.  Razeware, LLC, and others will have all the rights described in the license regarding this content.  The precise terms of this license may be found [here](License.md).
