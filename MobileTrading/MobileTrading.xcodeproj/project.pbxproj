@@ -37,10 +37,14 @@
 		E5906A641E9886FB00F696FB /* Poly1305Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A581E9886FB00F696FB /* Poly1305Tests.swift */; };
 		E5906A651E9886FB00F696FB /* RabbitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A591E9886FB00F696FB /* RabbitTests.swift */; };
 		E5906A661E9886FB00F696FB /* RandomBytesSequenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A5A1E9886FB00F696FB /* RandomBytesSequenceTests.swift */; };
+		E5906A691E988BA100F696FB /* String+MTExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A681E988BA100F696FB /* String+MTExtension.swift */; };
+		E5906A6B1E988E1400F696FB /* NSObject+MTExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A6A1E988E1400F696FB /* NSObject+MTExtension.swift */; };
 		E5CABEA21E9682800005933D /* flag-assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E5CABEA11E9682800005933D /* flag-assets.bundle */; };
 		E5CABEA41E9682CB0005933D /* FlagKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CABEA31E9682CB0005933D /* FlagKit.swift */; };
 		E5CABEA81E968DF50005933D /* libcompression.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CABEA71E968DF50005933D /* libcompression.tbd */; };
 		E5CABEAA1E968E2F0005933D /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CABEA91E968E2F0005933D /* Data+Compression.swift */; };
+		E5D7776D1E98CD1E00FCEF2D /* UIWindow+MTExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D7776C1E98CD1E00FCEF2D /* UIWindow+MTExtension.swift */; };
+		E5D7776F1E98CDA700FCEF2D /* Realm+MTExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D7776E1E98CDA700FCEF2D /* Realm+MTExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,10 +105,14 @@
 		E5906A581E9886FB00F696FB /* Poly1305Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poly1305Tests.swift; sourceTree = "<group>"; };
 		E5906A591E9886FB00F696FB /* RabbitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RabbitTests.swift; sourceTree = "<group>"; };
 		E5906A5A1E9886FB00F696FB /* RandomBytesSequenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomBytesSequenceTests.swift; sourceTree = "<group>"; };
+		E5906A681E988BA100F696FB /* String+MTExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MTExtension.swift"; sourceTree = "<group>"; };
+		E5906A6A1E988E1400F696FB /* NSObject+MTExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+MTExtension.swift"; sourceTree = "<group>"; };
 		E5CABEA11E9682800005933D /* flag-assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "flag-assets.bundle"; sourceTree = "<group>"; };
 		E5CABEA31E9682CB0005933D /* FlagKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagKit.swift; sourceTree = "<group>"; };
 		E5CABEA71E968DF50005933D /* libcompression.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcompression.tbd; path = usr/lib/libcompression.tbd; sourceTree = SDKROOT; };
 		E5CABEA91E968E2F0005933D /* Data+Compression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Compression.swift"; sourceTree = "<group>"; };
+		E5D7776C1E98CD1E00FCEF2D /* UIWindow+MTExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+MTExtension.swift"; sourceTree = "<group>"; };
+		E5D7776E1E98CDA700FCEF2D /* Realm+MTExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+MTExtension.swift"; sourceTree = "<group>"; };
 		EDDDBDB3D6558321B3B42B05 /* Pods-MobileTrading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTrading.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTrading/Pods-MobileTrading.debug.xcconfig"; sourceTree = "<group>"; };
 		FAD3A2514DE8E65672C9F0DE /* Pods-MobileTrading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTrading.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTrading/Pods-MobileTrading.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -269,6 +277,17 @@
 			path = CryptoSwiftTests;
 			sourceTree = "<group>";
 		};
+		E5906A671E988AB000F696FB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E5906A681E988BA100F696FB /* String+MTExtension.swift */,
+				E5906A6A1E988E1400F696FB /* NSObject+MTExtension.swift */,
+				E5D7776C1E98CD1E00FCEF2D /* UIWindow+MTExtension.swift */,
+				E5D7776E1E98CDA700FCEF2D /* Realm+MTExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E5CABE9E1E96824D0005933D /* Libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +299,7 @@
 		E5CABE9F1E9682800005933D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E5906A671E988AB000F696FB /* Extensions */,
 				E5CABEA01E9682800005933D /* FlagKit */,
 			);
 			name = Modules;
@@ -584,7 +604,11 @@
 			files = (
 				E5CABEAA1E968E2F0005933D /* Data+Compression.swift in Sources */,
 				E525AF9B1E95F44B00BAE5C4 /* ViewController.swift in Sources */,
+				E5906A6B1E988E1400F696FB /* NSObject+MTExtension.swift in Sources */,
+				E5906A691E988BA100F696FB /* String+MTExtension.swift in Sources */,
+				E5D7776F1E98CDA700FCEF2D /* Realm+MTExtension.swift in Sources */,
 				E525AF991E95F44B00BAE5C4 /* AppDelegate.swift in Sources */,
+				E5D7776D1E98CD1E00FCEF2D /* UIWindow+MTExtension.swift in Sources */,
 				E5CABEA41E9682CB0005933D /* FlagKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

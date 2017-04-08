@@ -11,12 +11,30 @@ import Compression
 import SwifterSwift
 
 class ViewController: UIViewController {
+    var objects: [NSObject] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         testCompressData()
         testFlagImage()
+        testObjectExtension()
+    }
+    
+    func testObjectExtension() {
+        let obj1 = NSObject()
+        _ = obj1.scheduleUpdate(delay: 5) { (obj, timer) in
+            print("scheduleUpdate run after 5s: \(obj); \(timer)")
+        }
+        objects.append(obj1)
+        let obj2 = NSObject()
+        _ = obj2.scheduleUpdate(repeatInterval: 1, handler: { (obj, timer) in
+            print("scheduleUpdate repeatInterval after 5s: \(obj); \(timer)")
+        })
+        objects.append(obj2)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5, execute: {
+            obj2.stopScheduleUpdate()
+        })
     }
     
     func testCompressData() {
