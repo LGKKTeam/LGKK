@@ -25,6 +25,18 @@
 		E5906A0C1E9873E000F696FB /* RNCryptorPerformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A041E9873E000F696FB /* RNCryptorPerformance.swift */; };
 		E5906A0D1E9873E000F696FB /* RNCryptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A051E9873E000F696FB /* RNCryptorTests.swift */; };
 		E5906A0E1E9873E000F696FB /* VectorTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A061E9873E000F696FB /* VectorTestHelpers.swift */; };
+		E5906A5B1E9886FB00F696FB /* Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A4F1E9886FB00F696FB /* Access.swift */; };
+		E5906A5C1E9886FB00F696FB /* AESTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A501E9886FB00F696FB /* AESTests.swift */; };
+		E5906A5D1E9886FB00F696FB /* BlowfishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A511E9886FB00F696FB /* BlowfishTests.swift */; };
+		E5906A5E1E9886FB00F696FB /* ChaCha20Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A521E9886FB00F696FB /* ChaCha20Tests.swift */; };
+		E5906A5F1E9886FB00F696FB /* DigestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A531E9886FB00F696FB /* DigestTests.swift */; };
+		E5906A601E9886FB00F696FB /* ExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A541E9886FB00F696FB /* ExtensionsTest.swift */; };
+		E5906A611E9886FB00F696FB /* HMACTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A551E9886FB00F696FB /* HMACTests.swift */; };
+		E5906A621E9886FB00F696FB /* PaddingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A561E9886FB00F696FB /* PaddingTests.swift */; };
+		E5906A631E9886FB00F696FB /* PBKDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A571E9886FB00F696FB /* PBKDF.swift */; };
+		E5906A641E9886FB00F696FB /* Poly1305Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A581E9886FB00F696FB /* Poly1305Tests.swift */; };
+		E5906A651E9886FB00F696FB /* RabbitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A591E9886FB00F696FB /* RabbitTests.swift */; };
+		E5906A661E9886FB00F696FB /* RandomBytesSequenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A5A1E9886FB00F696FB /* RandomBytesSequenceTests.swift */; };
 		E5CABEA21E9682800005933D /* flag-assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E5CABEA11E9682800005933D /* flag-assets.bundle */; };
 		E5CABEA41E9682CB0005933D /* FlagKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CABEA31E9682CB0005933D /* FlagKit.swift */; };
 		E5CABEA81E968DF50005933D /* libcompression.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CABEA71E968DF50005933D /* libcompression.tbd */; };
@@ -77,6 +89,18 @@
 		E5906A041E9873E000F696FB /* RNCryptorPerformance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNCryptorPerformance.swift; sourceTree = "<group>"; };
 		E5906A051E9873E000F696FB /* RNCryptorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNCryptorTests.swift; sourceTree = "<group>"; };
 		E5906A061E9873E000F696FB /* VectorTestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorTestHelpers.swift; sourceTree = "<group>"; };
+		E5906A4F1E9886FB00F696FB /* Access.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Access.swift; sourceTree = "<group>"; };
+		E5906A501E9886FB00F696FB /* AESTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AESTests.swift; sourceTree = "<group>"; };
+		E5906A511E9886FB00F696FB /* BlowfishTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlowfishTests.swift; sourceTree = "<group>"; };
+		E5906A521E9886FB00F696FB /* ChaCha20Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaCha20Tests.swift; sourceTree = "<group>"; };
+		E5906A531E9886FB00F696FB /* DigestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigestTests.swift; sourceTree = "<group>"; };
+		E5906A541E9886FB00F696FB /* ExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsTest.swift; sourceTree = "<group>"; };
+		E5906A551E9886FB00F696FB /* HMACTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMACTests.swift; sourceTree = "<group>"; };
+		E5906A561E9886FB00F696FB /* PaddingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingTests.swift; sourceTree = "<group>"; };
+		E5906A571E9886FB00F696FB /* PBKDF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBKDF.swift; sourceTree = "<group>"; };
+		E5906A581E9886FB00F696FB /* Poly1305Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poly1305Tests.swift; sourceTree = "<group>"; };
+		E5906A591E9886FB00F696FB /* RabbitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RabbitTests.swift; sourceTree = "<group>"; };
+		E5906A5A1E9886FB00F696FB /* RandomBytesSequenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomBytesSequenceTests.swift; sourceTree = "<group>"; };
 		E5CABEA11E9682800005933D /* flag-assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "flag-assets.bundle"; sourceTree = "<group>"; };
 		E5CABEA31E9682CB0005933D /* FlagKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagKit.swift; sourceTree = "<group>"; };
 		E5CABEA71E968DF50005933D /* libcompression.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcompression.tbd; path = usr/lib/libcompression.tbd; sourceTree = SDKROOT; };
@@ -196,6 +220,7 @@
 		E59069FC1E9873E000F696FB /* ModulesTests */ = {
 			isa = PBXGroup;
 			children = (
+				E5906A4E1E9886FB00F696FB /* CryptoSwiftTests */,
 				E59069FD1E9873E000F696FB /* RNCryptorTests */,
 			);
 			name = ModulesTests;
@@ -223,6 +248,25 @@
 				E5906A001E9873E000F696FB /* RNCryptorGeneratedVectorTests.swift */,
 			);
 			path = GeneratedTests;
+			sourceTree = "<group>";
+		};
+		E5906A4E1E9886FB00F696FB /* CryptoSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5906A4F1E9886FB00F696FB /* Access.swift */,
+				E5906A501E9886FB00F696FB /* AESTests.swift */,
+				E5906A511E9886FB00F696FB /* BlowfishTests.swift */,
+				E5906A521E9886FB00F696FB /* ChaCha20Tests.swift */,
+				E5906A531E9886FB00F696FB /* DigestTests.swift */,
+				E5906A541E9886FB00F696FB /* ExtensionsTest.swift */,
+				E5906A551E9886FB00F696FB /* HMACTests.swift */,
+				E5906A561E9886FB00F696FB /* PaddingTests.swift */,
+				E5906A571E9886FB00F696FB /* PBKDF.swift */,
+				E5906A581E9886FB00F696FB /* Poly1305Tests.swift */,
+				E5906A591E9886FB00F696FB /* RabbitTests.swift */,
+				E5906A5A1E9886FB00F696FB /* RandomBytesSequenceTests.swift */,
+			);
+			path = CryptoSwiftTests;
 			sourceTree = "<group>";
 		};
 		E5CABE9E1E96824D0005933D /* Libs */ = {
@@ -483,7 +527,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileTradingTests/Pods-MobileTradingTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileTradingTests/Pods-MobileTradingTests-resources.sh\"\n\"${SRCROOT}/Pods/Target Support Files/Pods-MobileTradingTests/Pods-MobileTradingTests-frameworks.sh\"";
 			showEnvVarsInLog = 0;
 		};
 		95DAFEE8CD27648FD1DB0A5F /* [CP] Copy Pods Resources */ = {
@@ -498,7 +542,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileTradingUITests/Pods-MobileTradingUITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileTradingUITests/Pods-MobileTradingUITests-resources.sh\"\n\"${SRCROOT}/Pods/Target Support Files/Pods-MobileTradingUITests/Pods-MobileTradingUITests-frameworks.sh\"";
 			showEnvVarsInLog = 0;
 		};
 		BFB5FC91C08AD1C404FAB876 /* [CP] Copy Pods Resources */ = {
@@ -550,12 +594,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				E525AFAE1E95F44B00BAE5C4 /* MobileTradingTests.swift in Sources */,
+				E5906A5B1E9886FB00F696FB /* Access.swift in Sources */,
 				E5906A0D1E9873E000F696FB /* RNCryptorTests.swift in Sources */,
+				E5906A621E9886FB00F696FB /* PaddingTests.swift in Sources */,
+				E5906A5F1E9886FB00F696FB /* DigestTests.swift in Sources */,
 				E5906A0E1E9873E000F696FB /* VectorTestHelpers.swift in Sources */,
+				E5906A641E9886FB00F696FB /* Poly1305Tests.swift in Sources */,
+				E5906A5E1E9886FB00F696FB /* ChaCha20Tests.swift in Sources */,
 				E5906A0B1E9873E000F696FB /* OverfowingBuffer.swift in Sources */,
+				E5906A5D1E9886FB00F696FB /* BlowfishTests.swift in Sources */,
 				E5906A071E9873E000F696FB /* Data.swift in Sources */,
 				E5906A0C1E9873E000F696FB /* RNCryptorPerformance.swift in Sources */,
+				E5906A5C1E9886FB00F696FB /* AESTests.swift in Sources */,
 				E5906A081E9873E000F696FB /* RNCryptorGeneratedVectorTests.swift in Sources */,
+				E5906A661E9886FB00F696FB /* RandomBytesSequenceTests.swift in Sources */,
+				E5906A631E9886FB00F696FB /* PBKDF.swift in Sources */,
+				E5906A651E9886FB00F696FB /* RabbitTests.swift in Sources */,
+				E5906A611E9886FB00F696FB /* HMACTests.swift in Sources */,
+				E5906A601E9886FB00F696FB /* ExtensionsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
