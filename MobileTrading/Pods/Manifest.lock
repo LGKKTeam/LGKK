@@ -76,6 +76,7 @@ PODS:
   - FontBlaster (3.0.2)
   - FXBlurView (1.6.4)
   - GPUImage (0.1.7)
+  - GzipSwift (3.1.4)
   - HTMLAttributedString (0.0.1)
   - IAPHelper (1.1)
   - ImageSlideshow/Core (1.2.0)
@@ -135,6 +136,7 @@ PODS:
     - Reusable/View (= 4.0.0)
   - Reusable/Storyboard (4.0.0)
   - Reusable/View (4.0.0)
+  - RNCryptor (5.0.1)
   - RxCocoa (3.3.1):
     - RxSwift (~> 3.3)
   - RxSwift (3.3.1)
@@ -183,6 +185,7 @@ DEPENDENCIES:
   - FontAwesomeKit
   - FontBlaster
   - GPUImage
+  - GzipSwift
   - HTMLAttributedString
   - IAPHelper
   - ImageSlideshow/Kingfisher
@@ -209,6 +212,7 @@ DEPENDENCIES:
   - RealmSwift
   - ReSwift
   - Reusable
+  - RNCryptor
   - RxCocoa
   - RxSwift
   - SCLAlertView
@@ -263,6 +267,7 @@ SPEC CHECKSUMS:
   FontBlaster: 6a34102ab08e18368683a99c2cee6247341121e0
   FXBlurView: db786c2561cb49a09ae98407f52460096ab8a44f
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  GzipSwift: 11ddb2bf253b1cd7b60bb169da20f62ac4348769
   HTMLAttributedString: b91d56441e481df9a1c09b184e3a7dc2a1db284e
   IAPHelper: fd74f53b0ac142eed085777b88b86a11746a2dd4
   ImageSlideshow: c1395dcf33f7dba407fd21df0e8c315e8941e209
@@ -291,6 +296,7 @@ SPEC CHECKSUMS:
   Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
   ReSwift: f0255f4b4f2dacd12c5d97d34d13fc5dad6d6371
   Reusable: 98e5fff1e0e2e00872199699b276dde08ee56c07
+  RNCryptor: 2e352a488779d1a9184ab629be22a7c5bc84acb5
   RxCocoa: 7dcb7a1860fc9cd0e23dae67ab105fc2916670b6
   RxSwift: 8fc9f2de6275a9101d518444e00bf32f1a42caac
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
@@ -314,6 +320,6 @@ SPEC CHECKSUMS:
   Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
   TYAlertController: 502d3dbc5d007e68559400b509c736f60ebc2cc1
 
-PODFILE CHECKSUM: 0dad823fc0822cccef17eb26ee1a7fd2ca8a8f44
+PODFILE CHECKSUM: 3e7343e7a37d49675b0828d8dfdd0310700c0a05
 
 COCOAPODS: 1.2.0

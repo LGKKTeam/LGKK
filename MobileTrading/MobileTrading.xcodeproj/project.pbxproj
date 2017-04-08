@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		0AFB905ECE9E2ECCB8FFAEE6 /* Pods_MobileTradingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C90458373B480566F5CB5D9 /* Pods_MobileTradingTests.framework */; };
 		2E5ABE482C1AA74FE51A4E55 /* Pods_MobileTrading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501F4CB39FCC850C7C4425 /* Pods_MobileTrading.framework */; };
+		C65CFFF2EA1CB036CB5E206C /* Pods_RNCryptorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09F3500A6583A94E71351FB /* Pods_RNCryptorTests.framework */; };
+		D3D9B66707E4BD52B51E0623 /* Pods_CryptoSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D0B652C2E82F8D3E62D2995 /* Pods_CryptoSwiftTests.framework */; };
 		D91E6B06D5E3CBA63D0B05AC /* Pods_MobileTradingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC78CDF92091C2875F5416A /* Pods_MobileTradingUITests.framework */; };
+		E278022497EF7FEB10C1690D /* Pods_GzipTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D81FD2B692B074C5CF3D98 /* Pods_GzipTests.framework */; };
 		E525AF991E95F44B00BAE5C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525AF981E95F44B00BAE5C4 /* AppDelegate.swift */; };
 		E525AF9B1E95F44B00BAE5C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525AF9A1E95F44B00BAE5C4 /* ViewController.swift */; };
 		E525AF9E1E95F44B00BAE5C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E525AF9C1E95F44B00BAE5C4 /* Main.storyboard */; };
@@ -17,10 +20,39 @@
 		E525AFA31E95F44B00BAE5C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E525AFA11E95F44B00BAE5C4 /* LaunchScreen.storyboard */; };
 		E525AFAE1E95F44B00BAE5C4 /* MobileTradingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525AFAD1E95F44B00BAE5C4 /* MobileTradingTests.swift */; };
 		E525AFB91E95F44B00BAE5C4 /* MobileTradingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525AFB81E95F44B00BAE5C4 /* MobileTradingUITests.swift */; };
+		E5906A691E988BA100F696FB /* String+MTExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A681E988BA100F696FB /* String+MTExtension.swift */; };
+		E5906A6B1E988E1400F696FB /* NSObject+MTExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A6A1E988E1400F696FB /* NSObject+MTExtension.swift */; };
 		E5CABEA21E9682800005933D /* flag-assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E5CABEA11E9682800005933D /* flag-assets.bundle */; };
 		E5CABEA41E9682CB0005933D /* FlagKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CABEA31E9682CB0005933D /* FlagKit.swift */; };
 		E5CABEA81E968DF50005933D /* libcompression.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CABEA71E968DF50005933D /* libcompression.tbd */; };
-		E5CABEAA1E968E2F0005933D /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CABEA91E968E2F0005933D /* Data+Compression.swift */; };
+		E5D7776D1E98CD1E00FCEF2D /* UIWindow+MTExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D7776C1E98CD1E00FCEF2D /* UIWindow+MTExtension.swift */; };
+		E5D7776F1E98CDA700FCEF2D /* Realm+MTExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D7776E1E98CDA700FCEF2D /* Realm+MTExtension.swift */; };
+		E5D7777C1E993A6500FCEF2D /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D7777B1E993A6500FCEF2D /* Data+Compression.swift */; };
+		E5D7777D1E993B2A00FCEF2D /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D7777B1E993A6500FCEF2D /* Data+Compression.swift */; };
+		E5D777801E993B9F00FCEF2D /* Data+CompressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D7777F1E993B9F00FCEF2D /* Data+CompressionTests.swift */; };
+		E5D777821E993BF900FCEF2D /* String+MTExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777811E993BF900FCEF2D /* String+MTExtensionTests.swift */; };
+		E5D777951E993D4400FCEF2D /* GzipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777931E993D4400FCEF2D /* GzipTests.swift */; };
+		E5D777961E993D4400FCEF2D /* test.txt.gz in Resources */ = {isa = PBXBuildFile; fileRef = E5D777941E993D4400FCEF2D /* test.txt.gz */; };
+		E5D777B11E9940C500FCEF2D /* Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777A51E9940C500FCEF2D /* Access.swift */; };
+		E5D777B21E9940C500FCEF2D /* AESTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777A61E9940C500FCEF2D /* AESTests.swift */; };
+		E5D777B31E9940C500FCEF2D /* BlowfishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777A71E9940C500FCEF2D /* BlowfishTests.swift */; };
+		E5D777B41E9940C500FCEF2D /* ChaCha20Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777A81E9940C500FCEF2D /* ChaCha20Tests.swift */; };
+		E5D777B51E9940C500FCEF2D /* DigestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777A91E9940C500FCEF2D /* DigestTests.swift */; };
+		E5D777B61E9940C500FCEF2D /* ExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777AA1E9940C500FCEF2D /* ExtensionsTest.swift */; };
+		E5D777B71E9940C500FCEF2D /* HMACTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777AB1E9940C500FCEF2D /* HMACTests.swift */; };
+		E5D777B81E9940C500FCEF2D /* PaddingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777AC1E9940C500FCEF2D /* PaddingTests.swift */; };
+		E5D777B91E9940C500FCEF2D /* PBKDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777AD1E9940C500FCEF2D /* PBKDF.swift */; };
+		E5D777BA1E9940C500FCEF2D /* Poly1305Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777AE1E9940C500FCEF2D /* Poly1305Tests.swift */; };
+		E5D777BB1E9940C500FCEF2D /* RabbitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777AF1E9940C500FCEF2D /* RabbitTests.swift */; };
+		E5D777BC1E9940C500FCEF2D /* RandomBytesSequenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777B01E9940C500FCEF2D /* RandomBytesSequenceTests.swift */; };
+		E5D777D41E99418400FCEF2D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777CB1E99418400FCEF2D /* Data.swift */; };
+		E5D777D51E99418400FCEF2D /* RNCryptorGeneratedVectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777CD1E99418400FCEF2D /* RNCryptorGeneratedVectorTests.swift */; };
+		E5D777D61E99418400FCEF2D /* GenVectorTests in Resources */ = {isa = PBXBuildFile; fileRef = E5D777CE1E99418400FCEF2D /* GenVectorTests */; };
+		E5D777D71E99418400FCEF2D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5D777CF1E99418400FCEF2D /* Info.plist */; };
+		E5D777D81E99418400FCEF2D /* OverfowingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777D01E99418400FCEF2D /* OverfowingBuffer.swift */; };
+		E5D777D91E99418400FCEF2D /* RNCryptorPerformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777D11E99418400FCEF2D /* RNCryptorPerformance.swift */; };
+		E5D777DA1E99418400FCEF2D /* RNCryptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777D21E99418400FCEF2D /* RNCryptorTests.swift */; };
+		E5D777DB1E99418400FCEF2D /* VectorTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D777D31E99418400FCEF2D /* VectorTestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,15 +70,44 @@
 			remoteGlobalIDString = E525AF941E95F44B00BAE5C4;
 			remoteInfo = MobileTrading;
 		};
+		E5D7778C1E993C9C00FCEF2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E525AF8D1E95F44B00BAE5C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E525AF941E95F44B00BAE5C4;
+			remoteInfo = MobileTrading;
+		};
+		E5D777A01E99408000FCEF2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E525AF8D1E95F44B00BAE5C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E525AF941E95F44B00BAE5C4;
+			remoteInfo = MobileTrading;
+		};
+		E5D777C61E99414F00FCEF2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E525AF8D1E95F44B00BAE5C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E525AF941E95F44B00BAE5C4;
+			remoteInfo = MobileTrading;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D130D6EDEAD79F09F99B354 /* Pods-GzipTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GzipTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GzipTests/Pods-GzipTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1C90458373B480566F5CB5D9 /* Pods_MobileTradingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTradingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D0B652C2E82F8D3E62D2995 /* Pods_CryptoSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29417CDCA19910BE815E66A0 /* Pods-MobileTradingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTradingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTradingUITests/Pods-MobileTradingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		379A6DB7A862417F1BF7B303 /* Pods-CryptoSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoSwiftTests/Pods-CryptoSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A065D63AFBE785C70DE7E57 /* Pods-MobileTradingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTradingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTradingTests/Pods-MobileTradingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5CC78CDF92091C2875F5416A /* Pods_MobileTradingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTradingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71D3A1ECC598965B0F95C340 /* Pods-RNCryptorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCryptorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RNCryptorTests/Pods-RNCryptorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A2DD4CFEA59EEBC1811953FA /* Pods-MobileTradingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTradingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTradingUITests/Pods-MobileTradingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A5D81FD2B692B074C5CF3D98 /* Pods_GzipTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GzipTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C09F3500A6583A94E71351FB /* Pods_RNCryptorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNCryptorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11BBCA374566E04C8D07A3D /* Pods-MobileTradingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTradingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTradingTests/Pods-MobileTradingTests.release.xcconfig"; sourceTree = "<group>"; };
+		C3DDACF4E2310733FA098DA5 /* Pods-RNCryptorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCryptorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RNCryptorTests/Pods-RNCryptorTests.release.xcconfig"; sourceTree = "<group>"; };
+		C8EB20F4F0C5BC5C953FF2D9 /* Pods-CryptoSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoSwiftTests/Pods-CryptoSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		E2501F4CB39FCC850C7C4425 /* Pods_MobileTrading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTrading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E525AF951E95F44B00BAE5C4 /* MobileTrading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileTrading.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E525AF981E95F44B00BAE5C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,10 +122,46 @@
 		E525AFB41E95F44B00BAE5C4 /* MobileTradingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileTradingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E525AFB81E95F44B00BAE5C4 /* MobileTradingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileTradingUITests.swift; sourceTree = "<group>"; };
 		E525AFBA1E95F44B00BAE5C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5906A681E988BA100F696FB /* String+MTExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MTExtension.swift"; sourceTree = "<group>"; };
+		E5906A6A1E988E1400F696FB /* NSObject+MTExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+MTExtension.swift"; sourceTree = "<group>"; };
 		E5CABEA11E9682800005933D /* flag-assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "flag-assets.bundle"; sourceTree = "<group>"; };
 		E5CABEA31E9682CB0005933D /* FlagKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagKit.swift; sourceTree = "<group>"; };
 		E5CABEA71E968DF50005933D /* libcompression.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcompression.tbd; path = usr/lib/libcompression.tbd; sourceTree = SDKROOT; };
-		E5CABEA91E968E2F0005933D /* Data+Compression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Compression.swift"; sourceTree = "<group>"; };
+		E5D7776C1E98CD1E00FCEF2D /* UIWindow+MTExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+MTExtension.swift"; sourceTree = "<group>"; };
+		E5D7776E1E98CDA700FCEF2D /* Realm+MTExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+MTExtension.swift"; sourceTree = "<group>"; };
+		E5D777701E98D18600FCEF2D /* MobileTrading-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MobileTrading-Bridging-Header.h"; sourceTree = "<group>"; };
+		E5D7777B1E993A6500FCEF2D /* Data+Compression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Compression.swift"; sourceTree = "<group>"; };
+		E5D7777F1E993B9F00FCEF2D /* Data+CompressionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+CompressionTests.swift"; sourceTree = "<group>"; };
+		E5D777811E993BF900FCEF2D /* String+MTExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MTExtensionTests.swift"; sourceTree = "<group>"; };
+		E5D777871E993C9C00FCEF2D /* GzipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GzipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D7778B1E993C9C00FCEF2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5D777931E993D4400FCEF2D /* GzipTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GzipTests.swift; path = ../../ModulesTests/GzipTests/GzipTests.swift; sourceTree = "<group>"; };
+		E5D777941E993D4400FCEF2D /* test.txt.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; name = test.txt.gz; path = ../../ModulesTests/GzipTests/test.txt.gz; sourceTree = "<group>"; };
+		E5D7779B1E99408000FCEF2D /* CryptoSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D7779F1E99408000FCEF2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5D777A51E9940C500FCEF2D /* Access.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Access.swift; path = ../../ModulesTests/CryptoSwiftTests/Access.swift; sourceTree = "<group>"; };
+		E5D777A61E9940C500FCEF2D /* AESTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AESTests.swift; path = ../../ModulesTests/CryptoSwiftTests/AESTests.swift; sourceTree = "<group>"; };
+		E5D777A71E9940C500FCEF2D /* BlowfishTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlowfishTests.swift; path = ../../ModulesTests/CryptoSwiftTests/BlowfishTests.swift; sourceTree = "<group>"; };
+		E5D777A81E9940C500FCEF2D /* ChaCha20Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChaCha20Tests.swift; path = ../../ModulesTests/CryptoSwiftTests/ChaCha20Tests.swift; sourceTree = "<group>"; };
+		E5D777A91E9940C500FCEF2D /* DigestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DigestTests.swift; path = ../../ModulesTests/CryptoSwiftTests/DigestTests.swift; sourceTree = "<group>"; };
+		E5D777AA1E9940C500FCEF2D /* ExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtensionsTest.swift; path = ../../ModulesTests/CryptoSwiftTests/ExtensionsTest.swift; sourceTree = "<group>"; };
+		E5D777AB1E9940C500FCEF2D /* HMACTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HMACTests.swift; path = ../../ModulesTests/CryptoSwiftTests/HMACTests.swift; sourceTree = "<group>"; };
+		E5D777AC1E9940C500FCEF2D /* PaddingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaddingTests.swift; path = ../../ModulesTests/CryptoSwiftTests/PaddingTests.swift; sourceTree = "<group>"; };
+		E5D777AD1E9940C500FCEF2D /* PBKDF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PBKDF.swift; path = ../../ModulesTests/CryptoSwiftTests/PBKDF.swift; sourceTree = "<group>"; };
+		E5D777AE1E9940C500FCEF2D /* Poly1305Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Poly1305Tests.swift; path = ../../ModulesTests/CryptoSwiftTests/Poly1305Tests.swift; sourceTree = "<group>"; };
+		E5D777AF1E9940C500FCEF2D /* RabbitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RabbitTests.swift; path = ../../ModulesTests/CryptoSwiftTests/RabbitTests.swift; sourceTree = "<group>"; };
+		E5D777B01E9940C500FCEF2D /* RandomBytesSequenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RandomBytesSequenceTests.swift; path = ../../ModulesTests/CryptoSwiftTests/RandomBytesSequenceTests.swift; sourceTree = "<group>"; };
+		E5D777C11E99414F00FCEF2D /* RNCryptorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNCryptorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D777C51E99414F00FCEF2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5D777CB1E99418400FCEF2D /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = ../../ModulesTests/RNCryptorTests/Data.swift; sourceTree = "<group>"; };
+		E5D777CD1E99418400FCEF2D /* RNCryptorGeneratedVectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNCryptorGeneratedVectorTests.swift; sourceTree = "<group>"; };
+		E5D777CE1E99418400FCEF2D /* GenVectorTests */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GenVectorTests; path = ../../ModulesTests/RNCryptorTests/GenVectorTests; sourceTree = "<group>"; };
+		E5D777CF1E99418400FCEF2D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../ModulesTests/RNCryptorTests/Info.plist; sourceTree = "<group>"; };
+		E5D777D01E99418400FCEF2D /* OverfowingBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverfowingBuffer.swift; path = ../../ModulesTests/RNCryptorTests/OverfowingBuffer.swift; sourceTree = "<group>"; };
+		E5D777D11E99418400FCEF2D /* RNCryptorPerformance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNCryptorPerformance.swift; path = ../../ModulesTests/RNCryptorTests/RNCryptorPerformance.swift; sourceTree = "<group>"; };
+		E5D777D21E99418400FCEF2D /* RNCryptorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNCryptorTests.swift; path = ../../ModulesTests/RNCryptorTests/RNCryptorTests.swift; sourceTree = "<group>"; };
+		E5D777D31E99418400FCEF2D /* VectorTestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VectorTestHelpers.swift; path = ../../ModulesTests/RNCryptorTests/VectorTestHelpers.swift; sourceTree = "<group>"; };
+		EA018931CC0636C16C79393E /* Pods-GzipTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GzipTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GzipTests/Pods-GzipTests.release.xcconfig"; sourceTree = "<group>"; };
 		EDDDBDB3D6558321B3B42B05 /* Pods-MobileTrading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTrading.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTrading/Pods-MobileTrading.debug.xcconfig"; sourceTree = "<group>"; };
 		FAD3A2514DE8E65672C9F0DE /* Pods-MobileTrading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTrading.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTrading/Pods-MobileTrading.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +192,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5D777841E993C9C00FCEF2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E278022497EF7FEB10C1690D /* Pods_GzipTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D777981E99408000FCEF2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3D9B66707E4BD52B51E0623 /* Pods_CryptoSwiftTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D777BE1E99414F00FCEF2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65CFFF2EA1CB036CB5E206C /* Pods_RNCryptorTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -107,6 +228,12 @@
 				C11BBCA374566E04C8D07A3D /* Pods-MobileTradingTests.release.xcconfig */,
 				29417CDCA19910BE815E66A0 /* Pods-MobileTradingUITests.debug.xcconfig */,
 				A2DD4CFEA59EEBC1811953FA /* Pods-MobileTradingUITests.release.xcconfig */,
+				0D130D6EDEAD79F09F99B354 /* Pods-GzipTests.debug.xcconfig */,
+				EA018931CC0636C16C79393E /* Pods-GzipTests.release.xcconfig */,
+				379A6DB7A862417F1BF7B303 /* Pods-CryptoSwiftTests.debug.xcconfig */,
+				C8EB20F4F0C5BC5C953FF2D9 /* Pods-CryptoSwiftTests.release.xcconfig */,
+				71D3A1ECC598965B0F95C340 /* Pods-RNCryptorTests.debug.xcconfig */,
+				C3DDACF4E2310733FA098DA5 /* Pods-RNCryptorTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -118,6 +245,9 @@
 				E2501F4CB39FCC850C7C4425 /* Pods_MobileTrading.framework */,
 				1C90458373B480566F5CB5D9 /* Pods_MobileTradingTests.framework */,
 				5CC78CDF92091C2875F5416A /* Pods_MobileTradingUITests.framework */,
+				A5D81FD2B692B074C5CF3D98 /* Pods_GzipTests.framework */,
+				1D0B652C2E82F8D3E62D2995 /* Pods_CryptoSwiftTests.framework */,
+				C09F3500A6583A94E71351FB /* Pods_RNCryptorTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,9 +259,13 @@
 				E525AF971E95F44B00BAE5C4 /* MobileTrading */,
 				E525AFAC1E95F44B00BAE5C4 /* MobileTradingTests */,
 				E525AFB71E95F44B00BAE5C4 /* MobileTradingUITests */,
+				E5D777881E993C9C00FCEF2D /* GzipTests */,
+				E5D7779C1E99408000FCEF2D /* CryptoSwiftTests */,
+				E5D777C21E99414F00FCEF2D /* RNCryptorTests */,
 				E525AF961E95F44B00BAE5C4 /* Products */,
 				89CF864E07D31887339EEC15 /* Pods */,
 				D3BFF14FF0403CBE4EC2F357 /* Frameworks */,
+				E5D777701E98D18600FCEF2D /* MobileTrading-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +275,9 @@
 				E525AF951E95F44B00BAE5C4 /* MobileTrading.app */,
 				E525AFA91E95F44B00BAE5C4 /* MobileTradingTests.xctest */,
 				E525AFB41E95F44B00BAE5C4 /* MobileTradingUITests.xctest */,
+				E5D777871E993C9C00FCEF2D /* GzipTests.xctest */,
+				E5D7779B1E99408000FCEF2D /* CryptoSwiftTests.xctest */,
+				E5D777C11E99414F00FCEF2D /* RNCryptorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +298,7 @@
 		E525AFAC1E95F44B00BAE5C4 /* MobileTradingTests */ = {
 			isa = PBXGroup;
 			children = (
+				E59069FC1E9873E000F696FB /* ModulesTests */,
 				E525AFAD1E95F44B00BAE5C4 /* MobileTradingTests.swift */,
 				E525AFAF1E95F44B00BAE5C4 /* Info.plist */,
 			);
@@ -176,6 +314,27 @@
 			path = MobileTradingUITests;
 			sourceTree = "<group>";
 		};
+		E59069FC1E9873E000F696FB /* ModulesTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5D7777E1E993B7900FCEF2D /* ExtensionTests */,
+			);
+			name = ModulesTests;
+			path = ../../ModulesTests;
+			sourceTree = "<group>";
+		};
+		E5906A671E988AB000F696FB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E5906A681E988BA100F696FB /* String+MTExtension.swift */,
+				E5906A6A1E988E1400F696FB /* NSObject+MTExtension.swift */,
+				E5D7776C1E98CD1E00FCEF2D /* UIWindow+MTExtension.swift */,
+				E5D7776E1E98CDA700FCEF2D /* Realm+MTExtension.swift */,
+				E5D7777B1E993A6500FCEF2D /* Data+Compression.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E5CABE9E1E96824D0005933D /* Libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +346,7 @@
 		E5CABE9F1E9682800005933D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E5906A671E988AB000F696FB /* Extensions */,
 				E5CABEA01E9682800005933D /* FlagKit */,
 			);
 			name = Modules;
@@ -196,11 +356,74 @@
 		E5CABEA01E9682800005933D /* FlagKit */ = {
 			isa = PBXGroup;
 			children = (
-				E5CABEA91E968E2F0005933D /* Data+Compression.swift */,
 				E5CABEA11E9682800005933D /* flag-assets.bundle */,
 				E5CABEA31E9682CB0005933D /* FlagKit.swift */,
 			);
 			path = FlagKit;
+			sourceTree = "<group>";
+		};
+		E5D7777E1E993B7900FCEF2D /* ExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5D7777F1E993B9F00FCEF2D /* Data+CompressionTests.swift */,
+				E5D777811E993BF900FCEF2D /* String+MTExtensionTests.swift */,
+			);
+			path = ExtensionTests;
+			sourceTree = "<group>";
+		};
+		E5D777881E993C9C00FCEF2D /* GzipTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5D777931E993D4400FCEF2D /* GzipTests.swift */,
+				E5D777941E993D4400FCEF2D /* test.txt.gz */,
+				E5D7778B1E993C9C00FCEF2D /* Info.plist */,
+			);
+			path = GzipTests;
+			sourceTree = "<group>";
+		};
+		E5D7779C1E99408000FCEF2D /* CryptoSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5D777A51E9940C500FCEF2D /* Access.swift */,
+				E5D777A61E9940C500FCEF2D /* AESTests.swift */,
+				E5D777A71E9940C500FCEF2D /* BlowfishTests.swift */,
+				E5D777A81E9940C500FCEF2D /* ChaCha20Tests.swift */,
+				E5D777A91E9940C500FCEF2D /* DigestTests.swift */,
+				E5D777AA1E9940C500FCEF2D /* ExtensionsTest.swift */,
+				E5D777AB1E9940C500FCEF2D /* HMACTests.swift */,
+				E5D777AC1E9940C500FCEF2D /* PaddingTests.swift */,
+				E5D777AD1E9940C500FCEF2D /* PBKDF.swift */,
+				E5D777AE1E9940C500FCEF2D /* Poly1305Tests.swift */,
+				E5D777AF1E9940C500FCEF2D /* RabbitTests.swift */,
+				E5D777B01E9940C500FCEF2D /* RandomBytesSequenceTests.swift */,
+				E5D7779F1E99408000FCEF2D /* Info.plist */,
+			);
+			path = CryptoSwiftTests;
+			sourceTree = "<group>";
+		};
+		E5D777C21E99414F00FCEF2D /* RNCryptorTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5D777CB1E99418400FCEF2D /* Data.swift */,
+				E5D777CC1E99418400FCEF2D /* GeneratedTests */,
+				E5D777CE1E99418400FCEF2D /* GenVectorTests */,
+				E5D777CF1E99418400FCEF2D /* Info.plist */,
+				E5D777D01E99418400FCEF2D /* OverfowingBuffer.swift */,
+				E5D777D11E99418400FCEF2D /* RNCryptorPerformance.swift */,
+				E5D777D21E99418400FCEF2D /* RNCryptorTests.swift */,
+				E5D777D31E99418400FCEF2D /* VectorTestHelpers.swift */,
+				E5D777C51E99414F00FCEF2D /* Info.plist */,
+			);
+			path = RNCryptorTests;
+			sourceTree = "<group>";
+		};
+		E5D777CC1E99418400FCEF2D /* GeneratedTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5D777CD1E99418400FCEF2D /* RNCryptorGeneratedVectorTests.swift */,
+			);
+			name = GeneratedTests;
+			path = ../../ModulesTests/RNCryptorTests/GeneratedTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +491,69 @@
 			productReference = E525AFB41E95F44B00BAE5C4 /* MobileTradingUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E5D777861E993C9C00FCEF2D /* GzipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5D7778E1E993C9C00FCEF2D /* Build configuration list for PBXNativeTarget "GzipTests" */;
+			buildPhases = (
+				3E6DC306A03CDAF3C350BBB8 /* [CP] Check Pods Manifest.lock */,
+				E5D777831E993C9C00FCEF2D /* Sources */,
+				E5D777841E993C9C00FCEF2D /* Frameworks */,
+				E5D777851E993C9C00FCEF2D /* Resources */,
+				1531B631EFCF3E03CE06F07E /* [CP] Embed Pods Frameworks */,
+				C7BA388D5F24AF73CD8FE7C5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5D7778D1E993C9C00FCEF2D /* PBXTargetDependency */,
+			);
+			name = GzipTests;
+			productName = GzipTests;
+			productReference = E5D777871E993C9C00FCEF2D /* GzipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E5D7779A1E99408000FCEF2D /* CryptoSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5D777A21E99408000FCEF2D /* Build configuration list for PBXNativeTarget "CryptoSwiftTests" */;
+			buildPhases = (
+				EEF52A984B28BD705272A070 /* [CP] Check Pods Manifest.lock */,
+				E5D777971E99408000FCEF2D /* Sources */,
+				E5D777981E99408000FCEF2D /* Frameworks */,
+				E5D777991E99408000FCEF2D /* Resources */,
+				5D987AE125AF02F309A52DEB /* [CP] Embed Pods Frameworks */,
+				A115240BE1EC5AAA9A604C2F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5D777A11E99408000FCEF2D /* PBXTargetDependency */,
+			);
+			name = CryptoSwiftTests;
+			productName = CryptoSwiftTests;
+			productReference = E5D7779B1E99408000FCEF2D /* CryptoSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E5D777C01E99414F00FCEF2D /* RNCryptorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5D777C81E99414F00FCEF2D /* Build configuration list for PBXNativeTarget "RNCryptorTests" */;
+			buildPhases = (
+				93FD2F1E7397E3048EAEEF48 /* [CP] Check Pods Manifest.lock */,
+				E5D777BD1E99414F00FCEF2D /* Sources */,
+				E5D777BE1E99414F00FCEF2D /* Frameworks */,
+				E5D777BF1E99414F00FCEF2D /* Resources */,
+				955125712DA2DF52FA23C8AB /* [CP] Embed Pods Frameworks */,
+				5896B8F725D20322531CD2B2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5D777C71E99414F00FCEF2D /* PBXTargetDependency */,
+			);
+			name = RNCryptorTests;
+			productName = RNCryptorTests;
+			productReference = E5D777C11E99414F00FCEF2D /* RNCryptorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -280,6 +566,7 @@
 				TargetAttributes = {
 					E525AF941E95F44B00BAE5C4 = {
 						CreatedOnToolsVersion = 8.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					E525AFA81E95F44B00BAE5C4 = {
@@ -291,6 +578,27 @@
 					E525AFB31E95F44B00BAE5C4 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = C2MD5G6WC2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E525AF941E95F44B00BAE5C4;
+					};
+					E5D777861E993C9C00FCEF2D = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = C2MD5G6WC2;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E525AF941E95F44B00BAE5C4;
+					};
+					E5D7779A1E99408000FCEF2D = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = C2MD5G6WC2;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E525AF941E95F44B00BAE5C4;
+					};
+					E5D777C01E99414F00FCEF2D = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = C2MD5G6WC2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E525AF941E95F44B00BAE5C4;
 					};
@@ -312,6 +620,9 @@
 				E525AF941E95F44B00BAE5C4 /* MobileTrading */,
 				E525AFA81E95F44B00BAE5C4 /* MobileTradingTests */,
 				E525AFB31E95F44B00BAE5C4 /* MobileTradingUITests */,
+				E5D777861E993C9C00FCEF2D /* GzipTests */,
+				E5D7779A1E99408000FCEF2D /* CryptoSwiftTests */,
+				E5D777C01E99414F00FCEF2D /* RNCryptorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -342,9 +653,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5D777851E993C9C00FCEF2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5D777961E993D4400FCEF2D /* test.txt.gz in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D777991E99408000FCEF2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D777BF1E99414F00FCEF2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5D777D71E99418400FCEF2D /* Info.plist in Resources */,
+				E5D777D61E99418400FCEF2D /* GenVectorTests in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1531B631EFCF3E03CE06F07E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GzipTests/Pods-GzipTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1E887E58D27012DDD98CD629 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -405,6 +755,51 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileTradingTests/Pods-MobileTradingTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3E6DC306A03CDAF3C350BBB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5896B8F725D20322531CD2B2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RNCryptorTests/Pods-RNCryptorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D987AE125AF02F309A52DEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptoSwiftTests/Pods-CryptoSwiftTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		63AEC36C96805B9A046779D7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -435,6 +830,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileTradingTests/Pods-MobileTradingTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		93FD2F1E7397E3048EAEEF48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		955125712DA2DF52FA23C8AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RNCryptorTests/Pods-RNCryptorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		95DAFEE8CD27648FD1DB0A5F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -448,6 +873,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileTradingUITests/Pods-MobileTradingUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A115240BE1EC5AAA9A604C2F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptoSwiftTests/Pods-CryptoSwiftTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BFB5FC91C08AD1C404FAB876 /* [CP] Copy Pods Resources */ = {
@@ -465,7 +905,37 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileTrading/Pods-MobileTrading-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C7BA388D5F24AF73CD8FE7C5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GzipTests/Pods-GzipTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EE21055E4740D183175B1C1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EEF52A984B28BD705272A070 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -487,9 +957,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5CABEAA1E968E2F0005933D /* Data+Compression.swift in Sources */,
+				E5D7777D1E993B2A00FCEF2D /* Data+Compression.swift in Sources */,
 				E525AF9B1E95F44B00BAE5C4 /* ViewController.swift in Sources */,
+				E5906A6B1E988E1400F696FB /* NSObject+MTExtension.swift in Sources */,
+				E5906A691E988BA100F696FB /* String+MTExtension.swift in Sources */,
+				E5D7776F1E98CDA700FCEF2D /* Realm+MTExtension.swift in Sources */,
 				E525AF991E95F44B00BAE5C4 /* AppDelegate.swift in Sources */,
+				E5D7776D1E98CD1E00FCEF2D /* UIWindow+MTExtension.swift in Sources */,
 				E5CABEA41E9682CB0005933D /* FlagKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +973,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E525AFAE1E95F44B00BAE5C4 /* MobileTradingTests.swift in Sources */,
+				E5D7777C1E993A6500FCEF2D /* Data+Compression.swift in Sources */,
+				E5D777801E993B9F00FCEF2D /* Data+CompressionTests.swift in Sources */,
+				E5D777821E993BF900FCEF2D /* String+MTExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +984,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				E525AFB91E95F44B00BAE5C4 /* MobileTradingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D777831E993C9C00FCEF2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5D777951E993D4400FCEF2D /* GzipTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D777971E99408000FCEF2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5D777B11E9940C500FCEF2D /* Access.swift in Sources */,
+				E5D777BC1E9940C500FCEF2D /* RandomBytesSequenceTests.swift in Sources */,
+				E5D777B91E9940C500FCEF2D /* PBKDF.swift in Sources */,
+				E5D777B61E9940C500FCEF2D /* ExtensionsTest.swift in Sources */,
+				E5D777B21E9940C500FCEF2D /* AESTests.swift in Sources */,
+				E5D777B51E9940C500FCEF2D /* DigestTests.swift in Sources */,
+				E5D777B31E9940C500FCEF2D /* BlowfishTests.swift in Sources */,
+				E5D777BA1E9940C500FCEF2D /* Poly1305Tests.swift in Sources */,
+				E5D777BB1E9940C500FCEF2D /* RabbitTests.swift in Sources */,
+				E5D777B71E9940C500FCEF2D /* HMACTests.swift in Sources */,
+				E5D777B41E9940C500FCEF2D /* ChaCha20Tests.swift in Sources */,
+				E5D777B81E9940C500FCEF2D /* PaddingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D777BD1E99414F00FCEF2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5D777D51E99418400FCEF2D /* RNCryptorGeneratedVectorTests.swift in Sources */,
+				E5D777D41E99418400FCEF2D /* Data.swift in Sources */,
+				E5D777D91E99418400FCEF2D /* RNCryptorPerformance.swift in Sources */,
+				E5D777DA1E99418400FCEF2D /* RNCryptorTests.swift in Sources */,
+				E5D777DB1E99418400FCEF2D /* VectorTestHelpers.swift in Sources */,
+				E5D777D81E99418400FCEF2D /* OverfowingBuffer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +1039,21 @@
 			isa = PBXTargetDependency;
 			target = E525AF941E95F44B00BAE5C4 /* MobileTrading */;
 			targetProxy = E525AFB51E95F44B00BAE5C4 /* PBXContainerItemProxy */;
+		};
+		E5D7778D1E993C9C00FCEF2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E525AF941E95F44B00BAE5C4 /* MobileTrading */;
+			targetProxy = E5D7778C1E993C9C00FCEF2D /* PBXContainerItemProxy */;
+		};
+		E5D777A11E99408000FCEF2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E525AF941E95F44B00BAE5C4 /* MobileTrading */;
+			targetProxy = E5D777A01E99408000FCEF2D /* PBXContainerItemProxy */;
+		};
+		E5D777C71E99414F00FCEF2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E525AF941E95F44B00BAE5C4 /* MobileTrading */;
+			targetProxy = E5D777C61E99414F00FCEF2D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -586,7 +1118,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -631,7 +1163,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -645,11 +1177,14 @@
 			baseConfigurationReference = EDDDBDB3D6558321B3B42B05 /* Pods-MobileTrading.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MobileTrading/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahdenglish.MobileTrading;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MobileTrading-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -659,11 +1194,13 @@
 			baseConfigurationReference = FAD3A2514DE8E65672C9F0DE /* Pods-MobileTrading.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MobileTrading/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahdenglish.MobileTrading;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MobileTrading-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -730,6 +1267,109 @@
 			};
 			name = Release;
 		};
+		E5D7778F1E993C9C00FCEF2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D130D6EDEAD79F09F99B354 /* Pods-GzipTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = C2MD5G6WC2;
+				INFOPLIST_FILE = GzipTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahdenglish.GzipTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileTrading.app/MobileTrading";
+			};
+			name = Debug;
+		};
+		E5D777901E993C9C00FCEF2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA018931CC0636C16C79393E /* Pods-GzipTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = C2MD5G6WC2;
+				INFOPLIST_FILE = GzipTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahdenglish.GzipTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileTrading.app/MobileTrading";
+			};
+			name = Release;
+		};
+		E5D777A31E99408000FCEF2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 379A6DB7A862417F1BF7B303 /* Pods-CryptoSwiftTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = C2MD5G6WC2;
+				INFOPLIST_FILE = CryptoSwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahdenglish.CryptoSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileTrading.app/MobileTrading";
+			};
+			name = Debug;
+		};
+		E5D777A41E99408000FCEF2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8EB20F4F0C5BC5C953FF2D9 /* Pods-CryptoSwiftTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = C2MD5G6WC2;
+				INFOPLIST_FILE = CryptoSwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahdenglish.CryptoSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileTrading.app/MobileTrading";
+			};
+			name = Release;
+		};
+		E5D777C91E99414F00FCEF2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71D3A1ECC598965B0F95C340 /* Pods-RNCryptorTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = C2MD5G6WC2;
+				INFOPLIST_FILE = RNCryptorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahdenglish.RNCryptorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileTrading.app/MobileTrading";
+			};
+			name = Debug;
+		};
+		E5D777CA1E99414F00FCEF2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3DDACF4E2310733FA098DA5 /* Pods-RNCryptorTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = C2MD5G6WC2;
+				INFOPLIST_FILE = RNCryptorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahdenglish.RNCryptorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileTrading.app/MobileTrading";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -768,6 +1408,31 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		E5D7778E1E993C9C00FCEF2D /* Build configuration list for PBXNativeTarget "GzipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5D7778F1E993C9C00FCEF2D /* Debug */,
+				E5D777901E993C9C00FCEF2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5D777A21E99408000FCEF2D /* Build configuration list for PBXNativeTarget "CryptoSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5D777A31E99408000FCEF2D /* Debug */,
+				E5D777A41E99408000FCEF2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E5D777C81E99414F00FCEF2D /* Build configuration list for PBXNativeTarget "RNCryptorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5D777C91E99414F00FCEF2D /* Debug */,
+				E5D777CA1E99414F00FCEF2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
