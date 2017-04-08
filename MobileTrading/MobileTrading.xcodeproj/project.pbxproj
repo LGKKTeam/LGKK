@@ -17,6 +17,14 @@
 		E525AFA31E95F44B00BAE5C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E525AFA11E95F44B00BAE5C4 /* LaunchScreen.storyboard */; };
 		E525AFAE1E95F44B00BAE5C4 /* MobileTradingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525AFAD1E95F44B00BAE5C4 /* MobileTradingTests.swift */; };
 		E525AFB91E95F44B00BAE5C4 /* MobileTradingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525AFB81E95F44B00BAE5C4 /* MobileTradingUITests.swift */; };
+		E5906A071E9873E000F696FB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59069FE1E9873E000F696FB /* Data.swift */; };
+		E5906A081E9873E000F696FB /* RNCryptorGeneratedVectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A001E9873E000F696FB /* RNCryptorGeneratedVectorTests.swift */; };
+		E5906A091E9873E000F696FB /* GenVectorTests in Resources */ = {isa = PBXBuildFile; fileRef = E5906A011E9873E000F696FB /* GenVectorTests */; };
+		E5906A0A1E9873E000F696FB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5906A021E9873E000F696FB /* Info.plist */; };
+		E5906A0B1E9873E000F696FB /* OverfowingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A031E9873E000F696FB /* OverfowingBuffer.swift */; };
+		E5906A0C1E9873E000F696FB /* RNCryptorPerformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A041E9873E000F696FB /* RNCryptorPerformance.swift */; };
+		E5906A0D1E9873E000F696FB /* RNCryptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A051E9873E000F696FB /* RNCryptorTests.swift */; };
+		E5906A0E1E9873E000F696FB /* VectorTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5906A061E9873E000F696FB /* VectorTestHelpers.swift */; };
 		E5CABEA21E9682800005933D /* flag-assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E5CABEA11E9682800005933D /* flag-assets.bundle */; };
 		E5CABEA41E9682CB0005933D /* FlagKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CABEA31E9682CB0005933D /* FlagKit.swift */; };
 		E5CABEA81E968DF50005933D /* libcompression.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CABEA71E968DF50005933D /* libcompression.tbd */; };
@@ -61,6 +69,14 @@
 		E525AFB41E95F44B00BAE5C4 /* MobileTradingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileTradingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E525AFB81E95F44B00BAE5C4 /* MobileTradingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileTradingUITests.swift; sourceTree = "<group>"; };
 		E525AFBA1E95F44B00BAE5C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E59069FE1E9873E000F696FB /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		E5906A001E9873E000F696FB /* RNCryptorGeneratedVectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNCryptorGeneratedVectorTests.swift; sourceTree = "<group>"; };
+		E5906A011E9873E000F696FB /* GenVectorTests */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GenVectorTests; sourceTree = "<group>"; };
+		E5906A021E9873E000F696FB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5906A031E9873E000F696FB /* OverfowingBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverfowingBuffer.swift; sourceTree = "<group>"; };
+		E5906A041E9873E000F696FB /* RNCryptorPerformance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNCryptorPerformance.swift; sourceTree = "<group>"; };
+		E5906A051E9873E000F696FB /* RNCryptorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNCryptorTests.swift; sourceTree = "<group>"; };
+		E5906A061E9873E000F696FB /* VectorTestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorTestHelpers.swift; sourceTree = "<group>"; };
 		E5CABEA11E9682800005933D /* flag-assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "flag-assets.bundle"; sourceTree = "<group>"; };
 		E5CABEA31E9682CB0005933D /* FlagKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagKit.swift; sourceTree = "<group>"; };
 		E5CABEA71E968DF50005933D /* libcompression.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcompression.tbd; path = usr/lib/libcompression.tbd; sourceTree = SDKROOT; };
@@ -161,6 +177,7 @@
 		E525AFAC1E95F44B00BAE5C4 /* MobileTradingTests */ = {
 			isa = PBXGroup;
 			children = (
+				E59069FC1E9873E000F696FB /* ModulesTests */,
 				E525AFAD1E95F44B00BAE5C4 /* MobileTradingTests.swift */,
 				E525AFAF1E95F44B00BAE5C4 /* Info.plist */,
 			);
@@ -174,6 +191,38 @@
 				E525AFBA1E95F44B00BAE5C4 /* Info.plist */,
 			);
 			path = MobileTradingUITests;
+			sourceTree = "<group>";
+		};
+		E59069FC1E9873E000F696FB /* ModulesTests */ = {
+			isa = PBXGroup;
+			children = (
+				E59069FD1E9873E000F696FB /* RNCryptorTests */,
+			);
+			name = ModulesTests;
+			path = ../../ModulesTests;
+			sourceTree = "<group>";
+		};
+		E59069FD1E9873E000F696FB /* RNCryptorTests */ = {
+			isa = PBXGroup;
+			children = (
+				E59069FE1E9873E000F696FB /* Data.swift */,
+				E59069FF1E9873E000F696FB /* GeneratedTests */,
+				E5906A011E9873E000F696FB /* GenVectorTests */,
+				E5906A021E9873E000F696FB /* Info.plist */,
+				E5906A031E9873E000F696FB /* OverfowingBuffer.swift */,
+				E5906A041E9873E000F696FB /* RNCryptorPerformance.swift */,
+				E5906A051E9873E000F696FB /* RNCryptorTests.swift */,
+				E5906A061E9873E000F696FB /* VectorTestHelpers.swift */,
+			);
+			path = RNCryptorTests;
+			sourceTree = "<group>";
+		};
+		E59069FF1E9873E000F696FB /* GeneratedTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5906A001E9873E000F696FB /* RNCryptorGeneratedVectorTests.swift */,
+			);
+			path = GeneratedTests;
 			sourceTree = "<group>";
 		};
 		E5CABE9E1E96824D0005933D /* Libs */ = {
@@ -332,6 +381,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5906A0A1E9873E000F696FB /* Info.plist in Resources */,
+				E5906A091E9873E000F696FB /* GenVectorTests in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +550,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E525AFAE1E95F44B00BAE5C4 /* MobileTradingTests.swift in Sources */,
+				E5906A0D1E9873E000F696FB /* RNCryptorTests.swift in Sources */,
+				E5906A0E1E9873E000F696FB /* VectorTestHelpers.swift in Sources */,
+				E5906A0B1E9873E000F696FB /* OverfowingBuffer.swift in Sources */,
+				E5906A071E9873E000F696FB /* Data.swift in Sources */,
+				E5906A0C1E9873E000F696FB /* RNCryptorPerformance.swift in Sources */,
+				E5906A081E9873E000F696FB /* RNCryptorGeneratedVectorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

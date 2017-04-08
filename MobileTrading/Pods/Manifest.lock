@@ -135,6 +135,7 @@ PODS:
     - Reusable/View (= 4.0.0)
   - Reusable/Storyboard (4.0.0)
   - Reusable/View (4.0.0)
+  - RNCryptor (5.0.1)
   - RxCocoa (3.3.1):
     - RxSwift (~> 3.3)
   - RxSwift (3.3.1)
@@ -209,6 +210,7 @@ DEPENDENCIES:
   - RealmSwift
   - ReSwift
   - Reusable
+  - RNCryptor (~> 5.0)
   - RxCocoa
   - RxSwift
   - SCLAlertView
@@ -291,6 +293,7 @@ SPEC CHECKSUMS:
   Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
   ReSwift: f0255f4b4f2dacd12c5d97d34d13fc5dad6d6371
   Reusable: 98e5fff1e0e2e00872199699b276dde08ee56c07
+  RNCryptor: 2e352a488779d1a9184ab629be22a7c5bc84acb5
   RxCocoa: 7dcb7a1860fc9cd0e23dae67ab105fc2916670b6
   RxSwift: 8fc9f2de6275a9101d518444e00bf32f1a42caac
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
@@ -314,6 +317,6 @@ SPEC CHECKSUMS:
   Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
   TYAlertController: 502d3dbc5d007e68559400b509c736f60ebc2cc1
 
-PODFILE CHECKSUM: 0dad823fc0822cccef17eb26ee1a7fd2ca8a8f44
+PODFILE CHECKSUM: 0a3a4880cd85d4a342813eec422e974941eea3c0
 
 COCOAPODS: 1.2.0

@@ -7,6 +7,10 @@ target 'MobileTrading' do
   inhibit_all_warnings!
   swift_version = '3.0'
   
+  # Cryptor, use CrytoSwift for all encode/decode/hash
+  pod 'RNCryptor', '~> 5.0'
+  pod 'CryptoSwift'
+  
   # Pods for MobileTrading
   pod 'SignalR-ObjC'
   
@@ -20,8 +24,7 @@ target 'MobileTrading' do
   pod 'CNPPopupController'
   pod 'SCLAlertView'
   pod 'SwiftMessages'
-  # User CrytoSwift for all encode/decode/hash
-  pod 'CryptoSwift'
+  
   pod 'Cartography'
   pod 'Toast'
   # Use Fashion for define UI style by the fastest way I can.
