@@ -76,7 +76,7 @@ open class FlagKit: NSObject {
             return nil
         }
         
-        if let infoFile = assetsBundle.path(forResource: "flags", ofType: "json") {
+        if let infoFile = assetsBundle.path(forResource: "flags_v1", ofType: "json") {
             return self.loadSheetFrom(infoFile)
         }
         
