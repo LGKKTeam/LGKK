@@ -1,9 +1,9 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '9.0'
 use_frameworks!
+inhibit_all_warnings!
 
 target 'MobileTrading' do
-    inhibit_all_warnings!
     swift_version = '3.0'
     
     pod 'libPhoneNumber-iOS'
@@ -22,6 +22,7 @@ target 'MobileTrading' do
     pod 'GzipSwift'
     pod 'Zip'
     pod 'SSZipArchive'
+    pod 'APNGKit', '~> 0.6'
     
     # Pods for MobileTrading
 #    pod 'SignalR-ObjC'
@@ -122,8 +123,12 @@ end
 
 target 'SSZipArchiveTests' do
     inherit! :search_paths
-    inhibit_all_warnings!
     pod 'SSZipArchive'
+end
+
+target 'APNGKitTests' do
+    inherit! :search_paths
+    pod 'APNGKit', '~> 0.6'
 end
 
 post_install do |installer|

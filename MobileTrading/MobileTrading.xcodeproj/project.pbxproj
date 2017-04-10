@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AFB905ECE9E2ECCB8FFAEE6 /* Pods_MobileTradingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C90458373B480566F5CB5D9 /* Pods_MobileTradingTests.framework */; };
+		12C2232D1CAB489615EF4728 /* Pods_APNGKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE0DD08B0975E44F02BA434 /* Pods_APNGKitTests.framework */; };
 		2E5ABE482C1AA74FE51A4E55 /* Pods_MobileTrading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501F4CB39FCC850C7C4425 /* Pods_MobileTrading.framework */; };
 		C65CFFF2EA1CB036CB5E206C /* Pods_RNCryptorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09F3500A6583A94E71351FB /* Pods_RNCryptorTests.framework */; };
 		CBECA249A20BD07BEF56ADA5 /* Pods_SSZipArchiveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C93F12940B2AE57D5244BEE /* Pods_SSZipArchiveTests.framework */; };
@@ -82,6 +83,31 @@
 		E5E247BE1E9BC9F30063D4B8 /* 6.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E5E247AD1E9BC9F30063D4B8 /* 6.m4a */; };
 		E5E247BF1E9BC9F30063D4B8 /* 7.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E5E247AE1E9BC9F30063D4B8 /* 7.m4a */; };
 		E5E247C01E9BC9F30063D4B8 /* SSZipArchiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E247AF1E9BC9F30063D4B8 /* SSZipArchiveTests.m */; };
+		E5E247E81E9BCEBF0063D4B8 /* APNGImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E247D01E9BCEBF0063D4B8 /* APNGImageCacheTests.swift */; };
+		E5E247E91E9BCEBF0063D4B8 /* APNGImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E247D11E9BCEBF0063D4B8 /* APNGImageTests.swift */; };
+		E5E247EA1E9BCEBF0063D4B8 /* APNGImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E247D21E9BCEBF0063D4B8 /* APNGImageViewTests.swift */; };
+		E5E247EB1E9BCEBF0063D4B8 /* APNGKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E247D31E9BCEBF0063D4B8 /* APNGKitTests.swift */; };
+		E5E247EC1E9BCEBF0063D4B8 /* DisassemblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E247D41E9BCEBF0063D4B8 /* DisassemblerTests.swift */; };
+		E5E247ED1E9BCEBF0063D4B8 /* Fundamental Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E247D51E9BCEBF0063D4B8 /* Fundamental Tests.swift */; };
+		E5E247EE1E9BCEBF0063D4B8 /* LibAPNGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E247D61E9BCEBF0063D4B8 /* LibAPNGTests.swift */; };
+		E5E247EF1E9BCEBF0063D4B8 /* LibPNGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E247D71E9BCEBF0063D4B8 /* LibPNGTests.swift */; };
+		E5E247F01E9BCEBF0063D4B8 /* NSBundle+APNGKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E247D81E9BCEBF0063D4B8 /* NSBundle+APNGKitTests.swift */; };
+		E5E247F11E9BCEBF0063D4B8 /* PNGSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E247D91E9BCEBF0063D4B8 /* PNGSource.swift */; };
+		E5E247F21E9BCEBF0063D4B8 /* ReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E247DA1E9BCEBF0063D4B8 /* ReaderTests.swift */; };
+		E5E247F31E9BCEBF0063D4B8 /* APNG-cube.apng in Resources */ = {isa = PBXBuildFile; fileRef = E5E247DC1E9BCEBF0063D4B8 /* APNG-cube.apng */; };
+		E5E247F41E9BCEBF0063D4B8 /* APNG-Icos4D.apng in Resources */ = {isa = PBXBuildFile; fileRef = E5E247DD1E9BCEBF0063D4B8 /* APNG-Icos4D.apng */; };
+		E5E247F51E9BCEBF0063D4B8 /* ball.apng in Resources */ = {isa = PBXBuildFile; fileRef = E5E247DE1E9BCEBF0063D4B8 /* ball.apng */; };
+		E5E247F61E9BCEBF0063D4B8 /* elephant_apng.apng in Resources */ = {isa = PBXBuildFile; fileRef = E5E247DF1E9BCEBF0063D4B8 /* elephant_apng.apng */; };
+		E5E247F71E9BCEBF0063D4B8 /* elephant_apng@2x.apng in Resources */ = {isa = PBXBuildFile; fileRef = E5E247E01E9BCEBF0063D4B8 /* elephant_apng@2x.apng */; };
+		E5E247F81E9BCEBF0063D4B8 /* minimalAPNG.apng in Resources */ = {isa = PBXBuildFile; fileRef = E5E247E11E9BCEBF0063D4B8 /* minimalAPNG.apng */; };
+		E5E247F91E9BCEBF0063D4B8 /* over_background.apng in Resources */ = {isa = PBXBuildFile; fileRef = E5E247E21E9BCEBF0063D4B8 /* over_background.apng */; };
+		E5E247FA1E9BCEBF0063D4B8 /* over_none.apng in Resources */ = {isa = PBXBuildFile; fileRef = E5E247E31E9BCEBF0063D4B8 /* over_none.apng */; };
+		E5E247FB1E9BCEBF0063D4B8 /* over_previous.apng in Resources */ = {isa = PBXBuildFile; fileRef = E5E247E41E9BCEBF0063D4B8 /* over_previous.apng */; };
+		E5E247FC1E9BCEBF0063D4B8 /* pyani.apng in Resources */ = {isa = PBXBuildFile; fileRef = E5E247E51E9BCEBF0063D4B8 /* pyani.apng */; };
+		E5E247FD1E9BCEBF0063D4B8 /* spinfox.apng in Resources */ = {isa = PBXBuildFile; fileRef = E5E247E61E9BCEBF0063D4B8 /* spinfox.apng */; };
+		E5E247FE1E9BCEBF0063D4B8 /* XCTAssertSwiftError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E247E71E9BCEBF0063D4B8 /* XCTAssertSwiftError.swift */; };
+		E5E248011E9BD3CE0063D4B8 /* demo.png in Resources */ = {isa = PBXBuildFile; fileRef = E5E247FF1E9BD3CE0063D4B8 /* demo.png */; };
+		E5E248021E9BD3CE0063D4B8 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E5E248001E9BD3CE0063D4B8 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,18 +160,28 @@
 			remoteGlobalIDString = E525AF941E95F44B00BAE5C4;
 			remoteInfo = MobileTrading;
 		};
+		E5E247CB1E9BCCFC0063D4B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E525AF8D1E95F44B00BAE5C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E525AF941E95F44B00BAE5C4;
+			remoteInfo = MobileTrading;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00E585FD138B86E84C595E0C /* Pods-APNGKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APNGKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-APNGKitTests/Pods-APNGKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		0D130D6EDEAD79F09F99B354 /* Pods-GzipTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GzipTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GzipTests/Pods-GzipTests.debug.xcconfig"; sourceTree = "<group>"; };
 		174711E5EA32688B3D07A995 /* Pods_ZipTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZipTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C90458373B480566F5CB5D9 /* Pods_MobileTradingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTradingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D0B652C2E82F8D3E62D2995 /* Pods_CryptoSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EE0DD08B0975E44F02BA434 /* Pods_APNGKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APNGKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29417CDCA19910BE815E66A0 /* Pods-MobileTradingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTradingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTradingUITests/Pods-MobileTradingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		379A6DB7A862417F1BF7B303 /* Pods-CryptoSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoSwiftTests/Pods-CryptoSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4F2AD3DB7890C7B01663C08B /* Pods-ZipTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZipTests/Pods-ZipTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A065D63AFBE785C70DE7E57 /* Pods-MobileTradingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTradingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTradingTests/Pods-MobileTradingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5CC78CDF92091C2875F5416A /* Pods_MobileTradingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTradingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66C041665851D1CDB3AE8722 /* Pods-APNGKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APNGKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-APNGKitTests/Pods-APNGKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		71D3A1ECC598965B0F95C340 /* Pods-RNCryptorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCryptorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RNCryptorTests/Pods-RNCryptorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9300C9217DC7208D8EC598E4 /* Pods-SSZipArchiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSZipArchiveTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SSZipArchiveTests/Pods-SSZipArchiveTests.release.xcconfig"; sourceTree = "<group>"; };
 		9C93F12940B2AE57D5244BEE /* Pods_SSZipArchiveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSZipArchiveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,6 +278,33 @@
 		E5E247AD1E9BC9F30063D4B8 /* 6.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 6.m4a; sourceTree = "<group>"; };
 		E5E247AE1E9BC9F30063D4B8 /* 7.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 7.m4a; sourceTree = "<group>"; };
 		E5E247AF1E9BC9F30063D4B8 /* SSZipArchiveTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSZipArchiveTests.m; path = ../../ModulesTests/SSZipArchiveTests/SSZipArchiveTests.m; sourceTree = "<group>"; };
+		E5E247C61E9BCCFC0063D4B8 /* APNGKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APNGKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E247CA1E9BCCFC0063D4B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5E247D01E9BCEBF0063D4B8 /* APNGImageCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APNGImageCacheTests.swift; path = ../../ModulesTests/APNGKitTests/APNGImageCacheTests.swift; sourceTree = "<group>"; };
+		E5E247D11E9BCEBF0063D4B8 /* APNGImageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APNGImageTests.swift; path = ../../ModulesTests/APNGKitTests/APNGImageTests.swift; sourceTree = "<group>"; };
+		E5E247D21E9BCEBF0063D4B8 /* APNGImageViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APNGImageViewTests.swift; path = ../../ModulesTests/APNGKitTests/APNGImageViewTests.swift; sourceTree = "<group>"; };
+		E5E247D31E9BCEBF0063D4B8 /* APNGKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APNGKitTests.swift; path = ../../ModulesTests/APNGKitTests/APNGKitTests.swift; sourceTree = "<group>"; };
+		E5E247D41E9BCEBF0063D4B8 /* DisassemblerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisassemblerTests.swift; path = ../../ModulesTests/APNGKitTests/DisassemblerTests.swift; sourceTree = "<group>"; };
+		E5E247D51E9BCEBF0063D4B8 /* Fundamental Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Fundamental Tests.swift"; path = "../../ModulesTests/APNGKitTests/Fundamental Tests.swift"; sourceTree = "<group>"; };
+		E5E247D61E9BCEBF0063D4B8 /* LibAPNGTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LibAPNGTests.swift; path = ../../ModulesTests/APNGKitTests/LibAPNGTests.swift; sourceTree = "<group>"; };
+		E5E247D71E9BCEBF0063D4B8 /* LibPNGTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LibPNGTests.swift; path = ../../ModulesTests/APNGKitTests/LibPNGTests.swift; sourceTree = "<group>"; };
+		E5E247D81E9BCEBF0063D4B8 /* NSBundle+APNGKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSBundle+APNGKitTests.swift"; path = "../../ModulesTests/APNGKitTests/NSBundle+APNGKitTests.swift"; sourceTree = "<group>"; };
+		E5E247D91E9BCEBF0063D4B8 /* PNGSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PNGSource.swift; path = ../../ModulesTests/APNGKitTests/PNGSource.swift; sourceTree = "<group>"; };
+		E5E247DA1E9BCEBF0063D4B8 /* ReaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReaderTests.swift; path = ../../ModulesTests/APNGKitTests/ReaderTests.swift; sourceTree = "<group>"; };
+		E5E247DC1E9BCEBF0063D4B8 /* APNG-cube.apng */ = {isa = PBXFileReference; lastKnownFileType = file; path = "APNG-cube.apng"; sourceTree = "<group>"; };
+		E5E247DD1E9BCEBF0063D4B8 /* APNG-Icos4D.apng */ = {isa = PBXFileReference; lastKnownFileType = file; path = "APNG-Icos4D.apng"; sourceTree = "<group>"; };
+		E5E247DE1E9BCEBF0063D4B8 /* ball.apng */ = {isa = PBXFileReference; lastKnownFileType = file; path = ball.apng; sourceTree = "<group>"; };
+		E5E247DF1E9BCEBF0063D4B8 /* elephant_apng.apng */ = {isa = PBXFileReference; lastKnownFileType = file; path = elephant_apng.apng; sourceTree = "<group>"; };
+		E5E247E01E9BCEBF0063D4B8 /* elephant_apng@2x.apng */ = {isa = PBXFileReference; lastKnownFileType = file; path = "elephant_apng@2x.apng"; sourceTree = "<group>"; };
+		E5E247E11E9BCEBF0063D4B8 /* minimalAPNG.apng */ = {isa = PBXFileReference; lastKnownFileType = file; path = minimalAPNG.apng; sourceTree = "<group>"; };
+		E5E247E21E9BCEBF0063D4B8 /* over_background.apng */ = {isa = PBXFileReference; lastKnownFileType = file; path = over_background.apng; sourceTree = "<group>"; };
+		E5E247E31E9BCEBF0063D4B8 /* over_none.apng */ = {isa = PBXFileReference; lastKnownFileType = file; path = over_none.apng; sourceTree = "<group>"; };
+		E5E247E41E9BCEBF0063D4B8 /* over_previous.apng */ = {isa = PBXFileReference; lastKnownFileType = file; path = over_previous.apng; sourceTree = "<group>"; };
+		E5E247E51E9BCEBF0063D4B8 /* pyani.apng */ = {isa = PBXFileReference; lastKnownFileType = file; path = pyani.apng; sourceTree = "<group>"; };
+		E5E247E61E9BCEBF0063D4B8 /* spinfox.apng */ = {isa = PBXFileReference; lastKnownFileType = file; path = spinfox.apng; sourceTree = "<group>"; };
+		E5E247E71E9BCEBF0063D4B8 /* XCTAssertSwiftError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XCTAssertSwiftError.swift; path = ../../ModulesTests/APNGKitTests/XCTAssertSwiftError.swift; sourceTree = "<group>"; };
+		E5E247FF1E9BD3CE0063D4B8 /* demo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo.png; sourceTree = "<group>"; };
+		E5E248001E9BD3CE0063D4B8 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		EA018931CC0636C16C79393E /* Pods-GzipTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GzipTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GzipTests/Pods-GzipTests.release.xcconfig"; sourceTree = "<group>"; };
 		EDDDBDB3D6558321B3B42B05 /* Pods-MobileTrading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTrading.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTrading/Pods-MobileTrading.debug.xcconfig"; sourceTree = "<group>"; };
 		FAD3A2514DE8E65672C9F0DE /* Pods-MobileTrading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTrading.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTrading/Pods-MobileTrading.release.xcconfig"; sourceTree = "<group>"; };
@@ -313,6 +376,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5E247C31E9BCCFC0063D4B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12C2232D1CAB489615EF4728 /* Pods_APNGKitTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -335,6 +406,8 @@
 				C2B18D6A0D55A06E419C05E0 /* Pods-ZipTests.release.xcconfig */,
 				9E648F8D79868BAD3818B94D /* Pods-SSZipArchiveTests.debug.xcconfig */,
 				9300C9217DC7208D8EC598E4 /* Pods-SSZipArchiveTests.release.xcconfig */,
+				66C041665851D1CDB3AE8722 /* Pods-APNGKitTests.debug.xcconfig */,
+				00E585FD138B86E84C595E0C /* Pods-APNGKitTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -351,6 +424,7 @@
 				C09F3500A6583A94E71351FB /* Pods_RNCryptorTests.framework */,
 				174711E5EA32688B3D07A995 /* Pods_ZipTests.framework */,
 				9C93F12940B2AE57D5244BEE /* Pods_SSZipArchiveTests.framework */,
+				1EE0DD08B0975E44F02BA434 /* Pods_APNGKitTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -360,13 +434,8 @@
 			children = (
 				E5CABE9E1E96824D0005933D /* Libs */,
 				E525AF971E95F44B00BAE5C4 /* MobileTrading */,
-				E525AFAC1E95F44B00BAE5C4 /* MobileTradingTests */,
-				E525AFB71E95F44B00BAE5C4 /* MobileTradingUITests */,
-				E5D777881E993C9C00FCEF2D /* GzipTests */,
-				E5D7779C1E99408000FCEF2D /* CryptoSwiftTests */,
-				E5D777C21E99414F00FCEF2D /* RNCryptorTests */,
-				E5D777ED1E99CA3200FCEF2D /* ZipTests */,
-				E5E247911E9BC8160063D4B8 /* SSZipArchiveTests */,
+				E5E247C11E9BCC770063D4B8 /* AllTests */,
+				E5E247C71E9BCCFC0063D4B8 /* APNGKitTests */,
 				E525AF961E95F44B00BAE5C4 /* Products */,
 				89CF864E07D31887339EEC15 /* Pods */,
 				D3BFF14FF0403CBE4EC2F357 /* Frameworks */,
@@ -385,6 +454,7 @@
 				E5D777C11E99414F00FCEF2D /* RNCryptorTests.xctest */,
 				E5D777EC1E99CA3200FCEF2D /* ZipTests.xctest */,
 				E5E247901E9BC8160063D4B8 /* SSZipArchiveTests.xctest */,
+				E5E247C61E9BCCFC0063D4B8 /* APNGKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -604,6 +674,62 @@
 			path = ../../ModulesTests/SSZipArchiveTests/Multi_Zip_Test;
 			sourceTree = "<group>";
 		};
+		E5E247C11E9BCC770063D4B8 /* AllTests */ = {
+			isa = PBXGroup;
+			children = (
+				E525AFAC1E95F44B00BAE5C4 /* MobileTradingTests */,
+				E525AFB71E95F44B00BAE5C4 /* MobileTradingUITests */,
+				E5D777881E993C9C00FCEF2D /* GzipTests */,
+				E5D7779C1E99408000FCEF2D /* CryptoSwiftTests */,
+				E5D777C21E99414F00FCEF2D /* RNCryptorTests */,
+				E5D777ED1E99CA3200FCEF2D /* ZipTests */,
+				E5E247911E9BC8160063D4B8 /* SSZipArchiveTests */,
+			);
+			name = AllTests;
+			sourceTree = "<group>";
+		};
+		E5E247C71E9BCCFC0063D4B8 /* APNGKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5E247D01E9BCEBF0063D4B8 /* APNGImageCacheTests.swift */,
+				E5E247D11E9BCEBF0063D4B8 /* APNGImageTests.swift */,
+				E5E247D21E9BCEBF0063D4B8 /* APNGImageViewTests.swift */,
+				E5E247D31E9BCEBF0063D4B8 /* APNGKitTests.swift */,
+				E5E247D41E9BCEBF0063D4B8 /* DisassemblerTests.swift */,
+				E5E247D51E9BCEBF0063D4B8 /* Fundamental Tests.swift */,
+				E5E247D61E9BCEBF0063D4B8 /* LibAPNGTests.swift */,
+				E5E247D71E9BCEBF0063D4B8 /* LibPNGTests.swift */,
+				E5E247D81E9BCEBF0063D4B8 /* NSBundle+APNGKitTests.swift */,
+				E5E247D91E9BCEBF0063D4B8 /* PNGSource.swift */,
+				E5E247DA1E9BCEBF0063D4B8 /* ReaderTests.swift */,
+				E5E247DB1E9BCEBF0063D4B8 /* TestImages */,
+				E5E247E71E9BCEBF0063D4B8 /* XCTAssertSwiftError.swift */,
+				E5E247CA1E9BCCFC0063D4B8 /* Info.plist */,
+			);
+			path = APNGKitTests;
+			sourceTree = "<group>";
+		};
+		E5E247DB1E9BCEBF0063D4B8 /* TestImages */ = {
+			isa = PBXGroup;
+			children = (
+				E5E247FF1E9BD3CE0063D4B8 /* demo.png */,
+				E5E248001E9BD3CE0063D4B8 /* logo.png */,
+				E5E247DC1E9BCEBF0063D4B8 /* APNG-cube.apng */,
+				E5E247DD1E9BCEBF0063D4B8 /* APNG-Icos4D.apng */,
+				E5E247DE1E9BCEBF0063D4B8 /* ball.apng */,
+				E5E247DF1E9BCEBF0063D4B8 /* elephant_apng.apng */,
+				E5E247E01E9BCEBF0063D4B8 /* elephant_apng@2x.apng */,
+				E5E247E11E9BCEBF0063D4B8 /* minimalAPNG.apng */,
+				E5E247E21E9BCEBF0063D4B8 /* over_background.apng */,
+				E5E247E31E9BCEBF0063D4B8 /* over_none.apng */,
+				E5E247E41E9BCEBF0063D4B8 /* over_previous.apng */,
+				E5E247E51E9BCEBF0063D4B8 /* pyani.apng */,
+				E5E247E61E9BCEBF0063D4B8 /* spinfox.apng */,
+			);
+			name = TestImages;
+			path = ../../ModulesTests/APNGKitTests/TestImages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -774,6 +900,27 @@
 			productReference = E5E247901E9BC8160063D4B8 /* SSZipArchiveTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E5E247C51E9BCCFC0063D4B8 /* APNGKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5E247CD1E9BCCFC0063D4B8 /* Build configuration list for PBXNativeTarget "APNGKitTests" */;
+			buildPhases = (
+				A0576E10E69A0FB5A74137E8 /* [CP] Check Pods Manifest.lock */,
+				E5E247C21E9BCCFC0063D4B8 /* Sources */,
+				E5E247C31E9BCCFC0063D4B8 /* Frameworks */,
+				E5E247C41E9BCCFC0063D4B8 /* Resources */,
+				2B650C1918873D0D1FB75A5F /* [CP] Embed Pods Frameworks */,
+				72994A42F5FF3AEF9A7FE0A6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5E247CC1E9BCCFC0063D4B8 /* PBXTargetDependency */,
+			);
+			name = APNGKitTests;
+			productName = APNGKitTests;
+			productReference = E5E247C61E9BCCFC0063D4B8 /* APNGKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -835,6 +982,13 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = E525AF941E95F44B00BAE5C4;
 					};
+					E5E247C51E9BCCFC0063D4B8 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = C2MD5G6WC2;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E525AF941E95F44B00BAE5C4;
+					};
 				};
 			};
 			buildConfigurationList = E525AF901E95F44B00BAE5C4 /* Build configuration list for PBXProject "MobileTrading" */;
@@ -858,6 +1012,7 @@
 				E5D777C01E99414F00FCEF2D /* RNCryptorTests */,
 				E5D777EB1E99CA3200FCEF2D /* ZipTests */,
 				E5E2478F1E9BC8160063D4B8 /* SSZipArchiveTests */,
+				E5E247C51E9BCCFC0063D4B8 /* APNGKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -948,6 +1103,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5E247C41E9BCCFC0063D4B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E248021E9BD3CE0063D4B8 /* logo.png in Resources */,
+				E5E247F61E9BCEBF0063D4B8 /* elephant_apng.apng in Resources */,
+				E5E247FD1E9BCEBF0063D4B8 /* spinfox.apng in Resources */,
+				E5E247F81E9BCEBF0063D4B8 /* minimalAPNG.apng in Resources */,
+				E5E247F71E9BCEBF0063D4B8 /* elephant_apng@2x.apng in Resources */,
+				E5E247FC1E9BCEBF0063D4B8 /* pyani.apng in Resources */,
+				E5E247FB1E9BCEBF0063D4B8 /* over_previous.apng in Resources */,
+				E5E247F51E9BCEBF0063D4B8 /* ball.apng in Resources */,
+				E5E247F31E9BCEBF0063D4B8 /* APNG-cube.apng in Resources */,
+				E5E248011E9BD3CE0063D4B8 /* demo.png in Resources */,
+				E5E247FA1E9BCEBF0063D4B8 /* over_none.apng in Resources */,
+				E5E247F41E9BCEBF0063D4B8 /* APNG-Icos4D.apng in Resources */,
+				E5E247F91E9BCEBF0063D4B8 /* over_background.apng in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1009,6 +1184,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2B650C1918873D0D1FB75A5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-APNGKitTests/Pods-APNGKitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2BD5A2EF689B8FB4DD13B046 /* [CP] Embed Pods Frameworks */ = {
@@ -1131,6 +1321,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileTradingTests/Pods-MobileTradingTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		72994A42F5FF3AEF9A7FE0A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-APNGKitTests/Pods-APNGKitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8202450C54197C09E75ECF5B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1189,6 +1394,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileTradingUITests/Pods-MobileTradingUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0576E10E69A0FB5A74137E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A115240BE1EC5AAA9A604C2F /* [CP] Copy Pods Resources */ = {
@@ -1407,6 +1627,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5E247C21E9BCCFC0063D4B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E247ED1E9BCEBF0063D4B8 /* Fundamental Tests.swift in Sources */,
+				E5E247F01E9BCEBF0063D4B8 /* NSBundle+APNGKitTests.swift in Sources */,
+				E5E247E81E9BCEBF0063D4B8 /* APNGImageCacheTests.swift in Sources */,
+				E5E247EE1E9BCEBF0063D4B8 /* LibAPNGTests.swift in Sources */,
+				E5E247FE1E9BCEBF0063D4B8 /* XCTAssertSwiftError.swift in Sources */,
+				E5E247EF1E9BCEBF0063D4B8 /* LibPNGTests.swift in Sources */,
+				E5E247E91E9BCEBF0063D4B8 /* APNGImageTests.swift in Sources */,
+				E5E247F21E9BCEBF0063D4B8 /* ReaderTests.swift in Sources */,
+				E5E247EB1E9BCEBF0063D4B8 /* APNGKitTests.swift in Sources */,
+				E5E247EC1E9BCEBF0063D4B8 /* DisassemblerTests.swift in Sources */,
+				E5E247F11E9BCEBF0063D4B8 /* PNGSource.swift in Sources */,
+				E5E247EA1E9BCEBF0063D4B8 /* APNGImageViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1444,6 +1683,11 @@
 			isa = PBXTargetDependency;
 			target = E525AF941E95F44B00BAE5C4 /* MobileTrading */;
 			targetProxy = E5E247951E9BC8160063D4B8 /* PBXContainerItemProxy */;
+		};
+		E5E247CC1E9BCCFC0063D4B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E525AF941E95F44B00BAE5C4 /* MobileTrading */;
+			targetProxy = E5E247CB1E9BCCFC0063D4B8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1827,6 +2071,41 @@
 			};
 			name = Release;
 		};
+		E5E247CE1E9BCCFC0063D4B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66C041665851D1CDB3AE8722 /* Pods-APNGKitTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = C2MD5G6WC2;
+				INFOPLIST_FILE = APNGKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahdenglish.APNGKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileTrading.app/MobileTrading";
+			};
+			name = Debug;
+		};
+		E5E247CF1E9BCCFC0063D4B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00E585FD138B86E84C595E0C /* Pods-APNGKitTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = C2MD5G6WC2;
+				INFOPLIST_FILE = APNGKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahdenglish.APNGKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileTrading.app/MobileTrading";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1907,6 +2186,15 @@
 			buildConfigurations = (
 				E5E247971E9BC8160063D4B8 /* Debug */,
 				E5E247981E9BC8160063D4B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5E247CD1E9BCCFC0063D4B8 /* Build configuration list for PBXNativeTarget "APNGKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5E247CE1E9BCCFC0063D4B8 /* Debug */,
+				E5E247CF1E9BCCFC0063D4B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

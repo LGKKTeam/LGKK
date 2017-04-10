@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.4.0)
+  - APNGKit (0.6.0)
   - CryptoSwift (0.6.8)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
@@ -36,6 +37,7 @@ PODS:
   - Zip (0.7.0)
 
 DEPENDENCIES:
+  - APNGKit (~> 0.6)
   - CryptoSwift
   - GzipSwift
   - IQKeyboardManagerSwift
@@ -54,6 +56,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  APNGKit: cc285242fc27224b754f9d231c40ac4bddf39ba3
   CryptoSwift: f21ea03ed3a94e79d241648ce26652cd4810508a
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   GzipSwift: 11ddb2bf253b1cd7b60bb169da20f62ac4348769
@@ -73,6 +76,6 @@ SPEC CHECKSUMS:
   SwifterSwift: 76bf942a17769ebf8fb77f89138cbbd525c039c0
   Zip: e34513299ac38c0686d5b24504da7ce343799ab9
 
-PODFILE CHECKSUM: 222ef425aae3762702a4cc951ae966b6b3bbe600
+PODFILE CHECKSUM: 641b4cb1c2dcda0d4b84821de9451bca16ddc98a
 
 COCOAPODS: 1.2.0
