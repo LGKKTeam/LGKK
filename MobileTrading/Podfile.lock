@@ -43,7 +43,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - libPhoneNumber-iOS
   - Moya
-  - Nimble
+  - Nimble (~> 6.0.0)
   - Nimble-Snapshots
   - ObjectMapper
   - Quick
@@ -76,6 +76,6 @@ SPEC CHECKSUMS:
   SwifterSwift: 76bf942a17769ebf8fb77f89138cbbd525c039c0
   Zip: e34513299ac38c0686d5b24504da7ce343799ab9
 
-PODFILE CHECKSUM: 641b4cb1c2dcda0d4b84821de9451bca16ddc98a
+PODFILE CHECKSUM: e62b40ad024252cdb8d89214cf8c5e7a7730c217
 
 COCOAPODS: 1.2.0

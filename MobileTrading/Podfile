@@ -87,7 +87,7 @@ target 'MobileTrading' do
         inherit! :search_paths
         # Pods for testing
         pod 'Quick'
-        pod 'Nimble'
+        pod 'Nimble', '~> 6.0.0'
         pod 'Nimble-Snapshots'
     end
     
@@ -95,7 +95,7 @@ target 'MobileTrading' do
         inherit! :search_paths
         # Pods for testing
         pod 'Quick'
-        pod 'Nimble'
+        pod 'Nimble', '~> 6.0.0'
         pod 'Nimble-Snapshots'
     end
 end
@@ -129,6 +129,11 @@ end
 target 'APNGKitTests' do
     inherit! :search_paths
     pod 'APNGKit', '~> 0.6'
+end
+
+target 'NimbleTests' do
+    inherit! :search_paths
+    pod 'Nimble', '~> 6.0.0'
 end
 
 post_install do |installer|
