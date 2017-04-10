@@ -31,6 +31,7 @@ PODS:
   - Result (3.2.1)
   - ReSwift (3.0.0)
   - RNCryptor (5.0.1)
+  - SSZipArchive (1.7)
   - SwifterSwift (1.6.3)
   - Zip (0.7.0)
 
@@ -47,6 +48,7 @@ DEPENDENCIES:
   - RealmSwift
   - ReSwift
   - RNCryptor
+  - SSZipArchive
   - SwifterSwift
   - Zip
 
@@ -67,9 +69,10 @@ SPEC CHECKSUMS:
   Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
   ReSwift: f0255f4b4f2dacd12c5d97d34d13fc5dad6d6371
   RNCryptor: 2e352a488779d1a9184ab629be22a7c5bc84acb5
+  SSZipArchive: 63f8e11cfcc33e03e4cd666b4359ea8bd6facd0c
   SwifterSwift: 76bf942a17769ebf8fb77f89138cbbd525c039c0
   Zip: e34513299ac38c0686d5b24504da7ce343799ab9
 
-PODFILE CHECKSUM: 5e0f446c217f8df3bb3b774516c9eb82e61266a9
+PODFILE CHECKSUM: 222ef425aae3762702a4cc951ae966b6b3bbe600
 
 COCOAPODS: 1.2.0

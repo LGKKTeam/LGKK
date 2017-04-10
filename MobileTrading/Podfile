@@ -21,6 +21,7 @@ target 'MobileTrading' do
     # An extension of Data. It enables compress/decompress gzip using zlib.
     pod 'GzipSwift'
     pod 'Zip'
+    pod 'SSZipArchive'
     
     # Pods for MobileTrading
 #    pod 'SignalR-ObjC'
@@ -117,6 +118,12 @@ end
 target 'ZipTests' do
     inherit! :search_paths
     pod 'Zip'
+end
+
+target 'SSZipArchiveTests' do
+    inherit! :search_paths
+    inhibit_all_warnings!
+    pod 'SSZipArchive'
 end
 
 post_install do |installer|
