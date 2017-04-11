@@ -133,18 +133,26 @@ end
 
 target 'NimbleTests' do
     inherit! :search_paths
+    pod 'Quick'
     pod 'Nimble'
+    pod 'Nimble-Snapshots'
 end
 
 target 'QuickTests' do
     inherit! :search_paths
     pod 'Quick'
     pod 'Nimble'
+    pod 'Nimble-Snapshots'
 end
 
 target 'LibPhoneNumberTests' do
     inherit! :search_paths
     pod 'libPhoneNumber-iOS'
+end
+
+target 'SwifterSwiftTests' do
+    inherit! :search_paths
+    pod 'SwifterSwift'
 end
 
 post_install do |installer|
