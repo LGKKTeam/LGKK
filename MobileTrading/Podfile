@@ -142,6 +142,11 @@ target 'QuickTests' do
     pod 'Nimble'
 end
 
+target 'LibPhoneNumberTests' do
+    inherit! :search_paths
+    pod 'libPhoneNumber-iOS'
+end
+
 post_install do |installer|
     puts("Update debug pod settings to speed up build time")
     Dir.glob(File.join("Pods", "**", "Pods*{debug,Private}.xcconfig")).each do |file|

@@ -11,6 +11,7 @@
 		12C2232D1CAB489615EF4728 /* Pods_APNGKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE0DD08B0975E44F02BA434 /* Pods_APNGKitTests.framework */; };
 		2E5ABE482C1AA74FE51A4E55 /* Pods_MobileTrading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501F4CB39FCC850C7C4425 /* Pods_MobileTrading.framework */; };
 		70A3B1096260DB8731936FB4 /* Pods_QuickTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8600EAD1EFC52AE59B949EA /* Pods_QuickTests.framework */; };
+		A18256921D0E4978EECC14B0 /* Pods_LibPhoneNumberTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BED00E98624DEE82AE4C24F /* Pods_LibPhoneNumberTests.framework */; };
 		C65CFFF2EA1CB036CB5E206C /* Pods_RNCryptorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09F3500A6583A94E71351FB /* Pods_RNCryptorTests.framework */; };
 		CBECA249A20BD07BEF56ADA5 /* Pods_SSZipArchiveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C93F12940B2AE57D5244BEE /* Pods_SSZipArchiveTests.framework */; };
 		D3D9B66707E4BD52B51E0623 /* Pods_CryptoSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D0B652C2E82F8D3E62D2995 /* Pods_CryptoSwiftTests.framework */; };
@@ -144,6 +145,10 @@
 		E5E249041E9BE0700063D4B8 /* ThrowAssertionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E248E81E9BE0700063D4B8 /* ThrowAssertionTest.swift */; };
 		E5E249051E9BE0700063D4B8 /* ThrowErrorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E248E91E9BE0700063D4B8 /* ThrowErrorTest.swift */; };
 		E5E2496D1E9C65700063D4B8 /* QuickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E2496C1E9C65700063D4B8 /* QuickTests.swift */; };
+		E5E249801E9D1A7D0063D4B8 /* NBAsYouTypeFormatterTest1.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E2497C1E9D1A7D0063D4B8 /* NBAsYouTypeFormatterTest1.m */; };
+		E5E249811E9D1A7D0063D4B8 /* NBAsYouTypeFormatterTest2.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E2497D1E9D1A7D0063D4B8 /* NBAsYouTypeFormatterTest2.m */; };
+		E5E249821E9D1A7D0063D4B8 /* NBPhoneNumberUtilTest1.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E2497E1E9D1A7D0063D4B8 /* NBPhoneNumberUtilTest1.m */; };
+		E5E249831E9D1A7D0063D4B8 /* NBPhoneNumberUtilTest2.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E2497F1E9D1A7D0063D4B8 /* NBPhoneNumberUtilTest2.m */; };
 		FF312EF2A11DD099DFBFF8F5 /* Pods_NimbleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BFFF8B8724775AA3CB82BC0 /* Pods_NimbleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -218,6 +223,13 @@
 			remoteGlobalIDString = E525AF941E95F44B00BAE5C4;
 			remoteInfo = MobileTrading;
 		};
+		E5E249771E9D19D50063D4B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E525AF8D1E95F44B00BAE5C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E525AF941E95F44B00BAE5C4;
+			remoteInfo = MobileTrading;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -228,12 +240,14 @@
 		1C90458373B480566F5CB5D9 /* Pods_MobileTradingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTradingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D0B652C2E82F8D3E62D2995 /* Pods_CryptoSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EE0DD08B0975E44F02BA434 /* Pods_APNGKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APNGKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2169135913D03367C635B921 /* Pods-LibPhoneNumberTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibPhoneNumberTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibPhoneNumberTests/Pods-LibPhoneNumberTests.debug.xcconfig"; sourceTree = "<group>"; };
 		29417CDCA19910BE815E66A0 /* Pods-MobileTradingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTradingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTradingUITests/Pods-MobileTradingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		379A6DB7A862417F1BF7B303 /* Pods-CryptoSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoSwiftTests/Pods-CryptoSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3BFFF8B8724775AA3CB82BC0 /* Pods_NimbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2DE048DA5BA91AEDCCD1C5 /* Pods-NimbleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NimbleTests/Pods-NimbleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4F2AD3DB7890C7B01663C08B /* Pods-ZipTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZipTests/Pods-ZipTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A065D63AFBE785C70DE7E57 /* Pods-MobileTradingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTradingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTradingTests/Pods-MobileTradingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5BED00E98624DEE82AE4C24F /* Pods_LibPhoneNumberTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibPhoneNumberTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC78CDF92091C2875F5416A /* Pods_MobileTradingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTradingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C041665851D1CDB3AE8722 /* Pods-APNGKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APNGKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-APNGKitTests/Pods-APNGKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6DAA0A5AE65893728FAA7AFD /* Pods-NimbleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NimbleTests/Pods-NimbleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -405,8 +419,15 @@
 		E5E249151E9BE8C20063D4B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5E2496B1E9BF0DD0063D4B8 /* QuickTests_Briding_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickTests_Briding_Header.h; sourceTree = "<group>"; };
 		E5E2496C1E9C65700063D4B8 /* QuickTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickTests.swift; sourceTree = "<group>"; };
+		E5E249721E9D19D50063D4B8 /* LibPhoneNumberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibPhoneNumberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E249761E9D19D50063D4B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5E2497C1E9D1A7D0063D4B8 /* NBAsYouTypeFormatterTest1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBAsYouTypeFormatterTest1.m; path = ../../ModulesTests/LibPhoneNumberTests/NBAsYouTypeFormatterTest1.m; sourceTree = "<group>"; };
+		E5E2497D1E9D1A7D0063D4B8 /* NBAsYouTypeFormatterTest2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBAsYouTypeFormatterTest2.m; path = ../../ModulesTests/LibPhoneNumberTests/NBAsYouTypeFormatterTest2.m; sourceTree = "<group>"; };
+		E5E2497E1E9D1A7D0063D4B8 /* NBPhoneNumberUtilTest1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBPhoneNumberUtilTest1.m; path = ../../ModulesTests/LibPhoneNumberTests/NBPhoneNumberUtilTest1.m; sourceTree = "<group>"; };
+		E5E2497F1E9D1A7D0063D4B8 /* NBPhoneNumberUtilTest2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBPhoneNumberUtilTest2.m; path = ../../ModulesTests/LibPhoneNumberTests/NBPhoneNumberUtilTest2.m; sourceTree = "<group>"; };
 		E8600EAD1EFC52AE59B949EA /* Pods_QuickTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA018931CC0636C16C79393E /* Pods-GzipTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GzipTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GzipTests/Pods-GzipTests.release.xcconfig"; sourceTree = "<group>"; };
+		EDD8DD1AF56CE43BB502ACAA /* Pods-LibPhoneNumberTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibPhoneNumberTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibPhoneNumberTests/Pods-LibPhoneNumberTests.release.xcconfig"; sourceTree = "<group>"; };
 		EDDDBDB3D6558321B3B42B05 /* Pods-MobileTrading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTrading.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTrading/Pods-MobileTrading.debug.xcconfig"; sourceTree = "<group>"; };
 		FAD3A2514DE8E65672C9F0DE /* Pods-MobileTrading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTrading.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTrading/Pods-MobileTrading.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -501,6 +522,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5E2496F1E9D19D50063D4B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A18256921D0E4978EECC14B0 /* Pods_LibPhoneNumberTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -529,6 +558,8 @@
 				6DAA0A5AE65893728FAA7AFD /* Pods-NimbleTests.release.xcconfig */,
 				04BACEE6889EB3F5E1C5C542 /* Pods-QuickTests.debug.xcconfig */,
 				E2B786DBB8C8783BF9AB067F /* Pods-QuickTests.release.xcconfig */,
+				2169135913D03367C635B921 /* Pods-LibPhoneNumberTests.debug.xcconfig */,
+				EDD8DD1AF56CE43BB502ACAA /* Pods-LibPhoneNumberTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -551,6 +582,7 @@
 				1EE0DD08B0975E44F02BA434 /* Pods_APNGKitTests.framework */,
 				3BFFF8B8724775AA3CB82BC0 /* Pods_NimbleTests.framework */,
 				E8600EAD1EFC52AE59B949EA /* Pods_QuickTests.framework */,
+				5BED00E98624DEE82AE4C24F /* Pods_LibPhoneNumberTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -564,6 +596,7 @@
 				E5E247C71E9BCCFC0063D4B8 /* APNGKitTests */,
 				E5E248081E9BD6730063D4B8 /* NimbleTests */,
 				E5E249121E9BE8C20063D4B8 /* QuickTests */,
+				E5E249731E9D19D50063D4B8 /* LibPhoneNumberTests */,
 				E525AF961E95F44B00BAE5C4 /* Products */,
 				89CF864E07D31887339EEC15 /* Pods */,
 				D3BFF14FF0403CBE4EC2F357 /* Frameworks */,
@@ -585,6 +618,7 @@
 				E5E247C61E9BCCFC0063D4B8 /* APNGKitTests.xctest */,
 				E5E248071E9BD6730063D4B8 /* NimbleTests.xctest */,
 				E5E249111E9BE8C10063D4B8 /* QuickTests.xctest */,
+				E5E249721E9D19D50063D4B8 /* LibPhoneNumberTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -931,6 +965,18 @@
 			path = QuickTests;
 			sourceTree = "<group>";
 		};
+		E5E249731E9D19D50063D4B8 /* LibPhoneNumberTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5E2497C1E9D1A7D0063D4B8 /* NBAsYouTypeFormatterTest1.m */,
+				E5E2497D1E9D1A7D0063D4B8 /* NBAsYouTypeFormatterTest2.m */,
+				E5E2497E1E9D1A7D0063D4B8 /* NBPhoneNumberUtilTest1.m */,
+				E5E2497F1E9D1A7D0063D4B8 /* NBPhoneNumberUtilTest2.m */,
+				E5E249761E9D19D50063D4B8 /* Info.plist */,
+			);
+			path = LibPhoneNumberTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1164,6 +1210,27 @@
 			productReference = E5E249111E9BE8C10063D4B8 /* QuickTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E5E249711E9D19D50063D4B8 /* LibPhoneNumberTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5E2497B1E9D19D50063D4B8 /* Build configuration list for PBXNativeTarget "LibPhoneNumberTests" */;
+			buildPhases = (
+				ED76DB7CF5B128C6EA3F8DBF /* [CP] Check Pods Manifest.lock */,
+				E5E2496E1E9D19D50063D4B8 /* Sources */,
+				E5E2496F1E9D19D50063D4B8 /* Frameworks */,
+				E5E249701E9D19D50063D4B8 /* Resources */,
+				8CCD0D51A842B063F0AB8006 /* [CP] Embed Pods Frameworks */,
+				821AF036B85F88B9C9B4458B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5E249781E9D19D50063D4B8 /* PBXTargetDependency */,
+			);
+			name = LibPhoneNumberTests;
+			productName = LibPhoneNumberTests;
+			productReference = E5E249721E9D19D50063D4B8 /* LibPhoneNumberTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1245,6 +1312,12 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = E525AF941E95F44B00BAE5C4;
 					};
+					E5E249711E9D19D50063D4B8 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = C2MD5G6WC2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E525AF941E95F44B00BAE5C4;
+					};
 				};
 			};
 			buildConfigurationList = E525AF901E95F44B00BAE5C4 /* Build configuration list for PBXProject "MobileTrading" */;
@@ -1271,6 +1344,7 @@
 				E5E247C51E9BCCFC0063D4B8 /* APNGKitTests */,
 				E5E248061E9BD6730063D4B8 /* NimbleTests */,
 				E5E249101E9BE8C10063D4B8 /* QuickTests */,
+				E5E249711E9D19D50063D4B8 /* LibPhoneNumberTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1389,6 +1463,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E5E2490F1E9BE8C10063D4B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5E249701E9D19D50063D4B8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1668,6 +1749,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SSZipArchiveTests/Pods-SSZipArchiveTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		821AF036B85F88B9C9B4458B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibPhoneNumberTests/Pods-LibPhoneNumberTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8BB6E6D12CEAFB1385C6D0E4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1681,6 +1777,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NimbleTests/Pods-NimbleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CCD0D51A842B063F0AB8006 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibPhoneNumberTests/Pods-LibPhoneNumberTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		93FD2F1E7397E3048EAEEF48 /* [CP] Check Pods Manifest.lock */ = {
@@ -1846,6 +1957,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZipTests/Pods-ZipTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED76DB7CF5B128C6EA3F8DBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		EE21055E4740D183175B1C1A /* [CP] Check Pods Manifest.lock */ = {
@@ -2057,6 +2183,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5E2496E1E9D19D50063D4B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E249821E9D1A7D0063D4B8 /* NBPhoneNumberUtilTest1.m in Sources */,
+				E5E249801E9D1A7D0063D4B8 /* NBAsYouTypeFormatterTest1.m in Sources */,
+				E5E249831E9D1A7D0063D4B8 /* NBPhoneNumberUtilTest2.m in Sources */,
+				E5E249811E9D1A7D0063D4B8 /* NBAsYouTypeFormatterTest2.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -2109,6 +2246,11 @@
 			isa = PBXTargetDependency;
 			target = E525AF941E95F44B00BAE5C4 /* MobileTrading */;
 			targetProxy = E5E249161E9BE8C20063D4B8 /* PBXContainerItemProxy */;
+		};
+		E5E249781E9D19D50063D4B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E525AF941E95F44B00BAE5C4 /* MobileTrading */;
+			targetProxy = E5E249771E9D19D50063D4B8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2610,6 +2752,38 @@
 			};
 			name = Release;
 		};
+		E5E249791E9D19D50063D4B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2169135913D03367C635B921 /* Pods-LibPhoneNumberTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = C2MD5G6WC2;
+				INFOPLIST_FILE = LibPhoneNumberTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahdenglish.LibPhoneNumberTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileTrading.app/MobileTrading";
+			};
+			name = Debug;
+		};
+		E5E2497A1E9D19D50063D4B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDD8DD1AF56CE43BB502ACAA /* Pods-LibPhoneNumberTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = C2MD5G6WC2;
+				INFOPLIST_FILE = LibPhoneNumberTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahdenglish.LibPhoneNumberTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileTrading.app/MobileTrading";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2720,6 +2894,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		E5E2497B1E9D19D50063D4B8 /* Build configuration list for PBXNativeTarget "LibPhoneNumberTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5E249791E9D19D50063D4B8 /* Debug */,
+				E5E2497A1E9D19D50063D4B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
