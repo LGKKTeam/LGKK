@@ -49,9 +49,9 @@
         XCTAssertEqualObjects(@"+82 51-2", [f inputDigit:@"2"]);
         XCTAssertEqualObjects(@"+82 51-23", [f inputDigit:@"3"]);
         XCTAssertEqualObjects(@"+82 51-234", [f inputDigit:@"4"]);
-        XCTAssertEqualObjects(@"+82 51-234-5", [f inputDigit:@"5"]);
-        XCTAssertEqualObjects(@"+82 51-234-56", [f inputDigit:@"6"]);
-        XCTAssertEqualObjects(@"+82 51-234-567", [f inputDigit:@"7"]);
+        XCTAssertEqualObjects(@"+82 51-2345", [f inputDigit:@"5"]);
+        XCTAssertEqualObjects(@"+82 51-2345-6", [f inputDigit:@"6"]);
+        XCTAssertEqualObjects(@"+82 51-2345-67", [f inputDigit:@"7"]);
         XCTAssertEqualObjects(@"+82 51-234-5678", [f inputDigit:@"8"]);
         
         // +82 2 531 5678
@@ -63,9 +63,9 @@
         XCTAssertEqualObjects(@"+82 25", [f inputDigit:@"5"]);
         XCTAssertEqualObjects(@"+82 2-53", [f inputDigit:@"3"]);
         XCTAssertEqualObjects(@"+82 2-531", [f inputDigit:@"1"]);
-        XCTAssertEqualObjects(@"+82 2-531-5", [f inputDigit:@"5"]);
-        XCTAssertEqualObjects(@"+82 2-531-56", [f inputDigit:@"6"]);
-        XCTAssertEqualObjects(@"+82 2-531-567", [f inputDigit:@"7"]);
+        XCTAssertEqualObjects(@"+82 2-5315", [f inputDigit:@"5"]);
+        XCTAssertEqualObjects(@"+82 2-5315-6", [f inputDigit:@"6"]);
+        XCTAssertEqualObjects(@"+82 2-5315-67", [f inputDigit:@"7"]);
         XCTAssertEqualObjects(@"+82 2-531-5678", [f inputDigit:@"8"]);
         
         // +82 2 3665 5678
@@ -80,7 +80,7 @@
         XCTAssertEqualObjects(@"+82 2-3665", [f inputDigit:@"5"]);
         XCTAssertEqualObjects(@"+82 2-3665-5", [f inputDigit:@"5"]);
         XCTAssertEqualObjects(@"+82 2-3665-56", [f inputDigit:@"6"]);
-        XCTAssertEqualObjects(@"+82 2-3665-567", [f inputDigit:@"7"]);
+        XCTAssertEqualObjects(@"+82 2-366-5567", [f inputDigit:@"7"]);
         XCTAssertEqualObjects(@"+82 2-3665-5678", [f inputDigit:@"8"]);
         
         // 02-114
@@ -108,9 +108,9 @@
         XCTAssertEqualObjects(@"011-4", [f inputDigit:@"4"]);
         XCTAssertEqualObjects(@"011-45", [f inputDigit:@"5"]);
         XCTAssertEqualObjects(@"011-456", [f inputDigit:@"6"]);
-        XCTAssertEqualObjects(@"011-456-7", [f inputDigit:@"7"]);
-        XCTAssertEqualObjects(@"011-456-78", [f inputDigit:@"8"]);
-        XCTAssertEqualObjects(@"011-456-789", [f inputDigit:@"9"]);
+        XCTAssertEqualObjects(@"011-4567", [f inputDigit:@"7"]);
+        XCTAssertEqualObjects(@"011-4567-8", [f inputDigit:@"8"]);
+        XCTAssertEqualObjects(@"011-4567-89", [f inputDigit:@"9"]);
         XCTAssertEqualObjects(@"011-456-7890", [f inputDigit:@"0"]);
         
         // 011-9876-7890
@@ -124,7 +124,7 @@
         XCTAssertEqualObjects(@"011-9876", [f inputDigit:@"6"]);
         XCTAssertEqualObjects(@"011-9876-7", [f inputDigit:@"7"]);
         XCTAssertEqualObjects(@"011-9876-78", [f inputDigit:@"8"]);
-        XCTAssertEqualObjects(@"011-9876-789", [f inputDigit:@"9"]);
+        XCTAssertEqualObjects(@"011-987-6789", [f inputDigit:@"9"]);
         XCTAssertEqualObjects(@"011-9876-7890", [f inputDigit:@"0"]);
     }
     
@@ -204,15 +204,15 @@
         XCTAssertEqualObjects(@"+52 ", [f inputDigit:@"2"]);
         XCTAssertEqualObjects(@"+52 1", [f inputDigit:@"1"]);
         XCTAssertEqualObjects(@"+52 15", [f inputDigit:@"5"]);
-        XCTAssertEqualObjects(@"+52 1 54", [f inputDigit:@"4"]);
-        XCTAssertEqualObjects(@"+52 1 541", [f inputDigit:@"1"]);
-        XCTAssertEqualObjects(@"+52 1 541 2", [f inputDigit:@"2"]);
-        XCTAssertEqualObjects(@"+52 1 541 23", [f inputDigit:@"3"]);
-        XCTAssertEqualObjects(@"+52 1 541 234", [f inputDigit:@"4"]);
-        XCTAssertEqualObjects(@"+52 1 541 234 5", [f inputDigit:@"5"]);
-        XCTAssertEqualObjects(@"+52 1 541 234 56", [f inputDigit:@"6"]);
-        XCTAssertEqualObjects(@"+52 1 541 234 567", [f inputDigit:@"7"]);
-        XCTAssertEqualObjects(@"+52 1 541 234 5678", [f inputDigit:@"8"]);
+        XCTAssertEqualObjects(@"+52154", [f inputDigit:@"4"]);
+        XCTAssertEqualObjects(@"+521541", [f inputDigit:@"1"]);
+        XCTAssertEqualObjects(@"+5215412", [f inputDigit:@"2"]);
+        XCTAssertEqualObjects(@"+52154123", [f inputDigit:@"3"]);
+        XCTAssertEqualObjects(@"+521541234", [f inputDigit:@"4"]);
+        XCTAssertEqualObjects(@"+5215412345", [f inputDigit:@"5"]);
+        XCTAssertEqualObjects(@"+52154123456", [f inputDigit:@"6"]);
+        XCTAssertEqualObjects(@"+521541234567", [f inputDigit:@"7"]);
+        XCTAssertEqualObjects(@"+5215412345678", [f inputDigit:@"8"]);
     }
     
     // testAYTF_International_Toll_Free()
@@ -245,14 +245,14 @@
         XCTAssertEqualObjects(@"+81 ", [f inputDigit:@"1"]);
         XCTAssertEqualObjects(@"+81 5", [f inputDigit:@"5"]);
         XCTAssertEqualObjects(@"+81 50", [f inputDigit:@"0"]);
-        XCTAssertEqualObjects(@"+81 50 2", [f inputDigit:@"2"]);
-        XCTAssertEqualObjects(@"+81 50 23", [f inputDigit:@"3"]);
-        XCTAssertEqualObjects(@"+81 50 234", [f inputDigit:@"4"]);
-        XCTAssertEqualObjects(@"+81 50 2345", [f inputDigit:@"5"]);
-        XCTAssertEqualObjects(@"+81 50 2345 6", [f inputDigit:@"6"]);
-        XCTAssertEqualObjects(@"+81 50 2345 67", [f inputDigit:@"7"]);
-        XCTAssertEqualObjects(@"+81 50 2345 678", [f inputDigit:@"8"]);
-        XCTAssertEqualObjects(@"+81 50 2345 6789", [f inputDigit:@"9"]);
+        XCTAssertEqualObjects(@"+81 50-2", [f inputDigit:@"2"]);
+        XCTAssertEqualObjects(@"+81 50-23", [f inputDigit:@"3"]);
+        XCTAssertEqualObjects(@"+81 50-234", [f inputDigit:@"4"]);
+        XCTAssertEqualObjects(@"+81 50-2345", [f inputDigit:@"5"]);
+        XCTAssertEqualObjects(@"+81 50-2345-6", [f inputDigit:@"6"]);
+        XCTAssertEqualObjects(@"+81 50-2345-67", [f inputDigit:@"7"]);
+        XCTAssertEqualObjects(@"+81 50-2345-678", [f inputDigit:@"8"]);
+        XCTAssertEqualObjects(@"+81 50-2345-6789", [f inputDigit:@"9"]);
         
         // +81 222 12 5678
         [f clear];
@@ -261,22 +261,22 @@
         XCTAssertEqualObjects(@"+81 ", [f inputDigit:@"1"]);
         XCTAssertEqualObjects(@"+81 2", [f inputDigit:@"2"]);
         XCTAssertEqualObjects(@"+81 22", [f inputDigit:@"2"]);
-        XCTAssertEqualObjects(@"+81 22 2", [f inputDigit:@"2"]);
-        XCTAssertEqualObjects(@"+81 22 21", [f inputDigit:@"1"]);
-        XCTAssertEqualObjects(@"+81 2221 2", [f inputDigit:@"2"]);
-        XCTAssertEqualObjects(@"+81 222 12 5", [f inputDigit:@"5"]);
-        XCTAssertEqualObjects(@"+81 222 12 56", [f inputDigit:@"6"]);
-        XCTAssertEqualObjects(@"+81 222 12 567", [f inputDigit:@"7"]);
-        XCTAssertEqualObjects(@"+81 222 12 5678", [f inputDigit:@"8"]);
+        XCTAssertEqualObjects(@"+81 22-2", [f inputDigit:@"2"]);
+        XCTAssertEqualObjects(@"+81 22-21", [f inputDigit:@"1"]);
+        XCTAssertEqualObjects(@"+81 22-212", [f inputDigit:@"2"]);
+        XCTAssertEqualObjects(@"+81 22-212-5", [f inputDigit:@"5"]);
+        XCTAssertEqualObjects(@"+81 22-212-56", [f inputDigit:@"6"]);
+        XCTAssertEqualObjects(@"+81 22-212-567", [f inputDigit:@"7"]);
+        XCTAssertEqualObjects(@"+81 22-212-5678", [f inputDigit:@"8"]);
         
         // 011113
         [f clear];
         XCTAssertEqualObjects(@"0", [f inputDigit:@"0"]);
         XCTAssertEqualObjects(@"01", [f inputDigit:@"1"]);
         XCTAssertEqualObjects(@"011", [f inputDigit:@"1"]);
-        XCTAssertEqualObjects(@"011 1", [f inputDigit:@"1"]);
-        XCTAssertEqualObjects(@"011 11", [f inputDigit:@"1"]);
-        XCTAssertEqualObjects(@"011113", [f inputDigit:@"3"]);
+        XCTAssertEqualObjects(@"011-1", [f inputDigit:@"1"]);
+        XCTAssertEqualObjects(@"011-11", [f inputDigit:@"1"]);
+        XCTAssertEqualObjects(@"011-113", [f inputDigit:@"3"]);
         
         // +81 3332 2 5678
         [f clear];
@@ -285,13 +285,13 @@
         XCTAssertEqualObjects(@"+81 ", [f inputDigit:@"1"]);
         XCTAssertEqualObjects(@"+81 3", [f inputDigit:@"3"]);
         XCTAssertEqualObjects(@"+81 33", [f inputDigit:@"3"]);
-        XCTAssertEqualObjects(@"+81 33 3", [f inputDigit:@"3"]);
-        XCTAssertEqualObjects(@"+81 3332", [f inputDigit:@"2"]);
-        XCTAssertEqualObjects(@"+81 3332 2", [f inputDigit:@"2"]);
-        XCTAssertEqualObjects(@"+81 3332 2 5", [f inputDigit:@"5"]);
-        XCTAssertEqualObjects(@"+81 3332 2 56", [f inputDigit:@"6"]);
-        XCTAssertEqualObjects(@"+81 3332 2 567", [f inputDigit:@"7"]);
-        XCTAssertEqualObjects(@"+81 3332 2 5678", [f inputDigit:@"8"]);
+        XCTAssertEqualObjects(@"+81 3-33", [f inputDigit:@"3"]);
+        XCTAssertEqualObjects(@"+81 3-332", [f inputDigit:@"2"]);
+        XCTAssertEqualObjects(@"+81 3-3322", [f inputDigit:@"2"]);
+        XCTAssertEqualObjects(@"+81 3-3322-5", [f inputDigit:@"5"]);
+        XCTAssertEqualObjects(@"+81 3-3322-56", [f inputDigit:@"6"]);
+        XCTAssertEqualObjects(@"+81 3-3322-567", [f inputDigit:@"7"]);
+        XCTAssertEqualObjects(@"+81 3-3322-5678", [f inputDigit:@"8"]);
     }
     
     // testAYTFLongIDD_AU()
@@ -307,13 +307,13 @@
         XCTAssertEqualObjects(@"0011 1 6", [f inputDigit:@"6"]);
         XCTAssertEqualObjects(@"0011 1 65", [f inputDigit:@"5"]);
         XCTAssertEqualObjects(@"0011 1 650", [f inputDigit:@"0"]);
-        XCTAssertEqualObjects(@"0011 1 650 2", [f inputDigit:@"2"]);
-        XCTAssertEqualObjects(@"0011 1 650 25", [f inputDigit:@"5"]);
-        XCTAssertEqualObjects(@"0011 1 650 253", [f inputDigit:@"3"]);
-        XCTAssertEqualObjects(@"0011 1 650 253 2", [f inputDigit:@"2"]);
-        XCTAssertEqualObjects(@"0011 1 650 253 22", [f inputDigit:@"2"]);
-        XCTAssertEqualObjects(@"0011 1 650 253 222", [f inputDigit:@"2"]);
-        XCTAssertEqualObjects(@"0011 1 650 253 2222", [f inputDigit:@"2"]);
+        XCTAssertEqualObjects(@"0011 1 650-2", [f inputDigit:@"2"]);
+        XCTAssertEqualObjects(@"0011 1 650-25", [f inputDigit:@"5"]);
+        XCTAssertEqualObjects(@"0011 1 650-253", [f inputDigit:@"3"]);
+        XCTAssertEqualObjects(@"0011 1 650-253-2", [f inputDigit:@"2"]);
+        XCTAssertEqualObjects(@"0011 1 650-253-22", [f inputDigit:@"2"]);
+        XCTAssertEqualObjects(@"0011 1 650-253-222", [f inputDigit:@"2"]);
+        XCTAssertEqualObjects(@"0011 1 650-253-2222", [f inputDigit:@"2"]);
         
         // 0011 81 3332 2 5678
         [f clear];
@@ -325,13 +325,13 @@
         XCTAssertEqualObjects(@"0011 81 ", [f inputDigit:@"1"]);
         XCTAssertEqualObjects(@"0011 81 3", [f inputDigit:@"3"]);
         XCTAssertEqualObjects(@"0011 81 33", [f inputDigit:@"3"]);
-        XCTAssertEqualObjects(@"0011 81 33 3", [f inputDigit:@"3"]);
-        XCTAssertEqualObjects(@"0011 81 3332", [f inputDigit:@"2"]);
-        XCTAssertEqualObjects(@"0011 81 3332 2", [f inputDigit:@"2"]);
-        XCTAssertEqualObjects(@"0011 81 3332 2 5", [f inputDigit:@"5"]);
-        XCTAssertEqualObjects(@"0011 81 3332 2 56", [f inputDigit:@"6"]);
-        XCTAssertEqualObjects(@"0011 81 3332 2 567", [f inputDigit:@"7"]);
-        XCTAssertEqualObjects(@"0011 81 3332 2 5678", [f inputDigit:@"8"]);
+        XCTAssertEqualObjects(@"0011 81 3-33", [f inputDigit:@"3"]);
+        XCTAssertEqualObjects(@"0011 81 3-332", [f inputDigit:@"2"]);
+        XCTAssertEqualObjects(@"0011 81 3-3322", [f inputDigit:@"2"]);
+        XCTAssertEqualObjects(@"0011 81 3-3322-5", [f inputDigit:@"5"]);
+        XCTAssertEqualObjects(@"0011 81 3-3322-56", [f inputDigit:@"6"]);
+        XCTAssertEqualObjects(@"0011 81 3-3322-567", [f inputDigit:@"7"]);
+        XCTAssertEqualObjects(@"0011 81 3-3322-5678", [f inputDigit:@"8"]);
         
         // 0011 244 250 253 222
         [f clear];
@@ -367,13 +367,13 @@
         XCTAssertEqualObjects(@"00300 1 6", [f inputDigit:@"6"]);
         XCTAssertEqualObjects(@"00300 1 65", [f inputDigit:@"5"]);
         XCTAssertEqualObjects(@"00300 1 650", [f inputDigit:@"0"]);
-        XCTAssertEqualObjects(@"00300 1 650 2", [f inputDigit:@"2"]);
-        XCTAssertEqualObjects(@"00300 1 650 25", [f inputDigit:@"5"]);
-        XCTAssertEqualObjects(@"00300 1 650 253", [f inputDigit:@"3"]);
-        XCTAssertEqualObjects(@"00300 1 650 253 2", [f inputDigit:@"2"]);
-        XCTAssertEqualObjects(@"00300 1 650 253 22", [f inputDigit:@"2"]);
-        XCTAssertEqualObjects(@"00300 1 650 253 222", [f inputDigit:@"2"]);
-        XCTAssertEqualObjects(@"00300 1 650 253 2222", [f inputDigit:@"2"]);
+        XCTAssertEqualObjects(@"00300 1 650-2", [f inputDigit:@"2"]);
+        XCTAssertEqualObjects(@"00300 1 650-25", [f inputDigit:@"5"]);
+        XCTAssertEqualObjects(@"00300 1 650-253", [f inputDigit:@"3"]);
+        XCTAssertEqualObjects(@"00300 1 650-253-2", [f inputDigit:@"2"]);
+        XCTAssertEqualObjects(@"00300 1 650-253-22", [f inputDigit:@"2"]);
+        XCTAssertEqualObjects(@"00300 1 650-253-222", [f inputDigit:@"2"]);
+        XCTAssertEqualObjects(@"00300 1 650-253-2222", [f inputDigit:@"2"]);
     }
     
     // testAYTFLongNDD_KR()
@@ -392,7 +392,7 @@
         XCTAssertEqualObjects(@"08811-9876", [f inputDigit:@"6"]);
         XCTAssertEqualObjects(@"08811-9876-7", [f inputDigit:@"7"]);
         XCTAssertEqualObjects(@"08811-9876-78", [f inputDigit:@"8"]);
-        XCTAssertEqualObjects(@"08811-9876-789", [f inputDigit:@"9"]);
+        XCTAssertEqualObjects(@"08811-987-6789", [f inputDigit:@"9"]);
         XCTAssertEqualObjects(@"08811-9876-7890", [f inputDigit:@"0"]);
         
         // 08500 11-9876-7890
@@ -410,7 +410,7 @@
         XCTAssertEqualObjects(@"08500 11-9876", [f inputDigit:@"6"]);
         XCTAssertEqualObjects(@"08500 11-9876-7", [f inputDigit:@"7"]);
         XCTAssertEqualObjects(@"08500 11-9876-78", [f inputDigit:@"8"]);
-        XCTAssertEqualObjects(@"08500 11-9876-789", [f inputDigit:@"9"]);
+        XCTAssertEqualObjects(@"08500 11-987-6789", [f inputDigit:@"9"]);
         XCTAssertEqualObjects(@"08500 11-9876-7890", [f inputDigit:@"0"]);
     }
     
@@ -424,15 +424,15 @@
         XCTAssertEqualObjects(@"777", [f inputDigit:@"7"]);
         XCTAssertEqualObjects(@"7777", [f inputDigit:@"7"]);
         XCTAssertEqualObjects(@"77777", [f inputDigit:@"7"]);
-        XCTAssertEqualObjects(@"777777 ", [f inputDigit:@"7"]);
-        XCTAssertEqualObjects(@"777777 9", [f inputDigit:@"9"]);
-        XCTAssertEqualObjects(@"777777 98", [f inputDigit:@"8"]);
-        XCTAssertEqualObjects(@"777777 987", [f inputDigit:@"7"]);
-        XCTAssertEqualObjects(@"777777 9876", [f inputDigit:@"6"]);
-        XCTAssertEqualObjects(@"777777 9876 7", [f inputDigit:@"7"]);
-        XCTAssertEqualObjects(@"777777 9876 78", [f inputDigit:@"8"]);
-        XCTAssertEqualObjects(@"777777 9876 789", [f inputDigit:@"9"]);
-        XCTAssertEqualObjects(@"777777 9876 7890", [f inputDigit:@"0"]);
+        XCTAssertEqualObjects(@"777777", [f inputDigit:@"7"]);
+        XCTAssertEqualObjects(@"7777779", [f inputDigit:@"9"]);
+        XCTAssertEqualObjects(@"77777798", [f inputDigit:@"8"]);
+        XCTAssertEqualObjects(@"777777987", [f inputDigit:@"7"]);
+        XCTAssertEqualObjects(@"7777779876", [f inputDigit:@"6"]);
+        XCTAssertEqualObjects(@"77777798767", [f inputDigit:@"7"]);
+        XCTAssertEqualObjects(@"777777987678", [f inputDigit:@"8"]);
+        XCTAssertEqualObjects(@"7777779876789", [f inputDigit:@"9"]);
+        XCTAssertEqualObjects(@"77777798767890", [f inputDigit:@"0"]);
     }
     
     // testAYTFShortNumberFormattingFix_AU()
@@ -447,12 +447,12 @@
         XCTAssertEqualObjects(@"12", [f inputDigit:@"2"]);
         XCTAssertEqualObjects(@"123", [f inputDigit:@"3"]);
         XCTAssertEqualObjects(@"1234", [f inputDigit:@"4"]);
-        XCTAssertEqualObjects(@"1234 5", [f inputDigit:@"5"]);
-        XCTAssertEqualObjects(@"1234 56", [f inputDigit:@"6"]);
-        XCTAssertEqualObjects(@"1234 567", [f inputDigit:@"7"]);
-        XCTAssertEqualObjects(@"1234 567 8", [f inputDigit:@"8"]);
-        XCTAssertEqualObjects(@"1234 567 89", [f inputDigit:@"9"]);
-        XCTAssertEqualObjects(@"1234 567 890", [f inputDigit:@"0"]);
+        XCTAssertEqualObjects(@"12345", [f inputDigit:@"5"]);
+        XCTAssertEqualObjects(@"123456", [f inputDigit:@"6"]);
+        XCTAssertEqualObjects(@"1234567", [f inputDigit:@"7"]);
+        XCTAssertEqualObjects(@"12345678", [f inputDigit:@"8"]);
+        XCTAssertEqualObjects(@"123456789", [f inputDigit:@"9"]);
+        XCTAssertEqualObjects(@"1234567890", [f inputDigit:@"0"]);
         
         // +61 1234 567 890 - Test the same number, but with the country code.
         [f clear];
@@ -461,14 +461,14 @@
         XCTAssertEqualObjects(@"+61 ", [f inputDigit:@"1"]);
         XCTAssertEqualObjects(@"+61 1", [f inputDigit:@"1"]);
         XCTAssertEqualObjects(@"+61 12", [f inputDigit:@"2"]);
-        XCTAssertEqualObjects(@"+61 123", [f inputDigit:@"3"]);
-        XCTAssertEqualObjects(@"+61 1234", [f inputDigit:@"4"]);
-        XCTAssertEqualObjects(@"+61 1234 5", [f inputDigit:@"5"]);
-        XCTAssertEqualObjects(@"+61 1234 56", [f inputDigit:@"6"]);
-        XCTAssertEqualObjects(@"+61 1234 567", [f inputDigit:@"7"]);
-        XCTAssertEqualObjects(@"+61 1234 567 8", [f inputDigit:@"8"]);
-        XCTAssertEqualObjects(@"+61 1234 567 89", [f inputDigit:@"9"]);
-        XCTAssertEqualObjects(@"+61 1234 567 890", [f inputDigit:@"0"]);
+        XCTAssertEqualObjects(@"+61123", [f inputDigit:@"3"]);
+        XCTAssertEqualObjects(@"+611234", [f inputDigit:@"4"]);
+        XCTAssertEqualObjects(@"+6112345", [f inputDigit:@"5"]);
+        XCTAssertEqualObjects(@"+61123456", [f inputDigit:@"6"]);
+        XCTAssertEqualObjects(@"+611234567", [f inputDigit:@"7"]);
+        XCTAssertEqualObjects(@"+6112345678", [f inputDigit:@"8"]);
+        XCTAssertEqualObjects(@"+61123456789", [f inputDigit:@"9"]);
+        XCTAssertEqualObjects(@"+611234567890", [f inputDigit:@"0"]);
         
         // 212345678 - For leading digit 2, the national prefix formatting rule puts
         // the national prefix before the first group.
@@ -650,25 +650,25 @@
         [f inputDigit:@"2"];
         [f inputDigit:@"2"];
         [f inputDigit:@"2"];
-        XCTAssertEqualObjects(@"1 650 253 2222", [f description]);
+        XCTAssertEqualObjects(@"1 650-253-2222", [f description]);
         
         [f removeLastDigit];
-        XCTAssertEqualObjects(@"1 650 253 222", [f description]);
+        XCTAssertEqualObjects(@"1 650-253-222", [f description]);
         
         [f removeLastDigit];
-        XCTAssertEqualObjects(@"1 650 253 22", [f description]);
+        XCTAssertEqualObjects(@"1 650-253-22", [f description]);
         
         [f removeLastDigit];
-        XCTAssertEqualObjects(@"1 650 253 2", [f description]);
+        XCTAssertEqualObjects(@"1 650-253-2", [f description]);
         
         [f removeLastDigit];
-        XCTAssertEqualObjects(@"1 650 253", [f description]);
+        XCTAssertEqualObjects(@"1 650-253", [f description]);
         
         [f removeLastDigit];
-        XCTAssertEqualObjects(@"1 650 25", [f description]);
+        XCTAssertEqualObjects(@"1 650-25", [f description]);
         
         [f removeLastDigit];
-        XCTAssertEqualObjects(@"1 650 2", [f description]);
+        XCTAssertEqualObjects(@"1 650-2", [f description]);
         
         [f removeLastDigit];
         XCTAssertEqualObjects(@"1 650", [f description]);
@@ -686,7 +686,7 @@
         XCTAssertEqualObjects(@"", [f description]);
         
         [f inputString:@"16502532222"];
-        XCTAssertEqualObjects(@"1 650 253 2222", [f description]);
+        XCTAssertEqualObjects(@"1 650-253-2222", [f description]);
     }
     
     // testAYTFNumberPatternsBecomingInvalidShouldNotResultInDigitLoss()
