@@ -1,48 +1,55 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '9.0'
+#platform :ios, '9.0'
+workspace 'MobileTrading'
 use_frameworks!
 inhibit_all_warnings!
+swift_version = '3.0'
 
-target 'MobileTrading' do
-    swift_version = '3.0'
-    
-    pod 'libPhoneNumber-iOS'
-    pod 'RealmSwift'
-    pod 'SwifterSwift'
-    pod 'ObjectMapper'
-    pod 'ReSwift'
-    pod 'IQKeyboardManagerSwift'
-    pod 'Moya'
-    
-    # Cryptor, use CrytoSwift for all encode/decode/hash
-    pod 'RNCryptor'
-    pod 'CryptoSwift'
-    
-    # An extension of Data. It enables compress/decompress gzip using zlib.
-    pod 'GzipSwift'
-    pod 'Zip'
-    pod 'SSZipArchive'
-    pod 'APNGKit', '~> 0.6'
-    
-    # Pods for MobileTrading
+pod 'libPhoneNumber-iOS'
+pod 'RealmSwift'
+pod 'SwifterSwift'
+pod 'ObjectMapper'
+pod 'ReSwift'
+pod 'IQKeyboardManagerSwift'
+pod 'Moya'
+# Cryptor, use CrytoSwift for all encode/decode/hash
+pod 'RNCryptor'
+pod 'CryptoSwift'
+# An extension of Data. It enables compress/decompress gzip using zlib.
+pod 'GzipSwift'
+pod 'Zip'
+pod 'SSZipArchive'
+pod 'APNGKit', '~> 0.6'
+pod 'CocoaLumberjack'
+pod 'CocoaLumberjack/Swift'
+pod 'Fashion'
+pod 'Reusable'
+pod 'Stripe'
+pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
+pod 'TYAlertController'
+pod 'LGSideMenuController'
+pod 'CNPPopupController'
+pod 'DZNEmptyDataSet'
+pod 'SCLAlertView'
+pod 'SVProgressHUD'
+pod 'MBProgressHUD'
+pod 'SwiftMessages'
+pod 'SnapKit'
+pod 'SVPullToRefresh'
+pod 'ESPullToRefresh'
+pod 'Toast'
+pod 'SwiftyJSON'
+pod 'MGSwipeTableCell'
+pod 'SwiftDate'
+pod 'SwiftLocation'
+
 #    pod 'SignalR-ObjC'
 #    pod 'Fabric'
 #    pod 'Crashlytics'
-    # Main side menu
-#    pod 'LGSideMenuController'
-#    pod 'TYAlertController'
-#    pod 'CNPPopupController'
-#    pod 'SCLAlertView'
-#    pod 'SwiftMessages'
 #    pod 'Cartography'
-#    pod 'Toast'
-    # Use Fashion for define UI style by the fastest way I can.
-#    pod 'Fashion'    
 #    pod 'PromiseKit'
 #    pod 'FontasticIcons'
-#    pod 'CocoaLumberjack'
-#    pod 'CocoaLumberjack/Swift'
-#    pod 'DZNEmptyDataSet'
+
 #    pod 'PDTSimpleCalendar'
 #    pod 'MagicalRecord'
 #    pod 'ChameleonFramework'
@@ -52,36 +59,32 @@ target 'MobileTrading' do
 #    pod 'PKRevealController'
 #    pod 'SlackTextViewController'
 #    pod 'PermissionScope'
-#    pod 'SVProgressHUD'
-#    pod 'MBProgressHUD'
-#    pod 'SnapKit'
-#    pod 'SVPullToRefresh'
-#    pod 'ESPullToRefresh'
-    #Pusher
-#    pod 'PusherSwift'    
+#Pusher
+#    pod 'PusherSwift'
 #    pod 'FontAwesomeKit'
-#    pod 'MGSwipeTableCell'
+
 #    pod 'IAPHelper'
 #    pod 'RxSwift'
 #    pod 'RxCocoa'
-#    pod 'SwiftyJSON'
-#    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
+
 #    pod 'FontBlaster'
 #    pod 'TAPromotee'
 #    pod 'KeychainAccess'
 #    pod 'Charts'
-#    pod 'SwiftDate'
-#    pod 'SwiftLocation'
+
 #    pod 'Fakery'
 #    pod 'Kingfisher'
-#    pod 'Reusable'
+
 #    pod 'HTMLAttributedString'
-#    pod 'Stripe'
+
 #    pod 'ImageSlideshow/Kingfisher'
 #    pod 'DYSlideView'
 #    pod 'Segmentio'
 #    pod 'PopupDialog'
 #    pod 'SCSkypeActivityIndicatorView'
+
+target 'MobileTrading' do
+    project 'MobileTrading'
 
     target 'MobileTradingTests' do
         inherit! :search_paths
@@ -98,58 +101,85 @@ target 'MobileTrading' do
         pod 'Nimble'
         pod 'Nimble-Snapshots'
     end
+    
+    target 'GzipTests' do
+        inherit! :search_paths
+        # An extension of Data. It enables compress/decompress gzip using zlib.
+        pod 'GzipSwift'
+    end
+    
+    target 'CryptoSwiftTests' do
+        inherit! :search_paths
+        pod 'CryptoSwift'
+    end
+    
+    target 'RNCryptorTests' do
+        inherit! :search_paths
+        pod 'RNCryptor'
+    end
+    
+    target 'ZipTests' do
+        inherit! :search_paths
+        pod 'Zip'
+    end
+    
+    target 'SSZipArchiveTests' do
+        inherit! :search_paths
+        pod 'SSZipArchive'
+    end
+    
+    target 'APNGKitTests' do
+        inherit! :search_paths
+        pod 'APNGKit', '~> 0.6'
+    end
+    
+    target 'NimbleTests' do
+        inherit! :search_paths
+        pod 'Quick'
+        pod 'Nimble'
+        pod 'Nimble-Snapshots'
+    end
+    
+    target 'QuickTests' do
+        inherit! :search_paths
+        pod 'Quick'
+        pod 'Nimble'
+        pod 'Nimble-Snapshots'
+    end
+    
+    target 'LibPhoneNumberTests' do
+        inherit! :search_paths
+        pod 'libPhoneNumber-iOS'
+    end
+    
+    target 'SwifterSwiftTests' do
+        inherit! :search_paths
+        pod 'SwifterSwift'
+    end
+    
 end
 
-target 'GzipTests' do
-    inherit! :search_paths
-    # An extension of Data. It enables compress/decompress gzip using zlib.
-    pod 'GzipSwift'
-end
-
-target 'CryptoSwiftTests' do
-    inherit! :search_paths
-    pod 'CryptoSwift'
-end
-
-target 'RNCryptorTests' do
-    inherit! :search_paths
-    pod 'RNCryptor'
-end
-
-target 'ZipTests' do
-    inherit! :search_paths
-    pod 'Zip'
-end
-
-target 'SSZipArchiveTests' do
-    inherit! :search_paths
-    pod 'SSZipArchive'
-end
-
-target 'APNGKitTests' do
-    inherit! :search_paths
-    pod 'APNGKit', '~> 0.6'
-end
-
-target 'NimbleTests' do
-    inherit! :search_paths
-    pod 'Nimble'
-end
-
-target 'QuickTests' do
-    inherit! :search_paths
-    pod 'Quick'
-    pod 'Nimble'
-end
-
-target 'LibPhoneNumberTests' do
-    inherit! :search_paths
-    pod 'libPhoneNumber-iOS'
+target 'LGKKCoreLib' do
+    project '../LGKKCoreLib/LGKKCoreLib'
+    
+    target 'LGKKCoreLibTests' do
+        inherit! :search_paths
+        pod 'Quick'
+        pod 'Nimble'
+        pod 'Nimble-Snapshots'
+    end
 end
 
 post_install do |installer|
-    puts("Update debug pod settings to speed up build time")
-    Dir.glob(File.join("Pods", "**", "Pods*{debug,Private}.xcconfig")).each do |file|
-        File.open(file, 'a') { |f| f.puts "\nDEBUG_INFORMATION_FORMAT = dwarf" }
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '3.0'
+            config.build_settings['ENABLE_BITCODE'] = 'NO'
+        end
     end
+    
+#    puts("Update debug pod settings to speed up build time")
+#    Dir.glob(File.join("Pods", "**", "Pods*{debug,Private}.xcconfig")).each do |file|
+#        File.open(file, 'a') { |f| f.puts "\nDEBUG_INFORMATION_FORMAT = dwarf" }
+#    end
 end
