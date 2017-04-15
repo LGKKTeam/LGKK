@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountryPhoneHolderView" customModule="drivethrough" customModuleProvider="target">
+            <connections>
+                <outlet property="btnFlag" destination="t3p-2w-wiI" id="2oI-sR-V7U"/>
+                <outlet property="lblPhoneCode" destination="NSD-C3-8xm" id="VgX-Ef-TUV"/>
+                <outlet property="line" destination="1EH-qV-deZ" id="BXC-0V-MJm"/>
+                <outlet property="lineHeight" destination="W0D-ER-0kP" id="rYV-Ga-hoq"/>
+                <outlet property="tfPhone" destination="zxI-fC-Lct" id="V5Z-KJ-fiT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3p-2w-wiI">
+                    <rect key="frame" x="0.0" y="10" width="40" height="30"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="t3p-2w-wiI" secondAttribute="height" multiplier="128:96" id="hbr-I5-lWD"/>
+                        <constraint firstAttribute="height" constant="30" id="xkl-HO-BH1"/>
+                    </constraints>
+                    <connections>
+                        <action selector="btnFlag_Tapped:" destination="-1" eventType="touchUpInside" id="UcW-hn-95M"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow gray" translatesAutoresizingMaskIntoConstraints="NO" id="4RQ-8L-0Mo">
+                    <rect key="frame" x="48" y="21" width="10" height="8"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="8" id="7tk-Ro-TpP"/>
+                        <constraint firstAttribute="width" constant="10" id="hwe-Ob-q8A"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSD-C3-8xm">
+                    <rect key="frame" x="66" y="14.5" width="19" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter phone number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zxI-fC-Lct">
+                    <rect key="frame" x="93" y="0.0" width="282" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Cnt-ye-MzG"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1EH-qV-deZ" userLabel="line">
+                    <rect key="frame" x="0.0" y="49" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="W0D-ER-0kP"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="1EH-qV-deZ" secondAttribute="trailing" id="34H-YJ-44f"/>
+                <constraint firstItem="zxI-fC-Lct" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="3Ap-yD-gZm"/>
+                <constraint firstItem="NSD-C3-8xm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="B1v-F1-jOK"/>
+                <constraint firstItem="1EH-qV-deZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EPD-DQ-ivc"/>
+                <constraint firstItem="NSD-C3-8xm" firstAttribute="leading" secondItem="4RQ-8L-0Mo" secondAttribute="trailing" constant="8" id="Gtc-yz-jbu"/>
+                <constraint firstItem="t3p-2w-wiI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="b3Q-JY-5fK"/>
+                <constraint firstItem="t3p-2w-wiI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="iVN-tC-pO1"/>
+                <constraint firstAttribute="trailing" secondItem="zxI-fC-Lct" secondAttribute="trailing" id="j83-yn-FPE"/>
+                <constraint firstItem="1EH-qV-deZ" firstAttribute="bottom" secondItem="zxI-fC-Lct" secondAttribute="bottom" id="qfj-aF-7gr"/>
+                <constraint firstItem="4RQ-8L-0Mo" firstAttribute="leading" secondItem="t3p-2w-wiI" secondAttribute="trailing" constant="8" id="vsZ-Kx-5p2"/>
+                <constraint firstItem="4RQ-8L-0Mo" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wbQ-rJ-Eh1"/>
+                <constraint firstItem="zxI-fC-Lct" firstAttribute="leading" secondItem="NSD-C3-8xm" secondAttribute="trailing" constant="8" id="y8T-jI-ySo"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="33.5" y="108"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow gray" width="13" height="7"/>
+    </resources>
+</document>
