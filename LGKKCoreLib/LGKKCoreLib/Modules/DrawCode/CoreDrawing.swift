@@ -22,6 +22,42 @@ public class CoreDrawing : NSObject {
         static var playRevertTargets: [AnyObject]?
         static var imageOfPlayBack: UIImage?
         static var playBackTargets: [AnyObject]?
+        static var imageOfVolumeMax: UIImage?
+        static var volumeMaxTargets: [AnyObject]?
+        static var imageOfPause: UIImage?
+        static var pauseTargets: [AnyObject]?
+        static var imageOfFastBackward: UIImage?
+        static var fastBackwardTargets: [AnyObject]?
+        static var imageOfFoward: UIImage?
+        static var fowardTargets: [AnyObject]?
+        static var imageOfVolumeMin: UIImage?
+        static var volumeMinTargets: [AnyObject]?
+        static var imageOfBackward: UIImage?
+        static var backwardTargets: [AnyObject]?
+        static var imageOfPlayNext: UIImage?
+        static var playNextTargets: [AnyObject]?
+        static var imageOfFastFoward: UIImage?
+        static var fastFowardTargets: [AnyObject]?
+        static var imageOfBack: UIImage?
+        static var backTargets: [AnyObject]?
+        static var imageOfPlay: UIImage?
+        static var playTargets: [AnyObject]?
+        static var imageOfFullScreen: UIImage?
+        static var fullScreenTargets: [AnyObject]?
+        static var imageOfExitFullScreen: UIImage?
+        static var exitFullScreenTargets: [AnyObject]?
+        static var imageOfDefaultView: UIImage?
+        static var defaultViewTargets: [AnyObject]?
+        static var imageOfCheckmark: UIImage?
+        static var checkmarkTargets: [AnyObject]?
+        static var imageOfSettingsFilled: UIImage?
+        static var settingsFilledTargets: [AnyObject]?
+        static var imageOfSettings: UIImage?
+        static var settingsTargets: [AnyObject]?
+        static var imageOfTheaterMode: UIImage?
+        static var theaterModeTargets: [AnyObject]?
+        static var imageOfSoundMuted: UIImage?
+        static var soundMutedTargets: [AnyObject]?
     }
 
     //// Colors
@@ -933,7 +969,7 @@ public class CoreDrawing : NSObject {
         context.restoreGState()
     }
 
-    //// Generated Images
+    //MARK: - Generated Images
 
     public dynamic class var imageOfNext: UIImage {
         if Cache.imageOfNext != nil {
@@ -982,7 +1018,7 @@ public class CoreDrawing : NSObject {
             return Cache.imageOfPlayBack!
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 90, height: 180), false, 0)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 115, height: 180), false, 0)
         CoreDrawing.drawPlayBack()
         
         Cache.imageOfPlayBack = UIGraphicsGetImageFromCurrentImageContext()!
@@ -991,23 +1027,259 @@ public class CoreDrawing : NSObject {
         return Cache.imageOfPlayBack!
     }
     
-    //WARNING: Image method for 'VolumeMax'
-    //WARNING: Image method for 'Pause'
-    //WARNING: Image method for 'FastBackward'
-    //WARNING: Image method for 'Foward' 
-    //WARNING: Image method for 'VolumeMin' 
-    //WARNING: Image method for 'Backward' 
-    //WARNING: Image method for 'PlayNext' 
-    //WARNING: Image method for 'FastFoward' 
-    //WARNING: Image method for 'Back' 
-    //WARNING: Image method for 'Play' 
-    //WARNING: Image method for 'FullScreen' 
-    //WARNING: Image method for 'ExitFullScreen' 
-    //WARNING: Image method for 'DefaultView' 
-    //WARNING: Image method for 'Checkmark' 
-    //WARNING: Image method for 'SettingsFilled' 
+    public dynamic class var imageOfVolumeMax: UIImage {
+        if Cache.imageOfVolumeMax != nil {
+            return Cache.imageOfVolumeMax!
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 128), false, 0)
+        CoreDrawing.drawVolumeMax()
+        
+        Cache.imageOfVolumeMax = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return Cache.imageOfVolumeMax!
+    }
+    
+    public dynamic class var imageOfPause: UIImage {
+        if Cache.imageOfPause != nil {
+            return Cache.imageOfPause!
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 90, height: 180), false, 0)
+        CoreDrawing.drawPause()
+        
+        Cache.imageOfPause = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return Cache.imageOfPause!
+    }
+    
+    public dynamic class var imageOfFastBackward: UIImage {
+        if Cache.imageOfFastBackward != nil {
+            return Cache.imageOfFastBackward!
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 200, height: 180), false, 0)
+        CoreDrawing.drawFastBackward()
+        
+        Cache.imageOfFastBackward = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return Cache.imageOfFastBackward!
+    }
+    
+    public dynamic class var imageOfFoward: UIImage {
+        if Cache.imageOfFoward != nil {
+            return Cache.imageOfFoward!
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 150, height: 180), false, 0)
+        CoreDrawing.drawFoward()
+        
+        Cache.imageOfFoward = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return Cache.imageOfFoward!
+    }
+    
+    public dynamic class var imageOfVolumeMin: UIImage {
+        if Cache.imageOfVolumeMin != nil {
+            return Cache.imageOfVolumeMin!
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 102, height: 128), false, 0)
+        CoreDrawing.drawVolumeMin()
+        
+        Cache.imageOfVolumeMin = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return Cache.imageOfVolumeMin!
+    }
+    
+    public dynamic class var imageOfBackward: UIImage {
+        if Cache.imageOfBackward != nil {
+            return Cache.imageOfBackward!
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 150, height: 180), false, 0)
+        CoreDrawing.drawBackward()
+        
+        Cache.imageOfBackward = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return Cache.imageOfBackward!
+    }
+    
+    public dynamic class var imageOfPlayNext: UIImage {
+        if Cache.imageOfPlayNext != nil {
+            return Cache.imageOfPlayNext!
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 115, height: 180), false, 0)
+        CoreDrawing.drawPlayNext()
+        
+        Cache.imageOfPlayNext = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return Cache.imageOfPlayNext!
+    }
+    
+    public dynamic class var imageOfFastFoward: UIImage {
+        if Cache.imageOfFastFoward != nil {
+            return Cache.imageOfFastFoward!
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 200, height: 180), false, 0)
+        CoreDrawing.drawFastFoward()
+        
+        Cache.imageOfFastFoward = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return Cache.imageOfFastFoward!
+    }
+    
+    public dynamic class var imageOfBack: UIImage {
+        if Cache.imageOfBack != nil {
+            return Cache.imageOfBack!
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 100, height: 180), false, 0)
+        CoreDrawing.drawBack()
+        
+        Cache.imageOfBack = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return Cache.imageOfBack!
+    }
+    
+    public dynamic class var imageOfPlay: UIImage {
+        if Cache.imageOfPlay != nil {
+            return Cache.imageOfPlay!
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 90, height: 180), false, 0)
+        CoreDrawing.drawPlay()
+        
+        Cache.imageOfPlay = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return Cache.imageOfPlay!
+    }
+    
+    public dynamic class var imageOfFullScreen: UIImage {
+        if Cache.imageOfFullScreen != nil {
+            return Cache.imageOfFullScreen!
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 128), false, 0)
+        CoreDrawing.drawFullScreen()
+        
+        Cache.imageOfFullScreen = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return Cache.imageOfFullScreen!
+    }
+    
+    public dynamic class var imageOfExitFullScreen: UIImage {
+        if Cache.imageOfExitFullScreen != nil {
+            return Cache.imageOfExitFullScreen!
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 128), false, 0)
+        CoreDrawing.drawExitFullScreen()
+        
+        Cache.imageOfExitFullScreen = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return Cache.imageOfExitFullScreen!
+    }
+    
+    public dynamic class var imageOfDefaultView: UIImage {
+        if Cache.imageOfDefaultView != nil {
+            return Cache.imageOfDefaultView!
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 73), false, 0)
+        CoreDrawing.drawDefaultView()
+        
+        Cache.imageOfDefaultView = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return Cache.imageOfDefaultView!
+    }
+    
+    public dynamic class var imageOfCheckmark: UIImage {
+        if Cache.imageOfCheckmark != nil {
+            return Cache.imageOfCheckmark!
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 64, height: 64), false, 0)
+        CoreDrawing.drawCheckmark()
+        
+        Cache.imageOfCheckmark = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return Cache.imageOfCheckmark!
+    }
+    
+    public dynamic class var imageOfSettingsFilled: UIImage {
+        if Cache.imageOfSettingsFilled != nil {
+            return Cache.imageOfSettingsFilled!
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 500, height: 500), false, 0)
+        CoreDrawing.drawSettingsFilled()
+        
+        Cache.imageOfSettingsFilled = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return Cache.imageOfSettingsFilled!
+    }
+    
+    public dynamic class var imageOfSettings: UIImage {
+        if Cache.imageOfSettings != nil {
+            return Cache.imageOfSettings!
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 500, height: 500), false, 0)
+        CoreDrawing.drawSettings()
+        
+        Cache.imageOfSettings = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return Cache.imageOfSettings!
+    }
+    
+    public dynamic class var imageOfTheaterMode: UIImage {
+        if Cache.imageOfTheaterMode != nil {
+            return Cache.imageOfTheaterMode!
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 73), false, 0)
+        CoreDrawing.drawTheaterMode()
+        
+        Cache.imageOfTheaterMode = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return Cache.imageOfTheaterMode!
+    }
+    
+    public dynamic class var imageOfSoundMuted: UIImage {
+        if Cache.imageOfSoundMuted != nil {
+            return Cache.imageOfSoundMuted!
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 128), false, 0)
+        CoreDrawing.drawSoundMuted()
+        
+        Cache.imageOfSoundMuted = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return Cache.imageOfSoundMuted!
+    }
 
-    //// Customization Infrastructure
+    //MARK: - Customization Infrastructure
 
     @IBOutlet dynamic var nextTargets: [AnyObject]! {
         get { return Cache.nextTargets }
