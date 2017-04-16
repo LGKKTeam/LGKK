@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		154789E08C33087641E407A9 /* Pods_LGKKCoreLibTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFA82F137286E35F50C296C /* Pods_LGKKCoreLibTests.framework */; };
 		4707F85FAAD27299B6B9772F /* Pods_LGKKCoreLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C603D810EFCF33C371C81A16 /* Pods_LGKKCoreLib.framework */; };
+		E5410EA41EA3D22C009480F9 /* CoreDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5410EA31EA3D22C009480F9 /* CoreDrawing.swift */; };
 		E5481E2F1EA28F1A00315060 /* LGKKCoreLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5481E251EA28F1A00315060 /* LGKKCoreLib.framework */; };
 		E5481E341EA28F1A00315060 /* LGKKCoreLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5481E331EA28F1A00315060 /* LGKKCoreLibTests.swift */; };
 		E5481E361EA28F1A00315060 /* LGKKCoreLib.h in Headers */ = {isa = PBXBuildFile; fileRef = E5481E281EA28F1A00315060 /* LGKKCoreLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -65,6 +66,7 @@
 		ABFA82F137286E35F50C296C /* Pods_LGKKCoreLibTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LGKKCoreLibTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C603D810EFCF33C371C81A16 /* Pods_LGKKCoreLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LGKKCoreLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7C2E4FA5C6D9961B6B5D4E /* Pods-LGKKCoreLibTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LGKKCoreLibTests.release.xcconfig"; path = "../MobileTrading/Pods/Target Support Files/Pods-LGKKCoreLibTests/Pods-LGKKCoreLibTests.release.xcconfig"; sourceTree = "<group>"; };
+		E5410EA31EA3D22C009480F9 /* CoreDrawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDrawing.swift; sourceTree = "<group>"; };
 		E5481E251EA28F1A00315060 /* LGKKCoreLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LGKKCoreLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5481E281EA28F1A00315060 /* LGKKCoreLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGKKCoreLib.h; sourceTree = "<group>"; };
 		E5481E291EA28F1A00315060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -150,6 +152,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E5410EA21EA3D223009480F9 /* DrawCode */ = {
+			isa = PBXGroup;
+			children = (
+				E5410EA31EA3D22C009480F9 /* CoreDrawing.swift */,
+			);
+			path = DrawCode;
+			sourceTree = "<group>";
+		};
 		E5481E1B1EA28F1A00315060 = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +236,7 @@
 		E5481E521EA296A700315060 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E5410EA21EA3D223009480F9 /* DrawCode */,
 				E5481E531EA296A700315060 /* CRCurrencyString */,
 				E5481E591EA296A700315060 /* FlagKit */,
 				E5481E611EA296A700315060 /* SPExtensions */,
@@ -513,6 +524,7 @@
 				E5481E881EA296A800315060 /* Realm+SPExtension.swift in Sources */,
 				E5481E761EA296A800315060 /* SPBaseSideMenuViewController.swift in Sources */,
 				E5481E6D1EA296A800315060 /* SPBaseListModel.swift in Sources */,
+				E5410EA41EA3D22C009480F9 /* CoreDrawing.swift in Sources */,
 				E5481E781EA296A800315060 /* SPBaseTableViewCell.swift in Sources */,
 				E5481E891EA296A800315060 /* String+Crypto.swift in Sources */,
 			);
