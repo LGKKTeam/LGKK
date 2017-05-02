@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CaptureVideoViewController" customModule="DemoVideoByGPU" customModuleProvider="target">
+            <connections>
+                <outlet property="gpuView" destination="i3z-OA-Kdi" id="X9c-RF-Aql"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fa9-Qx-IMR">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lxJ-F7-Ub0">
+                            <rect key="frame" x="20" y="0.0" width="335" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lj6-Qw-N6R">
+                                    <rect key="frame" x="0.0" y="0.0" width="78" height="50"/>
+                                    <state key="normal" title="Start"/>
+                                    <connections>
+                                        <action selector="startRecording:" destination="-1" eventType="touchUpInside" id="5M5-Nx-C1s"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcB-TL-lga">
+                                    <rect key="frame" x="86" y="0.0" width="77.5" height="50"/>
+                                    <state key="normal" title="Pause"/>
+                                    <connections>
+                                        <action selector="pauseRecording:" destination="-1" eventType="touchUpInside" id="K2F-r8-63r"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zn6-wz-dGO">
+                                    <rect key="frame" x="171.5" y="0.0" width="78" height="50"/>
+                                    <state key="normal" title="Resume"/>
+                                    <connections>
+                                        <action selector="resumeRecording:" destination="-1" eventType="touchUpInside" id="c4J-uW-xRo"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sh4-OG-87H">
+                                    <rect key="frame" x="257.5" y="0.0" width="77.5" height="50"/>
+                                    <state key="normal" title="Stop"/>
+                                    <connections>
+                                        <action selector="stopRecording:" destination="-1" eventType="touchUpInside" id="EqO-AE-lNa"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Uai-2K-xIY"/>
+                        <constraint firstItem="lxJ-F7-Ub0" firstAttribute="leading" secondItem="Fa9-Qx-IMR" secondAttribute="leading" constant="20" symbolic="YES" id="dWm-qS-piV"/>
+                        <constraint firstAttribute="trailing" secondItem="lxJ-F7-Ub0" secondAttribute="trailing" constant="20" symbolic="YES" id="gha-z9-Kaw"/>
+                        <constraint firstItem="lxJ-F7-Ub0" firstAttribute="top" secondItem="Fa9-Qx-IMR" secondAttribute="top" id="luB-sr-pOM"/>
+                        <constraint firstAttribute="bottom" secondItem="lxJ-F7-Ub0" secondAttribute="bottom" id="nWV-Cr-tS7"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3z-OA-Kdi" customClass="GPUImageView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="i3z-OA-Kdi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9Jl-WF-W7P"/>
+                <constraint firstItem="i3z-OA-Kdi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ENQ-d9-WaI"/>
+                <constraint firstItem="Fa9-Qx-IMR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MBK-oT-Ta2"/>
+                <constraint firstAttribute="trailing" secondItem="Fa9-Qx-IMR" secondAttribute="trailing" id="TVi-lK-OHt"/>
+                <constraint firstAttribute="trailing" secondItem="i3z-OA-Kdi" secondAttribute="trailing" id="YvQ-XU-gwP"/>
+                <constraint firstAttribute="bottom" secondItem="i3z-OA-Kdi" secondAttribute="bottom" constant="50" id="n5i-On-P2H"/>
+                <constraint firstAttribute="bottom" secondItem="Fa9-Qx-IMR" secondAttribute="bottom" id="nfr-3F-91E"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="93.5"/>
+        </view>
+    </objects>
+</document>

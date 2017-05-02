@@ -10,13 +10,13 @@
 		700C9F0E79FA119C838805F5 /* Pods_DemoVideoByGPUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E06E527EE0184DBAF35E0A5 /* Pods_DemoVideoByGPUTests.framework */; };
 		BA63D0EC2E400B73A401AF67 /* Pods_DemoVideoByGPU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E7F189F06CDE8B75A0B5B8 /* Pods_DemoVideoByGPU.framework */; };
 		CE282944A74652B5CA3C42B4 /* Pods_DemoVideoByGPUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35F7CEC672AE3D29CBD114A /* Pods_DemoVideoByGPUUITests.framework */; };
+		E57E5EC61EB8B3C800D23085 /* CaptureVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E5EC41EB8B3C800D23085 /* CaptureVideoViewController.swift */; };
+		E57E5EC71EB8B3C800D23085 /* CaptureVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E57E5EC51EB8B3C800D23085 /* CaptureVideoViewController.xib */; };
+		E57E5ECD1EB8B92E00D23085 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57E5ECB1EB8B92E00D23085 /* LaunchScreen.storyboard */; };
+		E57E5ED21EB8E73900D23085 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E5ED11EB8E73900D23085 /* OverlayView.swift */; };
+		E57E5ED41EB8E74200D23085 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E57E5ED31EB8E74200D23085 /* OverlayView.xib */; };
 		E5DF119A1EB8905400D6A9E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF11991EB8905400D6A9E9 /* AppDelegate.swift */; };
-		E5DF119C1EB8905400D6A9E9 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF119B1EB8905400D6A9E9 /* RootViewController.swift */; };
-		E5DF119E1EB8905400D6A9E9 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF119D1EB8905400D6A9E9 /* DataViewController.swift */; };
-		E5DF11A01EB8905400D6A9E9 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF119F1EB8905400D6A9E9 /* ModelController.swift */; };
-		E5DF11A31EB8905400D6A9E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5DF11A11EB8905400D6A9E9 /* Main.storyboard */; };
 		E5DF11A51EB8905400D6A9E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DF11A41EB8905400D6A9E9 /* Assets.xcassets */; };
-		E5DF11A81EB8905400D6A9E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5DF11A61EB8905400D6A9E9 /* LaunchScreen.storyboard */; };
 		E5DF11B31EB8905400D6A9E9 /* DemoVideoByGPUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF11B21EB8905400D6A9E9 /* DemoVideoByGPUTests.swift */; };
 		E5DF11BE1EB8905400D6A9E9 /* DemoVideoByGPUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF11BD1EB8905400D6A9E9 /* DemoVideoByGPUUITests.swift */; };
 /* End PBXBuildFile section */
@@ -48,14 +48,14 @@
 		8068135C1FD059C936B267A0 /* Pods-DemoVideoByGPUTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoVideoByGPUTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoVideoByGPUTests/Pods-DemoVideoByGPUTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B35F7CEC672AE3D29CBD114A /* Pods_DemoVideoByGPUUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoVideoByGPUUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E7F189F06CDE8B75A0B5B8 /* Pods_DemoVideoByGPU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoVideoByGPU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E57E5EC41EB8B3C800D23085 /* CaptureVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureVideoViewController.swift; sourceTree = "<group>"; };
+		E57E5EC51EB8B3C800D23085 /* CaptureVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CaptureVideoViewController.xib; sourceTree = "<group>"; };
+		E57E5ECC1EB8B92E00D23085 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E57E5ED11EB8E73900D23085 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		E57E5ED31EB8E74200D23085 /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		E5DF11961EB8905400D6A9E9 /* DemoVideoByGPU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoVideoByGPU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DF11991EB8905400D6A9E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E5DF119B1EB8905400D6A9E9 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		E5DF119D1EB8905400D6A9E9 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		E5DF119F1EB8905400D6A9E9 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
-		E5DF11A21EB8905400D6A9E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5DF11A41EB8905400D6A9E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E5DF11A71EB8905400D6A9E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5DF11A91EB8905400D6A9E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5DF11AE1EB8905400D6A9E9 /* DemoVideoByGPUTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoVideoByGPUTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DF11B21EB8905400D6A9E9 /* DemoVideoByGPUTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoVideoByGPUTests.swift; sourceTree = "<group>"; };
@@ -141,14 +141,14 @@
 		E5DF11981EB8905400D6A9E9 /* DemoVideoByGPU */ = {
 			isa = PBXGroup;
 			children = (
+				E57E5ECB1EB8B92E00D23085 /* LaunchScreen.storyboard */,
 				E5DF11991EB8905400D6A9E9 /* AppDelegate.swift */,
-				E5DF119B1EB8905400D6A9E9 /* RootViewController.swift */,
-				E5DF119D1EB8905400D6A9E9 /* DataViewController.swift */,
-				E5DF119F1EB8905400D6A9E9 /* ModelController.swift */,
-				E5DF11A11EB8905400D6A9E9 /* Main.storyboard */,
 				E5DF11A41EB8905400D6A9E9 /* Assets.xcassets */,
-				E5DF11A61EB8905400D6A9E9 /* LaunchScreen.storyboard */,
 				E5DF11A91EB8905400D6A9E9 /* Info.plist */,
+				E57E5EC41EB8B3C800D23085 /* CaptureVideoViewController.swift */,
+				E57E5EC51EB8B3C800D23085 /* CaptureVideoViewController.xib */,
+				E57E5ED11EB8E73900D23085 /* OverlayView.swift */,
+				E57E5ED31EB8E74200D23085 /* OverlayView.xib */,
 			);
 			path = DemoVideoByGPU;
 			sourceTree = "<group>";
@@ -290,9 +290,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5DF11A81EB8905400D6A9E9 /* LaunchScreen.storyboard in Resources */,
+				E57E5ECD1EB8B92E00D23085 /* LaunchScreen.storyboard in Resources */,
+				E57E5ED41EB8E74200D23085 /* OverlayView.xib in Resources */,
 				E5DF11A51EB8905400D6A9E9 /* Assets.xcassets in Resources */,
-				E5DF11A31EB8905400D6A9E9 /* Main.storyboard in Resources */,
+				E57E5EC71EB8B3C800D23085 /* CaptureVideoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,9 +456,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5DF119C1EB8905400D6A9E9 /* RootViewController.swift in Sources */,
-				E5DF11A01EB8905400D6A9E9 /* ModelController.swift in Sources */,
-				E5DF119E1EB8905400D6A9E9 /* DataViewController.swift in Sources */,
+				E57E5ED21EB8E73900D23085 /* OverlayView.swift in Sources */,
+				E57E5EC61EB8B3C800D23085 /* CaptureVideoViewController.swift in Sources */,
 				E5DF119A1EB8905400D6A9E9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,18 +494,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E5DF11A11EB8905400D6A9E9 /* Main.storyboard */ = {
+		E57E5ECB1EB8B92E00D23085 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E5DF11A21EB8905400D6A9E9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E5DF11A61EB8905400D6A9E9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E5DF11A71EB8905400D6A9E9 /* Base */,
+				E57E5ECC1EB8B92E00D23085 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -619,6 +611,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahdenglish.DemoVideoByGPU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -633,6 +626,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahdenglish.DemoVideoByGPU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -717,6 +711,7 @@
 				E5DF11C41EB8905400D6A9E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5DF11C51EB8905400D6A9E9 /* Build configuration list for PBXNativeTarget "DemoVideoByGPUTests" */ = {
 			isa = XCConfigurationList;
@@ -725,6 +720,7 @@
 				E5DF11C71EB8905400D6A9E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5DF11C81EB8905400D6A9E9 /* Build configuration list for PBXNativeTarget "DemoVideoByGPUUITests" */ = {
 			isa = XCConfigurationList;
@@ -733,6 +729,7 @@
 				E5DF11CA1EB8905400D6A9E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
