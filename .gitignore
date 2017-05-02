@@ -65,3 +65,7 @@ fastlane/screenshots
 fastlane/test_output
 MobileTrading/Pods
 *.xcscmblueprint
+Podfile
+Podfile.lock
+contents.xcworkspacedata
+DemoVideoByGPU/Pods
