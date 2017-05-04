@@ -10,11 +10,24 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    let _id: String? = "asdkasldk"
+    
     var window: UIWindow?
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // override point for customization after application launch. asdkasdlaks, alsdajsdlkasd
+        print(_id as Any)
+        
+        let mys_Table: UITableView? = UITableView()
+        print(mys_Table as Any)
+        
+        let bool1: Bool = false
+        guard bool1 else {
+            print("test1 my")
+            return true
+        }
+        print(_id as Any)
         return true
     }
 }

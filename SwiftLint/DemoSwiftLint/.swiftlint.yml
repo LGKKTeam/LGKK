@@ -1,7 +1,6 @@
 disabled_rules: 
   - colon
   - control_statement
-  - todo
   - nesting
   - trailing_whitespace
   - file_header
@@ -33,6 +32,10 @@ opt_in_rules:
   - prohibited_super_call
   - fatal_error_message
 
+force_cast: warning # implicitly
+force_try:
+  severity: warning # explicitly
+
 file_length:
   warning: 600
   error: 800
@@ -53,6 +56,23 @@ cyclomatic_complexity:
   error: 35
 number_separator:
   minimum_length: 5
+type_name:
+  min_length: 4 # only warning
+  max_length: # warning and error
+    warning: 40
+    error: 50
+  excluded: iPhone # excluded via string
+identifier_name:
+  min_length: # only min_length
+    error: 4 # only error
+  excluded: # excluded via string array
+    - id
+    - _id
+    - URL
+    - GlobalAPIKey
+large_tuple: # warn when using 3 values in tuple, give error if there are 4
+   warning: 3
+   error: 4
 
 custom_rules:
   vertical_whitespace_closing_braces:
@@ -60,61 +80,40 @@ custom_rules:
     regex: '\n\s*\n\s*[)}\]]'
     name: "Vertical Whitespace before Closing Braces"
     message: "Don't include vertical whitespace (empty line) before closing braces."
+    severity: warning    
+  comments_space:
+    name: "Space After Comment"
+    regex: "(^*//\\w+)"
+    message: "There should be a space after //"
     severity: warning
-    #########
-  # comments_space:
-  #   name: "Space After Comment"
-  #   regex: "(^*//\\w+)"
-  #   message: "There should be a space after //"
-  #   severity: error
-  # comments_capitalized_ignore_possible_code:
-  #   name: "Capitalize First Word In Comment"
-  #   regex: "(^ +// +(?!swiftlint)[a-z]+)"
-  #   message: "The first word of a comment should be capitalized"
-  #   severity: error
-  # empty_line_after_guard:
-  #   name: "Empty Line After Guard"
-  #   regex: "(^ *guard[ a-zA-Z0-9=?.\(\),><!]*\{[ a-zA-Z0-9=?.\(\),><!]*\}\n *(?!(?:return|guard))\S+)"
-  #   message: "There should be an empty line after a guard"
-  #   severity: error
-  # empty_line_after_super:
-  #   name: "Empty Line After Super"
-  #   regex: "(^ *super\.[ a-zA-Z0-9=?.\(\)\{\}:,><!]*\n *(?!(?:\}|return))\S+)"
-  #   message: "There should be an empty line after super"
-  #   severity: error
-  # multiple_empty_lines:
-  #   name: "Multiple Empty Lines"
-  #   regex: "((?:\s*\n){3,})"
-  #   message: "There are too many line breaks"
-  #   severity: error
-  # unnecessary_type:
-  #   name: "Unnecessary Type"
-  #   regex: "[ a-zA-Z0-9]*(?:let|var) [ a-zA-Z0-9]*: ([a-zA-Z0-9]*)[\? ]*= \1"
-  #   message: "Type Definition Not Needed"
-  #   severity: error
-
-####### enabled rules #######
-#  - comma # k,v >> k, v
-#  - file_length # max number of lines per file
-#  - force_cast # as!
-#  - force_try # try!
-#  - function_body_length # max length of function body
-#  - leading_whitespace # empty lines with whitespaces only
-#  - legacy_constructor # e.g CGPointMake(...) >>> CGPoint(x: ..., y: ...)
-#  - line_length # max length of a line
-#  - opening_brace # [].map(){ ... } >>> [].map() { ... }
-#  - operator_function_whitespace # func  thing () {...} >>> func thing() {...}
-#  - return_arrow_whitespace # func thing()->Bool >>> func thing() -> Bool
-#  - statement_position # }else if { >>> } else if {
-#  - trailing_newline # new line at the end of a file
-#  - trailing_semicolon # no ;
-#  - trailing_whitespace # no trailing whitespaced
-#  - type_body_length # max body length
-#  - type_name # types should start with a capital letter
-#  - valid_docs # docs should match the method signature
-#  - variable_name_min_length # variables should have a 3 letter minimum name and 40 maximum.
-#  - variable_name # variables should start with a lower case character or a capitalized one if `static`.
-#  - cyclomatic_complexity # limit the number of entries inside an enum or struct.
-
-# reporter type (xcode, json, csv, checkstyle)
-reporter: "xcode"
+  no_my_identifier:
+    name: "No my identifier Rule"
+    regex: "([M,m]y^*)"
+    match_kinds:
+      - identifier
+    message: "There should be no my_var, myTable, ...etc here"
+    severity: error
+  comma_space_rule:
+    name: "Expected only one space after comma"
+    regex: ",[ ]{2,}"
+    match_kinds:
+      - comment
+    message: "Expected only one space after comma"
+  force_https:
+    name: "Force HTTPS over HTTP"
+    regex: "((?i)http(?!s))"
+    match_kinds: string
+    message: "HTTPS should be favored over HTTP"
+    severity: warning
+  empty_line_after_super:
+    name: "Empty Line After Super"
+    regex: "(^*super\\.[ a-zA-Z0-9=?.\\(\\)\\{\\}:,><!]*\n *(?!(?:\\}|return))\\S+)"
+    message: "There should be an empty line after super"
+    severity: error
+  empty_line_after_guard:
+    name: "Empty Line After Guard"
+    regex: "(^*guard [ a-zA-Z0-9=?.\\(\\)\\{\\}:,><!]*\n *(?!(?:\\}|return|guard))\\S+)"
+    message: "There should be an empty line after a guard"
+    severity: error
+  
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle)
