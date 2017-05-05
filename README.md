@@ -10,6 +10,9 @@ Most code is compatible with **Xcode 8.2** and **Swift 3**. We'll keep this upda
 
 :heart_eyes: **Suggestions and contributions are welcome!** :heart_eyes:
 
+## Demo
+- [Capture video by GPU](https://github.com/LamGiauKhongKhoTeam/LGKK/tree/master/DemoVideoByGPU)
+
 ## Important links
 - [Data Compression](https://github.com/leemorgan/NSData-Compression)
 
