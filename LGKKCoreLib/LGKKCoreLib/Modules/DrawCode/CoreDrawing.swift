@@ -9,6 +9,8 @@
 
 import UIKit
 
+// swiftlint:disable type_body_length line_length object_literal function_body_length file_length
+
 public class CoreDrawing : NSObject {
 
     //// Cache
@@ -66,16 +68,18 @@ public class CoreDrawing : NSObject {
 
     //// Drawing Methods
 
-    public dynamic class func drawNext(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 180), resizing: ResizingBehavior = .aspectFit) {
+    public dynamic class func drawNext(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 180),
+                                       resizing: ResizingBehavior = .aspectFit) {
         //// General Declarations
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         
         //// Resize to Target Frame
         context.saveGState()
-        let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 100, height: 180), target: targetFrame)
+        let resizedFrame = resizing.apply(rect: CGRect(x: 0, y: 0, width: 100, height: 180), target: targetFrame)
         context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
         context.scaleBy(x: resizedFrame.width / 100, y: resizedFrame.height / 180)
-
 
         //// raw Drawing
         let rawPath = UIBezierPath()
@@ -91,19 +95,19 @@ public class CoreDrawing : NSObject {
         rawPath.fill()
         
         context.restoreGState()
-
     }
 
     public dynamic class func drawVolume(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 71, height: 128), resizing: ResizingBehavior = .aspectFit) {
         //// General Declarations
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 71, height: 128), target: targetFrame)
         context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
         context.scaleBy(x: resizedFrame.width / 71, y: resizedFrame.height / 128)
-
 
         //// Bezier Drawing
         let bezierPath = UIBezierPath()
@@ -118,19 +122,19 @@ public class CoreDrawing : NSObject {
         bezierPath.fill()
         
         context.restoreGState()
-
     }
 
     public dynamic class func drawPlayRevert(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 90, height: 180), resizing: ResizingBehavior = .aspectFit) {
         //// General Declarations
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 90, height: 180), target: targetFrame)
         context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
         context.scaleBy(x: resizedFrame.width / 90, y: resizedFrame.height / 180)
-
 
         //// Bezier 2 Drawing
         let bezier2Path = UIBezierPath()
@@ -142,11 +146,12 @@ public class CoreDrawing : NSObject {
         bezier2Path.fill()
         
         context.restoreGState()
-
     }
     
     public dynamic class func drawPlayBack(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 115, height: 180), resizing: ResizingBehavior = .aspectFit) {
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
 
         //// Resize to Target Frame
         context.saveGState()
@@ -175,7 +180,9 @@ public class CoreDrawing : NSObject {
     
     public dynamic class func drawVolumeMax(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 128, height: 128), resizing: ResizingBehavior = .aspectFit) {
         
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 128, height: 128), target: targetFrame)
@@ -212,7 +219,9 @@ public class CoreDrawing : NSObject {
     }
 
     public dynamic class func drawSoundMuted(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 128, height: 128), resizing: ResizingBehavior = .aspectFit) {
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 128, height: 128), target: targetFrame)
@@ -277,7 +286,9 @@ public class CoreDrawing : NSObject {
 
     public dynamic class func drawPause(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 90, height: 180), resizing: ResizingBehavior = .aspectFit) {
         ////
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 90, height: 180), target: targetFrame)
@@ -307,7 +318,9 @@ public class CoreDrawing : NSObject {
     
     public dynamic class func drawFastBackward(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 200, height: 180), resizing: ResizingBehavior = .aspectFit) {
         ////
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 200, height: 180), target: targetFrame)
@@ -349,7 +362,9 @@ public class CoreDrawing : NSObject {
 
     public dynamic class func drawFoward(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 150, height: 180), resizing: ResizingBehavior = .aspectFit) {
         ////
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 150, height: 180), target: targetFrame)
@@ -383,7 +398,9 @@ public class CoreDrawing : NSObject {
 
     public dynamic class func drawVolumeMin(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 102, height: 128), resizing: ResizingBehavior = .aspectFit) {
         ////
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 102, height: 128), target: targetFrame)
@@ -414,7 +431,9 @@ public class CoreDrawing : NSObject {
 
     public dynamic class func drawBackward(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 150, height: 180), resizing: ResizingBehavior = .aspectFit) {
         ////
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 150, height: 180), target: targetFrame)
@@ -442,14 +461,15 @@ public class CoreDrawing : NSObject {
         CoreDrawing.colorBlack.setFill()
         bezierPath.fill()
 
-        
         ////
         context.restoreGState()
     }
 
     public dynamic class func drawPlayNext(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 115, height: 180), resizing: ResizingBehavior = .aspectFit) {
         ////
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 115, height: 180), target: targetFrame)
@@ -479,7 +499,9 @@ public class CoreDrawing : NSObject {
     
     public dynamic class func drawFastFoward(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 200, height: 180), resizing: ResizingBehavior = .aspectFit) {
         ////
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 200, height: 180), target: targetFrame)
@@ -521,7 +543,9 @@ public class CoreDrawing : NSObject {
 
     public dynamic class func drawBack(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 180), resizing: ResizingBehavior = .aspectFit) {
         ////
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 100, height: 180), target: targetFrame)
@@ -547,7 +571,9 @@ public class CoreDrawing : NSObject {
     
     public dynamic class func drawPlay(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 90, height: 180), resizing: ResizingBehavior = .aspectFit) {
         ////
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 90, height: 180), target: targetFrame)
@@ -569,7 +595,9 @@ public class CoreDrawing : NSObject {
 
     public dynamic class func drawFullScreen(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 128, height: 128), resizing: ResizingBehavior = .aspectFit) {
         ////
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 128, height: 128), target: targetFrame)
@@ -619,7 +647,9 @@ public class CoreDrawing : NSObject {
 
     public dynamic class func drawExitFullScreen(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 128, height: 128), resizing: ResizingBehavior = .aspectFit) {
         ////
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 128, height: 128), target: targetFrame)
@@ -669,7 +699,9 @@ public class CoreDrawing : NSObject {
 
     public dynamic class func drawDefaultView(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 128, height: 73), resizing: ResizingBehavior = .aspectFit) {
         ////
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 128, height: 73), target: targetFrame)
@@ -700,7 +732,9 @@ public class CoreDrawing : NSObject {
 
     public dynamic class func drawTheaterMode(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 128, height: 73), resizing: ResizingBehavior = .aspectFit) {
         ////
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 128, height: 73), target: targetFrame)
@@ -731,7 +765,9 @@ public class CoreDrawing : NSObject {
     
     public dynamic class func drawCheckmark(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 64, height: 64), resizing: ResizingBehavior = .aspectFit) {
         ////
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 64, height: 64), target: targetFrame)
@@ -767,7 +803,9 @@ public class CoreDrawing : NSObject {
 
     public dynamic class func drawSettingsFilled(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 500, height: 500), resizing: ResizingBehavior = .aspectFit) {
         ////
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 500, height: 500), target: targetFrame)
@@ -829,7 +867,9 @@ public class CoreDrawing : NSObject {
 
     public dynamic class func drawSettings(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 500, height: 500), resizing: ResizingBehavior = .aspectFit) {
         ////
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         //// Resize to Target Frame
         context.saveGState()
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 500, height: 500), target: targetFrame)
@@ -969,76 +1009,83 @@ public class CoreDrawing : NSObject {
         context.restoreGState()
     }
 
-    //MARK: - Generated Images
+    // MARK: - Generated Images
 
     public dynamic class var imageOfNext: UIImage {
-        if Cache.imageOfNext != nil {
-            return Cache.imageOfNext!
-        }
-
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 100, height: 180), false, 0)
+        if Cache.imageOfNext == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 100, height: 180), false, 0)
             CoreDrawing.drawNext()
-
-        Cache.imageOfNext = UIGraphicsGetImageFromCurrentImageContext()!.withRenderingMode(.alwaysTemplate)
-        UIGraphicsEndImageContext()
-
-        return Cache.imageOfNext!
+            
+            Cache.imageOfNext = UIGraphicsGetImageFromCurrentImageContext()?.withRenderingMode(.alwaysTemplate)
+            UIGraphicsEndImageContext()
+        }
+        
+        if let imageOfNext = Cache.imageOfNext {
+            return imageOfNext
+        } else {
+            fatalError("imageOfNext is nil")
+        }
     }
 
     public dynamic class var imageOfVolume: UIImage {
-        if Cache.imageOfVolume != nil {
-            return Cache.imageOfVolume!
-        }
-
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 71, height: 128), false, 0)
+        if Cache.imageOfVolume == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 71, height: 128), false, 0)
             CoreDrawing.drawVolume()
-
-        Cache.imageOfVolume = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-
-        return Cache.imageOfVolume!
+            
+            Cache.imageOfVolume = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+        }
+        if let imageOfVolume = Cache.imageOfVolume {
+            return imageOfVolume
+        } else {
+            fatalError("imageOfVolume is nil")
+        }
     }
 
     public dynamic class var imageOfPlayRevert: UIImage {
-        if Cache.imageOfPlayRevert != nil {
-            return Cache.imageOfPlayRevert!
-        }
-
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 90, height: 180), false, 0)
+        if Cache.imageOfPlayRevert == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 90, height: 180), false, 0)
             CoreDrawing.drawPlayRevert()
-
-        Cache.imageOfPlayRevert = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-
-        return Cache.imageOfPlayRevert!
+            
+            Cache.imageOfPlayRevert = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+        }
+        if let imageOfPlayRevert = Cache.imageOfPlayRevert {
+            return imageOfPlayRevert
+        } else {
+            fatalError("imageOfPlayRevert is nil")
+        }
     }
     
     public dynamic class var imageOfPlayBack: UIImage {
-        if Cache.imageOfPlayBack != nil {
-            return Cache.imageOfPlayBack!
+        if Cache.imageOfPlayBack == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 115, height: 180), false, 0)
+            CoreDrawing.drawPlayBack()
+            
+            Cache.imageOfPlayBack = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
-        
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 115, height: 180), false, 0)
-        CoreDrawing.drawPlayBack()
-        
-        Cache.imageOfPlayBack = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfPlayBack!
+        if let imageOfPlayBack = Cache.imageOfPlayBack {
+            return imageOfPlayBack
+        } else {
+            fatalError("imageOfPlayBack is nil")
+        }
     }
     
     public dynamic class var imageOfVolumeMax: UIImage {
-        if Cache.imageOfVolumeMax != nil {
-            return Cache.imageOfVolumeMax!
+        if Cache.imageOfVolumeMax == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 128), false, 0)
+            CoreDrawing.drawVolumeMax()
+            
+            Cache.imageOfVolumeMax = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 128), false, 0)
-        CoreDrawing.drawVolumeMax()
-        
-        Cache.imageOfVolumeMax = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfVolumeMax!
+        if let imageOfVolumeMax = Cache.imageOfVolumeMax {
+            return imageOfVolumeMax
+        } else {
+            fatalError("imageOfVolumeMax is nil")
+        }
     }
     
     public dynamic class var imageOfPause: UIImage {
@@ -1279,40 +1326,37 @@ public class CoreDrawing : NSObject {
         return Cache.imageOfSoundMuted!
     }
 
-    //MARK: - Customization Infrastructure
+    // MARK: - Customization Infrastructure
 
-    @IBOutlet dynamic var nextTargets: [AnyObject]! {
+    @IBOutlet fileprivate dynamic var nextTargets: [AnyObject]! {
         get { return Cache.nextTargets }
         set {
             Cache.nextTargets = newValue
             for target: AnyObject in newValue {
-                let _ = target.perform(NSSelectorFromString("setImage:"), with: CoreDrawing.imageOfNext)
+                _ = target.perform(NSSelectorFromString("setImage:"), with: CoreDrawing.imageOfNext)
             }
         }
     }
 
-    @IBOutlet dynamic var volumeTargets: [AnyObject]! {
+    @IBOutlet fileprivate dynamic var volumeTargets: [AnyObject]! {
         get { return Cache.volumeTargets }
         set {
             Cache.volumeTargets = newValue
             for target: AnyObject in newValue {
-                let _ = target.perform(NSSelectorFromString("setImage:"), with: CoreDrawing.imageOfVolume)
+                _ = target.perform(NSSelectorFromString("setImage:"), with: CoreDrawing.imageOfVolume)
             }
         }
     }
 
-    @IBOutlet dynamic var playRevertTargets: [AnyObject]! {
+    @IBOutlet fileprivate dynamic var playRevertTargets: [AnyObject]! {
         get { return Cache.playRevertTargets }
         set {
             Cache.playRevertTargets = newValue
             for target: AnyObject in newValue {
-                let _ = target.perform(NSSelectorFromString("setImage:"), with: CoreDrawing.imageOfPlayRevert)
+                _ = target.perform(NSSelectorFromString("setImage:"), with: CoreDrawing.imageOfPlayRevert)
             }
         }
     }
-
-
-
 
     @objc(CoreDrawingResizingBehavior)
     public enum ResizingBehavior: Int {

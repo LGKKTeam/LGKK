@@ -8,8 +8,8 @@
 
 import UIKit
 import ObjectMapper
-import RealmSwift
 import Realm
+import RealmSwift
 
 open class RealmString: Object {
     open dynamic var stringValue = ""
@@ -32,6 +32,7 @@ open class SPBaseModel: Object, Mappable {
     
     required public init(map: Map) {
         super.init()
+        
         _id <- map["_id"]
     }
     
@@ -59,8 +60,9 @@ open class ListTransform<T:Object> : TransformType where T:Mappable {
         if let tempArr = value as? [Any] {
             for entry in tempArr {
                 let mapper = Mapper<T>()
-                let model : T = mapper.map(JSONObject: entry)!
-                result.append(model)
+                if let model:T = mapper.map(JSONObject: entry) {
+                    result.append(model)
+                }
             }
         }
         return result

@@ -14,7 +14,9 @@
 import UIKit
 
 public extension UILabel {
-    public convenience init(badgeText: String, color: UIColor = UIColor(hex: "FE0555"), fontSize: CGFloat = UIFont.smallSystemFontSize) {
+    public convenience init(badgeText: String,
+                            color: UIColor = UIColor(hex: "FE0555"),
+                            fontSize: CGFloat = UIFont.smallSystemFontSize) {
         self.init()
         text = " \(badgeText) "
         textColor = UIColor.white
@@ -25,7 +27,13 @@ public extension UILabel {
         clipsToBounds = true
         
         translatesAutoresizingMaskIntoConstraints = false
-        addConstraint(NSLayoutConstraint(item: self, attribute: .width, relatedBy: .greaterThanOrEqual, toItem: self, attribute: .height, multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint(item: self,
+                                         attribute: .width,
+                                         relatedBy: .greaterThanOrEqual,
+                                         toItem: self,
+                                         attribute: .height,
+                                         multiplier: 1,
+                                         constant: 0))
     }
 }
 
@@ -36,8 +44,20 @@ public extension UIBarButtonItem {
         
         let badgeLabel = UILabel(badgeText: badge ?? "")
         button.addSubview(badgeLabel)
-        button.addConstraint(NSLayoutConstraint(item: badgeLabel, attribute: .top, relatedBy: .equal, toItem: button, attribute: .top, multiplier: 1, constant: -8))
-        button.addConstraint(NSLayoutConstraint(item: badgeLabel, attribute: .right, relatedBy: .equal, toItem: button, attribute: .right, multiplier: 1, constant: 8))
+        button.addConstraint(NSLayoutConstraint(item: badgeLabel,
+                                                attribute: .top,
+                                                relatedBy: .equal,
+                                                toItem: button,
+                                                attribute: .top,
+                                                multiplier: 1,
+                                                constant: -8))
+        button.addConstraint(NSLayoutConstraint(item: badgeLabel,
+                                                attribute: .right,
+                                                relatedBy: .equal,
+                                                toItem: button,
+                                                attribute: .right,
+                                                multiplier: 1,
+                                                constant: 8))
         if nil == badge {
             badgeLabel.isHidden = true
         }
@@ -73,10 +93,12 @@ public extension UIBarButtonItem {
     public var badgeString: String? {
         get { return badgeLabel?.text?.trimmingCharacters(in: NSCharacterSet.whitespaces) }
         set {
-            if let badgeLabel = badgeLabel {
-                badgeLabel.text = nil == newValue ? nil : " \(newValue!) "
+            if let badgeLabel = badgeLabel, let newValue = newValue {
+                badgeLabel.text = " \(newValue) "
                 badgeLabel.sizeToFit()
-                badgeLabel.isHidden = nil == newValue
+                badgeLabel.isHidden = false
+            } else {
+                badgeLabel?.isHidden = true
             }
         }
     }
@@ -99,18 +121,18 @@ extension UIButton {
     /// removes other title attributes
     public var titleSize: CGFloat {
         get {
-            let titleFont = attributedTitle(for: .normal)?.attribute(NSFontAttributeName, at: 0, effectiveRange: nil) as? UIFont
+            let titleFont = attributedTitle(for: .normal)?
+                .attribute(NSFontAttributeName, at: 0, effectiveRange: nil) as? UIFont
             return titleFont?.pointSize ?? UIFont.buttonFontSize
         }
         set {
             // TODO: use current attributedTitleForState(.Normal) if defined
             if UIFont.buttonFontSize == newValue || 0 == newValue {
                 setTitle(currentTitle, for: .normal)
-            }
-            else {
-                let attrTitle = NSAttributedString(string: currentTitle ?? "", attributes:
-                    [NSFontAttributeName: UIFont.systemFont(ofSize: newValue), NSForegroundColorAttributeName: currentTitleColor]
-                )
+            } else {
+                let attributes = [NSFontAttributeName: UIFont.systemFont(ofSize: newValue),
+                                  NSForegroundColorAttributeName: currentTitleColor]
+                let attrTitle = NSAttributedString(string: currentTitle ?? "", attributes: attributes)
                 setAttributedTitle(attrTitle, for: .normal)
             }
             
@@ -129,8 +151,7 @@ extension UIButton {
         if size.isZero {
             backgroundColor = UIColor.clear
             setTitleColor(tintColor, for: .normal)
-        }
-        else {
+        } else {
             backgroundColor = tintColor
             let currentTitleColor = titleColor(for: .normal)
             if currentTitleColor == nil || currentTitleColor == tintColor {
@@ -141,6 +162,7 @@ extension UIButton {
     
     override open func tintColorDidChange() {
         super.tintColorDidChange()
+        
         if rounded {
             backgroundColor = tintColor
         }

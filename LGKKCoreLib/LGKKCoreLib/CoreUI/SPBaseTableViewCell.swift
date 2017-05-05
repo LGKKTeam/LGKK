@@ -10,5 +10,4 @@ import UIKit
 import MGSwipeTableCell
 
 open class SPBaseTableViewCell: MGSwipeTableCell {
-    
 }

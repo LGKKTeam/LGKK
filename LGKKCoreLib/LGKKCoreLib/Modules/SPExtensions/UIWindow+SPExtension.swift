@@ -12,7 +12,8 @@ import QuartzCore
 
 public extension UIWindow {
     
-    public func sp_set(rootViewController newRootViewController: UIViewController, withTransition transition: CATransition? = nil) {
+    public func sp_set(rootViewController newRootViewController: UIViewController,
+                       withTransition transition: CATransition? = nil) {
         let previousViewController = rootViewController
         
         if let transition = transition {
@@ -31,7 +32,8 @@ public extension UIWindow {
             newRootViewController.setNeedsStatusBarAppearanceUpdate()
         }
         
-        /// The presenting view controllers view doesn't get removed from the window as its currently transistioning and presenting a view controller
+        /* The presenting view controllers view doesn't get removed from the window
+         as its currently transistioning and presenting a view controller */
         if let transitionViewClass = NSClassFromString("UITransitionView") {
             for subview in subviews where subview.isKind(of: transitionViewClass) {
                 subview.removeFromSuperview()

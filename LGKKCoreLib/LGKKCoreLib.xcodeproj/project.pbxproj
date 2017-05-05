@@ -323,6 +323,7 @@
 				E5481E221EA28F1A00315060 /* Headers */,
 				E5481E231EA28F1A00315060 /* Resources */,
 				9AE2E9EB3650212CA657AB94 /* [CP] Copy Pods Resources */,
+				E518EF651EBB5D3200D57AA4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -476,6 +477,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../MobileTrading/Pods/Target Support Files/Pods-LGKKCoreLibTests/Pods-LGKKCoreLibTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E518EF651EBB5D3200D57AA4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		EFD6199154D7F7C13F566B0F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -33,7 +33,11 @@ open class SpriteSheet {
     fileprivate var imageCache = [String:UIImage]()
     
     fileprivate var cgImage: CGImage {
-        return image.cgImage!
+        if let cgImage = image.cgImage {
+            return cgImage
+        } else {
+            fatalError("cgImage is nil")
+        }
     }
     
     fileprivate var bitsPerComponent: Int {
@@ -77,7 +81,11 @@ open class SpriteSheet {
     }
     
     var bytes: UnsafeMutablePointer<UInt8> {
-        return imageData!.assumingMemoryBound(to: UInt8.self)
+        if let imageData = imageData {
+            return imageData.assumingMemoryBound(to: UInt8.self)
+        } else {
+            fatalError("imageData is nil")
+        }
     }
     
     init?(sheetImage: UIImage, info sInfo: SheetInfo) {
@@ -95,12 +103,18 @@ open class SpriteSheet {
         let memory = (sheetBytesCount * MemoryLayout<UInt8>.stride, MemoryLayout<UInt8>.alignment)
         let bytes = UnsafeMutableRawPointer.allocate(bytes: memory.0, alignedTo: memory.1)
         
-        guard let bmpCtx = CGContext(data: bytes, width: Int(imageSize.width), height: Int(imageSize.height), bitsPerComponent: bitsPerComponent, bytesPerRow: 4 * Int(imageSize.width), space: colorSpace, bitmapInfo: bitmapInfo.rawValue) else {
+        guard let bmpCtx = CGContext(data: bytes,
+                                     width: Int(imageSize.width),
+                                     height: Int(imageSize.height),
+                                     bitsPerComponent: bitsPerComponent,
+                                     bytesPerRow: 4 * Int(imageSize.width),
+                                     space: colorSpace,
+                                     bitmapInfo: bitmapInfo.rawValue) else {
             bytes.deallocate(bytes: memory.0, alignedTo: memory.1)
             return
         }
         imageData = bytes
-        bmpCtx.draw(cgImage, in: CGRect(x: 0,y: 0,width: imageSize.width,height: imageSize.height))
+        bmpCtx.draw(cgImage, in: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height))
     }
     
     open func getImageFor(_ code: String, deepCopy: Bool = true, scale: CGFloat = 2) -> UIImage? {
@@ -142,11 +156,12 @@ open class SpriteSheet {
                 return nil
             }
             
-            guard let provider = CGDataProvider(dataInfo: nil, data: data, size: sheetBytesPerRow * info.spriteSize.height, releaseData: {_ in}) else {
-                return nil
-            }
+            let provider = CGDataProvider(dataInfo: nil,
+                                          data: data,
+                                          size: sheetBytesPerRow * info.spriteSize.height,
+                                          releaseData: { _ in })
             
-            guard let cgImage = CGImage(
+            guard let providerNotNil = provider, let cgImage = CGImage(
                 width: info.spriteSize.width,
                 height: info.spriteSize.height,
                 bitsPerComponent: bitsPerComponent,
@@ -154,7 +169,7 @@ open class SpriteSheet {
                 bytesPerRow: sheetBytesPerRow,
                 space: colorSpace,
                 bitmapInfo: bitmapInfo,
-                provider: provider,
+                provider: providerNotNil,
                 decode: nil,
                 shouldInterpolate: true,
                 intent: CGColorRenderingIntent.defaultIntent
@@ -184,7 +199,6 @@ open class SpriteSheet {
         }
         imageData = nil
     }
-    
 }
 
 open class FlagIcons: NSObject {
@@ -193,6 +207,7 @@ open class FlagIcons: NSObject {
     
     override init() {
         super.init()
+        
         spriteSheet = FlagIcons.loadDefault()
     }
     
@@ -215,7 +230,9 @@ open class FlagIcons: NSObject {
         
         if let infoData = try? Data(contentsOf: URL(fileURLWithPath: file)) {
             do {
-                if let infoObj = try JSONSerialization.jsonObject(with: infoData, options: JSONSerialization.ReadingOptions(rawValue: 0)) as? [String:Any] {
+                let rawObj = try JSONSerialization.jsonObject(with: infoData,
+                                                              options: JSONSerialization.ReadingOptions(rawValue: 0))
+                if let infoObj = rawObj as? [String:Any] {
                     if let gridSizeObj = infoObj["gridSize"] as? [String:Int],
                         let spriteSizeObj = infoObj["spriteSize"] as? [String:Int] {
                         let gridSize = (gridSizeObj["cols"]!, gridSizeObj["rows"]!)
@@ -226,7 +243,9 @@ open class FlagIcons: NSObject {
                                 let resourceUrl = assetsBundle.resourceURL {
                                 let sheetFileUrl = resourceUrl.appendingPathComponent(sheetFileName)
                                 if let image = UIImage(contentsOfFile: sheetFileUrl.path) {
-                                    let info = SpriteSheet.SheetInfo(gridSize: gridSize, spriteSize: spriteSize, codes: codes)
+                                    let info = SpriteSheet.SheetInfo(gridSize: gridSize,
+                                                                     spriteSize: spriteSize,
+                                                                     codes: codes)
                                     return SpriteSheet(sheetImage: image, info:  info)
                                 }
                             }
@@ -244,7 +263,6 @@ open class FlagIcons: NSObject {
         guard let assetsBundlePath = bundle.path(forResource: "flag-assets", ofType: "bundle") else {
             return nil
         }
-        return Bundle(path: assetsBundlePath);
+        return Bundle(path: assetsBundlePath)
     }
-    
 }
