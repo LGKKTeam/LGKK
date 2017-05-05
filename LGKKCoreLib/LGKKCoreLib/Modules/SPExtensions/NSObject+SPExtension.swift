@@ -9,7 +9,7 @@
 import UIKit
 import ObjectiveC
 
-///Speacial work with Timer for interval update content subview.
+/// Speacial work with Timer for interval update content subview.
 public extension NSObject {
     private struct AssociatedKeys {
         static var weakTimer = "AssociatedKeys.Timer"
@@ -20,15 +20,17 @@ public extension NSObject {
             return objc_getAssociatedObject(self, &AssociatedKeys.weakTimer) as? Timer
         }
         set(newValue) {
-            objc_setAssociatedObject(self, &AssociatedKeys.weakTimer, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+            let policy = objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN
+            objc_setAssociatedObject(self, &AssociatedKeys.weakTimer, newValue, policy)
         }
     }
     
-    public func scheduleUpdate(repeatInterval interval: TimeInterval, handler:@escaping (AnyObject, Timer) -> Void) -> Timer? {
+    public func scheduleUpdate(repeatInterval interval: TimeInterval,
+                               handler:@escaping (AnyObject, Timer) -> Void) -> Timer? {
         stopScheduleUpdate()
-        weaktimer = Timer.schedule(repeatInterval: interval) {[weak self] (timer) in
-            if self != nil {
-                handler(self!, timer!)
+        weaktimer = Timer.schedule(repeatInterval: interval) {[weak self] timer in
+            if self != nil, let timer = timer {
+                handler(self!, timer)
             } else {
                 timer?.invalidate()
             }
@@ -39,8 +41,8 @@ public extension NSObject {
     public func scheduleUpdate(delay: TimeInterval, handler:@escaping (AnyObject, Timer) -> Void) -> Timer? {
         stopScheduleUpdate()
         weaktimer = Timer.schedule(delay: delay, handler: {[weak self] (timer) in
-            if self != nil {
-                handler(self!, timer!)
+            if self != nil, let timer = timer {
+                handler(self!, timer)
             } else {
                 timer?.invalidate()
             }

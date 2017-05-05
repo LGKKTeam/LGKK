@@ -42,6 +42,7 @@ pod 'SwiftyJSON'
 pod 'MGSwipeTableCell'
 pod 'SwiftDate'
 pod 'SwiftLocation'
+pod 'SwiftLint'
 
 #    pod 'SignalR-ObjC'
 #    pod 'Fabric'

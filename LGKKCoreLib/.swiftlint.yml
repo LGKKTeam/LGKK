@@ -1,0 +1,119 @@
+disabled_rules: 
+  - colon
+  - control_statement
+  - nesting
+  - trailing_whitespace
+  - file_header
+  - sorted_imports
+
+excluded: 
+  - Carthage
+  - Pods
+  - External
+  - R.generated.swift
+
+opt_in_rules: 
+  - missing_docs
+  - force_unwrapping
+  - empty_count
+  - file_header
+  - explicit_init
+  - closure_spacing
+  - overridden_super_call
+  - redundant_nil_coalescing
+  - private_outlet
+  - nimble_operator
+  - attributes
+  - operator_usage_whitespace
+  - closure_end_indentation
+  - first_where
+  - object_literal
+  - number_separator
+  - prohibited_super_call
+  - fatal_error_message
+
+force_cast: warning # implicitly
+force_try:
+  severity: warning # explicitly
+
+file_length:
+  warning: 600
+  error: 800
+function_body_length:
+  warning: 40
+  error: 80
+function_parameter_count: 
+  warning: 6
+  error: 8
+line_length:
+  warning: 120
+  error: 150
+type_body_length: 
+  warning: 400
+  error: 500
+cyclomatic_complexity: 
+  warning: 25
+  error: 35
+number_separator:
+  minimum_length: 5
+type_name:
+  min_length: 4 # only warning
+  max_length: # warning and error
+    warning: 30
+    error: 40
+  excluded: iPhone # excluded via string
+identifier_name:
+  min_length: # only min_length
+    warning: 3
+  excluded: # excluded via string array
+    - id
+    - _id
+    - URL
+    - GlobalAPIKey
+large_tuple: # warn when using 3 values in tuple, give error if there are 4
+   warning: 3
+   error: 4
+
+custom_rules:
+  vertical_whitespace_closing_braces:
+    included: ".*.swift"
+    regex: '\n\s*\n\s*[)}\]]'
+    name: "Vertical Whitespace before Closing Braces"
+    message: "Don't include vertical whitespace (empty line) before closing braces."
+    severity: warning    
+  comments_space:
+    name: "Space After Comment"
+    regex: "(^*//\\w+)"
+    message: "There should be a space after //"
+    severity: warning
+  no_my_identifier:
+    name: "No my identifier Rule"
+    regex: "([M,m]y^*)"
+    match_kinds:
+      - identifier
+    message: "There should be no my_var, myTable, ...etc here"
+    severity: error
+  comma_space_rule:
+    name: "Expected only one space after comma"
+    regex: ",[ ]{2,}"
+    match_kinds:
+      - comment
+    message: "Expected only one space after comma"
+  force_https:
+    name: "Force HTTPS over HTTP"
+    regex: "((?i)http(?!s))"
+    match_kinds: string
+    message: "HTTPS should be favored over HTTP"
+    severity: warning
+  empty_line_after_super:
+    name: "Empty Line After Super"
+    regex: "(^*super\\.[ a-zA-Z0-9=?.\\(\\)\\{\\}:,><!]*\n *(?!(?:\\}|return))\\S+)"
+    message: "There should be an empty line after super"
+    severity: error
+  empty_line_after_guard:
+    name: "Empty Line After Guard"
+    regex: "(^*guard [ a-zA-Z0-9=?.\\(\\)\\{\\}:,><!]*\n *(?!(?:\\}|return|guard))\\S+)"
+    message: "There should be an empty line after a guard"
+    severity: error
+  
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle)

@@ -9,5 +9,4 @@
 import UIKit
 
 open class SPBaseRouting: NSObject {
-
 }

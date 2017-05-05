@@ -10,28 +10,51 @@ import Foundation
 
 // MARK: - Error
 public enum SPAPICode: String {
-    case NONE = ""
+    case none = ""
     
-    //Authencation
-    case ERROR_REQUIRED_FIELD_NOT_PROVIDED
-    case ERROR_INVALID_CREDENTIALS
-    case ERROR_PASSWORD_LENGTH
-    case ERROR_DUPLICATION
-    case ERROR_ACCOUNT_IS_INACTIVE
-    case ERROR_ACCOUNT_IS_ACTIVE
-    case ERROR_ACCOUNT_IS_BANNED
-    case ERROR_ACCOUNT_IS_BANNED_OR_ACTIVE
-    case ERROR_ACTIVATION_CODE_EXPIRED
-    case ERROR_FORGOT_PASSWORD_CODE_EXPIRED
-    case ERROR_ACTIVATION_FAILED
-    case ERROR_RESOURCE_NOT_EXIST
-    case INVALID_CURRENT_PASSWORD
-    case ERROR_UNAUTHENTICATED
-    case ERROR_NOT_ACTIVE_USER
-    case ERROR_NO_PAYMENT_METHOD
+    // Authencation
+    case errorRequiredFieldNotProvided
+    case errorInvalidCredentials
+    case errorPasswordLength
+    case errorDuplication
+    case errorAccountIsInactive
+    case errorAccountIsActive
+    case errorAccountIsBanned
+    case errorAccountIsBannedOrActive
+    case errorActivationCodeExpired
+    case errorForgotPasswordCodeExpired
+    case errorActivationFailed
+    case errorResourceNotExist
+    case invalidCurrentPassword
+    case errorUnauthenticated
+    case errorNotActiveUser
+    case errorNoPaymentMethod
     
-    //Order
-    case ERROR_NO_ACTIVE_CART
+    //  Order
+    case errorNoActiveCart
+    
+    public init(rawValue: String) {
+        switch rawValue {
+        case "ERROR_REQUIRED_FIELD_NOT_PROVIDED": self = .errorRequiredFieldNotProvided; break
+        case "ERROR_INVALID_CREDENTIALS": self = .errorInvalidCredentials; break
+        case "ERROR_PASSWORD_LENGTH": self = .errorPasswordLength; break
+        case "ERROR_DUPLICATION": self = .errorDuplication; break
+        case "ERROR_ACCOUNT_IS_INACTIVE": self = .errorAccountIsInactive; break
+        case "ERROR_ACCOUNT_IS_ACTIVE": self = .errorAccountIsActive; break
+        case "ERROR_ACCOUNT_IS_BANNED": self = .errorAccountIsBanned; break
+        case "ERROR_ACCOUNT_IS_BANNED_OR_ACTIVE": self = .errorAccountIsBannedOrActive; break
+        case "ERROR_ACTIVATION_CODE_EXPIRED": self = .errorActivationCodeExpired; break
+        case "ERROR_FORGOT_PASSWORD_CODE_EXPIRED": self = .errorForgotPasswordCodeExpired; break
+        case "ERROR_ACTIVATION_FAILED": self = .errorActivationFailed; break
+        case "ERROR_RESOURCE_NOT_EXIST": self = .errorResourceNotExist; break
+        case "INVALID_CURRENT_PASSWORD": self = .invalidCurrentPassword; break
+        case "ERROR_UNAUTHENTICATED": self = .errorUnauthenticated; break
+        case "ERROR_NOT_ACTIVE_USER": self = .errorNotActiveUser; break
+        case "ERROR_NO_PAYMENT_METHOD": self = .errorNoPaymentMethod; break
+        case "ERROR_NO_ACTIVE_CART": self = .errorNoActiveCart; break
+        default: self = .none; break
+        }
+    }
 }
 
 public enum SPAPIStatus: Int {
@@ -51,7 +74,7 @@ public enum SPBaseError {
     case encryptFailed
     case wrapError(Swift.Error)
     
-    //error case from API
+    // error case from API
     case requiredFieldNotProvided
     case unexpectedError
     case loginFailed
@@ -65,7 +88,7 @@ public enum SPBaseError {
     case notActiveUser
     case duplication(String)
     
-    //Sign up error code
+    // Signup error code
     case firstNameIsBlank
     case lastNameIsBlank
     case phoneNumberIsBlank
@@ -79,45 +102,30 @@ public enum SPBaseError {
     case passwordAndConfirmPasswordAreNotMatched
     case verificationCodeIsIncorrect
     
-    //Sign in error code
+    // Sign in error code
     case phoneOrPasswordIsIncorrect
     case accountDoesNotExit
     case accountIsNotActivatedYet
     case accountIsDisabled
     case accountIsActive
     
-    //Order
+    // Order
     case noActiveCart
     case noResultFound
     case noPaymentMethod
     
-    //Account
+    // Account
     case currentPasswordIncorrect
     case currentPasswordBlank
     case newPasswordBlank
     case newPasswordLessThan6Characters
     case confirmNewPasswordBlank
     case confirmNewPasswordLessThan6Characters
-    case newPasswordAndConfirmNewPasswordAreNotMatched
+    case newPwdAndConfirmAreNotMatched
     
-    //
-    public func toString() -> String? {
+    private func toStringCaseAPI() -> String? {
         switch self {
-        case .encryptFailed:
-            return NSLocalizedString("Encrypt failed somewhere", comment: "")
-        case .wrapError(let error):
-            let error = error as NSError
-            let userInfo = error.userInfo
-            var errorMessage = "Undefine"
-            if let message = userInfo[NSLocalizedFailureReasonErrorKey] as? String {
-                errorMessage = message
-            } else {
-                errorMessage = error.description
-            }
-            
-            return errorMessage
-            
-        //error case from API
+        // error case from API
         case .requiredFieldNotProvided:
             return localString("Required field is not provided")
         case .unexpectedError:
@@ -142,8 +150,14 @@ public enum SPBaseError {
             return localString("Not active user")
         case .duplication(let message):
             return localString(message)
-            
-        //Sign up error code
+        default:
+            return nil
+        }
+    }
+    
+    private func toStringSignup() -> String? {
+        switch self {
+        // Signup error code
         case .firstNameIsBlank:
             return localString("Please enter your first name.")
         case .lastNameIsBlank:
@@ -168,20 +182,14 @@ public enum SPBaseError {
             return localString("Passwords do not match.")
         case .verificationCodeIsIncorrect:
             return localString("The verification code is invalid.")
-            
-        //Sign in error code
-        case .phoneOrPasswordIsIncorrect:
-            return localString("Your phone number or password is incorrect.")
-        case .accountDoesNotExit:
-            return localString("Your phone number or password is incorrect.")
-        case .accountIsNotActivatedYet:
-            return localString("You have not completed registration. We will send a code to you for account verification.")
-        case .accountIsDisabled:
-            return localString("Your account is disable. For any questions or concerns, please contact our Customer Support at (424) 333-0709 or via email demo.siliconprime@gmail.com")
-        case .accountIsActive:
-            return localString("Your account is activated already")
-            
-        //Account
+        default:
+            return nil
+        }
+    }
+    
+    private func toStringAccount() -> String? {
+        switch self {
+        // Account
         case .currentPasswordIncorrect:
             return localString("Your current password is incorrect.")
         case .currentPasswordBlank:
@@ -194,10 +202,60 @@ public enum SPBaseError {
             return localString("Passwords should be at least 6 characters.")
         case .confirmNewPasswordLessThan6Characters:
             return localString("Passwords should be at least 6 characters.")
-        case .newPasswordAndConfirmNewPasswordAreNotMatched:
+        case .newPwdAndConfirmAreNotMatched:
             return localString("New passwords do not match.")
+        default:
+            return nil
+        }
+    }
+    
+    private func toStringAuthenAccount() -> String? {
+        switch self {
+        // Signin error code
+        case .phoneOrPasswordIsIncorrect:
+            return localString("Your phone number or password is incorrect.")
+        case .accountDoesNotExit:
+            return localString("Your phone number or password is incorrect.")
+        case .accountIsNotActivatedYet:
+            let msg = "You have not completed registration. We will send a code to you for account verification."
+            return localString(msg)
+        case .accountIsDisabled:
+            var msg = "Your account is disable. For any questions or concerns, "
+            msg.append("please contact our Customer Support at (424) 333-0709 or via email demo.siliconprime@gmail.com")
+            return localString(msg)
+        case .accountIsActive:
+            return localString("Your account is activated already")
+        default:
+            return nil
+        }
+    }
+    
+    public func toString() -> String? {
+        if let result = toStringCaseAPI() {
+            return result
+        } else if let result = toStringAuthenAccount() {
+            return result
+        } else if let result = toStringSignup() {
+            return result
+        } else if let result = toStringAccount() {
+            return result
+        }
+        
+        switch self {
+        case .encryptFailed:
+            return NSLocalizedString("Encrypt failed somewhere", comment: "")
+        case .wrapError(let error):
+            let error = error as NSError
+            let userInfo = error.userInfo
+            var errorMessage = "Undefine"
+            if let message = userInfo[NSLocalizedFailureReasonErrorKey] as? String {
+                errorMessage = message
+            } else {
+                errorMessage = error.description
+            }
+            return errorMessage
             
-        //Order
+        // Order
         case .noResultFound:
             return localString("No result found")
         case .noActiveCart:
@@ -214,10 +272,10 @@ public enum SPBaseError {
         return NSLocalizedString(str, comment: "")
     }
     
-    //For get a error message, need 2 params status and code from response.
-    public init(status: SPAPIStatus, code: SPAPICode, response: Dictionary<String, Any>?) {
+    // For get a error message, need 2 params status and code from response.
+    public init(status: SPAPIStatus, code: SPAPICode, response: [String: Any]?) {
         switch (status, code) {
-        case (.status400, .ERROR_DUPLICATION):
+        case (.status400, SPAPICode.errorDuplication):
             if let response = response, let message = response["message"] as? String {
                 self = .duplication(message)
             } else {
@@ -225,73 +283,24 @@ public enum SPBaseError {
             }
             break
             
-        case (.status403, .ERROR_ACCOUNT_IS_INACTIVE):
-            self = .accountIsNotActivatedYet
-            break
-            
-        case (.status403, .ERROR_ACCOUNT_IS_ACTIVE):
-            self = .accountIsActive
-            break
-            
-        case (.status403, .ERROR_ACCOUNT_IS_BANNED):
-            self = .accountIsDisabled
-            break
-            
-        case (.status400, .ERROR_REQUIRED_FIELD_NOT_PROVIDED):
-            self = .requiredFieldNotProvided
-            break
-            
-        case (.status500, .ERROR_INVALID_CREDENTIALS):
-            self = .unexpectedError
-            break
-            
-        case (.status403, .ERROR_INVALID_CREDENTIALS):
-            self = .loginFailed
-            break
-            
-        case (.status400, .ERROR_PASSWORD_LENGTH):
-            self = .invalidPasswordLength
-            break
-            
-        case (.status400, .ERROR_ACTIVATION_CODE_EXPIRED):
-            self = .activationTokenExpired
-            break
-            
-        case (.status400, .ERROR_FORGOT_PASSWORD_CODE_EXPIRED):
-            self = .forgotPasswordTokenExpired
-            break
-            
-        case (.status400, .ERROR_ACTIVATION_FAILED):
-            self = .activationFailed
-            break
-            
-        case (.status404, .ERROR_RESOURCE_NOT_EXIST):
-            self = .resourceNotExist
-            break
-            
-        case (.status400, .INVALID_CURRENT_PASSWORD):
-            self = .invalidPassword
-            break
-            
-        case (.status401, .ERROR_UNAUTHENTICATED):
-            self = .unauthenticated
-            break
-            
-        case (.status400, .ERROR_NOT_ACTIVE_USER):
-            self = .notActiveUser
-            break
-            
-            //Order
-        case (.status404, .ERROR_NO_ACTIVE_CART):
-            self = .noActiveCart
-            break
-        case (.status404, .ERROR_NO_PAYMENT_METHOD):
-            self = .noPaymentMethod
-            break
-            
-        default:
-            self = .none
-            break
+        case (.status403, SPAPICode.errorAccountIsInactive): self = .accountIsNotActivatedYet; break
+        case (.status403, SPAPICode.errorAccountIsActive): self = .accountIsActive; break
+        case (.status403, SPAPICode.errorAccountIsBanned): self = .accountIsDisabled; break
+        case (.status400, SPAPICode.errorRequiredFieldNotProvided): self = .requiredFieldNotProvided; break
+        case (.status500, SPAPICode.errorInvalidCredentials): self = .unexpectedError; break
+        case (.status403, SPAPICode.errorInvalidCredentials): self = .loginFailed; break
+        case (.status400, SPAPICode.errorPasswordLength): self = .invalidPasswordLength; break
+        case (.status400, SPAPICode.errorActivationCodeExpired): self = .activationTokenExpired; break
+        case (.status400, SPAPICode.errorForgotPasswordCodeExpired): self = .forgotPasswordTokenExpired; break
+        case (.status400, SPAPICode.errorActivationFailed): self = .activationFailed; break
+        case (.status404, SPAPICode.errorResourceNotExist): self = .resourceNotExist; break
+        case (.status400, SPAPICode.invalidCurrentPassword): self = .invalidPassword; break
+        case (.status401, SPAPICode.errorUnauthenticated): self = .unauthenticated; break
+        case (.status400, SPAPICode.errorNotActiveUser): self = .notActiveUser; break
+        // Order
+        case (.status404, SPAPICode.errorNoActiveCart): self = .noActiveCart; break
+        case (.status404, SPAPICode.errorNoPaymentMethod): self = .noPaymentMethod; break
+        default: self = .none; break
         }
     }
 }
