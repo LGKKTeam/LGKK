@@ -5,12 +5,14 @@ disabled_rules:
   - trailing_whitespace
   - file_header
   - sorted_imports
+  - todo
 
 excluded: 
   - Carthage
   - Pods
   - External
   - R.generated.swift
+  - CoreDrawing
 
 opt_in_rules: 
   - missing_docs
@@ -40,8 +42,8 @@ file_length:
   warning: 600
   error: 800
 function_body_length:
-  warning: 40
-  error: 80
+  warning: 50
+  error: 100
 function_parameter_count: 
   warning: 6
   error: 8
@@ -64,7 +66,7 @@ type_name:
   excluded: iPhone # excluded via string
 identifier_name:
   min_length: # only min_length
-    warning: 3
+    warning: 2
   excluded: # excluded via string array
     - id
     - _id
@@ -83,7 +85,7 @@ custom_rules:
     severity: warning    
   comments_space:
     name: "Space After Comment"
-    regex: "(^*//\\w+)"
+    regex: "(^* //\\w+)"
     message: "There should be a space after //"
     severity: warning
   no_my_identifier:
@@ -110,10 +112,10 @@ custom_rules:
     regex: "(^*super\\.[ a-zA-Z0-9=?.\\(\\)\\{\\}:,><!]*\n *(?!(?:\\}|return))\\S+)"
     message: "There should be an empty line after super"
     severity: error
-  empty_line_after_guard:
-    name: "Empty Line After Guard"
-    regex: "(^*guard [ a-zA-Z0-9=?.\\(\\)\\{\\}:,><!]*\n *(?!(?:\\}|return|guard))\\S+)"
-    message: "There should be an empty line after a guard"
-    severity: error
+  # empty_line_after_guard:
+  #   name: "Empty Line After Guard"
+  #   regex: "(^*guard [ a-zA-Z0-9=?.\\(\\)\\{\\}:,><!]*\n *(?!(?:\\}|return|guard))\\S+)"
+  #   message: "There should be an empty line after a guard"
+  #   severity: error
   
 reporter: "xcode" # reporter type (xcode, json, csv, checkstyle)

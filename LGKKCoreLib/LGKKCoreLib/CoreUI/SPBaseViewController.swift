@@ -25,12 +25,12 @@ import Realm
 import RealmSwift
 import SwifterSwift
 
-
 @objc public protocol CustomAlertPrc {
-    @objc optional func formatCustomAlertTitle(_ lbl: UILabel)
-    @objc optional func formatCustomAlertSubTitle(_ lbl: UILabel)
-    @objc optional func formatCustomAlertPrimaryButton(_ btn: UIButton)
-    @objc optional func formatCustomAlertNormalButton(_ btn: UIButton)
+    @objc optional
+    func formatCustomAlertTitle(_ lbl: UILabel)
+    func formatCustomAlertSubTitle(_ lbl: UILabel)
+    func formatCustomAlertPrimaryButton(_ btn: UIButton)
+    func formatCustomAlertNormalButton(_ btn: UIButton)
 }
 
 extension Moya.Cancellable {
@@ -40,12 +40,10 @@ extension Moya.Cancellable {
 }
 
 open class SPBaseViewController: UIViewController, StoreSubscriber {
-    private var cancellables: [Cancellable] = [] //Solve problem when viewController deinit before request success!
+    private var cancellables: [Cancellable] = [] // Solve problem when viewController deinit before request success!
     func cancelAllMoyaRequest() {
-        for cancellable in cancellables {
-            if cancellable.isCancelled == false {
-                cancellable.cancel()
-            }
+        for cancellable in cancellables where cancellable.isCancelled == false {
+            cancellable.cancel()
         }
         cancellables.removeAll()
     }
@@ -57,7 +55,7 @@ open class SPBaseViewController: UIViewController, StoreSubscriber {
     open var cnpPopupController: CNPPopupController?
     
     public func newState(state: StateType) {
-        //NOP
+        // NOP
     }
     
     func forceRotate(mode: UIInterfaceOrientation) {
@@ -66,22 +64,27 @@ open class SPBaseViewController: UIViewController, StoreSubscriber {
     
     override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
 //        mainStore.unsubscribe(self)
     }
     
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        mainStore.subscribe(self)
         
-        //Default < button
-        let backItem = UIBarButtonItem.init(image: UIImage.init(named: "back"), style: .done, target: self, action: #selector(back_Tapped(_:)))
+        // Default < button
+        let backImgStr = "back"
+        let backItem = UIBarButtonItem(image: UIImage(named: backImgStr),
+                                       style: .done,
+                                       target: self,
+                                       action: #selector(back_Tapped(_:)))
         self.navigationItem.leftBarButtonItem = backItem
     }
-
+    
     override open func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
-        edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
+        edgesForExtendedLayout = UIRectEdge(rawValue: 0)
     }
     
     deinit {
@@ -97,6 +100,7 @@ open class SPBaseViewController: UIViewController, StoreSubscriber {
 
     override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
         // Dispose of any resources that can be recreated.
         
         DDLogWarn("MemoryWarning!")
@@ -111,9 +115,10 @@ open class SPBaseViewController: UIViewController, StoreSubscriber {
         var config = SwiftMessages.defaultConfig
         config.presentationContext = SwiftMessages.PresentationContext.viewController(self)
         error.backgroundColor = UIColor.white
-        error.titleLabel?.textColor = UIColor.init(hex: "#FD5F61")
-        error.bodyLabel?.textColor = UIColor.init(hex: "#FD5F61")
-        error.iconImageView?.image = UIImage(named: "delete")?.filled(withColor: UIColor.red)
+        error.titleLabel?.textColor = UIColor(hex: "#FD5F61")
+        error.bodyLabel?.textColor = UIColor(hex: "#FD5F61")
+        let deleteImgName = "delete"
+        error.iconImageView?.image = UIImage(named: deleteImgName)?.filled(withColor: UIColor.red)
         SwiftMessages.show(config: config, view: error)
     }
     
@@ -138,11 +143,9 @@ extension SPBaseViewController: CustomAlertPrc {
     }
     
     public func formatCustomAlertNormalButton(_ btn: UIButton) {
-        
     }
     
     public func formatCustomAlertPrimaryButton(_ btn: UIButton) {
-        
     }
     
     public func showAlertView(title: String?, message: String?, actions: [UIAlertAction]?) {
@@ -168,7 +171,7 @@ extension SPBaseViewController: CustomAlertPrc {
     
     public func showAlertViewCustom2(title: String?, message: String?, actions: [SPAlertAction]?) {
         
-        let appearance = SCLAlertView.SCLAppearance.init(
+        let appearance = SCLAlertView.SCLAppearance(
             kDefaultShadowOpacity: 0.7,
             kCircleTopPosition: 0.0,
             kCircleBackgroundTopPosition: 6.0,
@@ -196,20 +199,28 @@ extension SPBaseViewController: CustomAlertPrc {
             contentViewBorderColor: UIColor.gray,
             titleColor: UIColor.black)
         
-        let alert = SCLAlertView.init(appearance: appearance)
+        let alert = SCLAlertView(appearance: appearance)
         if let actions = actions {
             for actionObj in actions {
-                _ = alert.addButton(actionObj.title!, backgroundColor: actionObj.backgroundColor, textColor: actionObj.textColor, showDurationStatus: actionObj.showDurationStatus, action: actionObj.action!)
+                if let title = actionObj.title, let action = actionObj.action {
+                    _ = alert.addButton(title,
+                                        backgroundColor: actionObj.backgroundColor,
+                                        textColor: actionObj.textColor,
+                                        showDurationStatus: actionObj.showDurationStatus,
+                                        action: action)
+                }
             }
         }
         
         _ = alert.showSuccess(title ?? "", subTitle: message ?? "")
     }
     
-    public func showAlertViewCustom3(title: String? = nil,
-                              message: String? = nil,
-                              customviews: [UIView]? = nil,
-                              actions: [SPAlertAction]? = nil) -> CNPPopupController {
+    // swiftlint:disable function_body_length
+    public func showAlertViewCustom3(
+        title: String? = nil,
+        message: String? = nil,
+        customviews: [UIView]? = nil,
+        actions: [SPAlertAction]? = nil) -> CNPPopupController {
         let oldOpUp = self.cnpPopupController
         if oldOpUp != nil {
             oldOpUp?.dismiss(animated: true)
@@ -217,11 +228,11 @@ extension SPBaseViewController: CustomAlertPrc {
         
         var contents:[UIView] = []
         let minScreenSize = min(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
-        let maxWidth = minScreenSize*0.8
-        let maxPopWidth = minScreenSize*0.9
+        let maxWidth = minScreenSize * 0.8
+        let maxPopWidth = minScreenSize * 0.9
         
         if let title = title {
-            let topV = UIView(frame: CGRect(x: 0, y: 0, width: maxWidth/2, height: 0))
+            let topV = UIView(frame: CGRect(x: 0, y: 0, width: maxWidth / 2, height: 0))
             topV.backgroundColor = .white
             contents.append(topV)
             
@@ -235,11 +246,12 @@ extension SPBaseViewController: CustomAlertPrc {
             
             let btnClose = UIButton(type: .custom)
             btnClose.frame = CGRect(x: maxWidth - 30, y: 0, width: 28, height: 28)
-            btnClose.setImage(UIImage(named: "delete"), for: .normal)
+            let deleteImgStr = "delete"
+            btnClose.setImage(UIImage(named: deleteImgStr), for: .normal)
             btnClose.addTarget(self, action: #selector(closePopupView), for: .touchUpInside)
             vTitle.addSubview(btnClose)
             
-            //Add divider line:
+            // Add divider line:
             let divider = UIView(frame: CGRect(x: 0, y: 0, width: maxWidth, height: 0.5))
             divider.backgroundColor = UIColor.lightGray
             contents.append(divider)
@@ -259,7 +271,7 @@ extension SPBaseViewController: CustomAlertPrc {
         
         if let actions = actions {
             var buttons = [CNPPopupButton]()
-            for (index,actionObj) in actions.enumerated() {
+            for (index, actionObj) in actions.enumerated() {
                 let button = CNPPopupButton()
                 button.setTitle(actionObj.title, for: .normal)
                 let selectionHandler: (CNPPopupButton) -> Void = { [unowned self] button in
@@ -293,34 +305,36 @@ extension SPBaseViewController: CustomAlertPrc {
                 }
                 contents.append(stack)
                 
-                let bottomV = UIView(frame: CGRect(x: 0, y: 0, width: maxWidth/2, height: 0))
+                let bottomV = UIView(frame: CGRect(x: 0, y: 0, width: maxWidth / 2, height: 0))
                 bottomV.backgroundColor = .white
                 contents.append(bottomV)
-                
             } else {
                 // Fallback on earlier versions
                 // MINHND: Dont fallback earlier iOS version, because only <1.9%
                 // Or just use custom Alert 1 or 2.
             }
-            
         }
         
-        let popUp = CNPPopupController.init(contents: contents)
+        let popUp = CNPPopupController(contents: contents)
         popUp.theme.presentationStyle = .slideInFromTop
         popUp.theme.dismissesOppositeDirection = true
         popUp.theme.maxPopupWidth = maxPopWidth
-        popUp.theme.popupContentInsets = UIEdgeInsetsMake(0, 0, 0, 0)
+        popUp.theme.popupContentInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         popUp.theme.popupStyle = .centered
         popUp.delegate = self
         self.cnpPopupController = popUp
         
-        if actions == nil || actions?.count == 0 {
+        if let actions = actions, actions.isEmpty {
+            popUp.theme.shouldDismissOnBackgroundTouch = true
+        } else if actions == nil {
             popUp.theme.shouldDismissOnBackgroundTouch = true
         }
         
         popUp.present(animated: true)
         return popUp
     }
+    
+    // swiftlint:enable function_body_length
     
     public func closePopupView() {
         let oldOpUp = self.cnpPopupController
@@ -347,13 +361,13 @@ extension SPBaseViewController {
     }
     
     func icon_Tapped(_ sender: AnyObject) {
-        //Work as menu tapped for now.
+        // Work as menu tapped for now.
         showLeftView(sender: sender)
     }
     
     func back_Tapped(_ sender: AnyObject) {
-        if self.navigationController != nil {
-            _ = navigationController!.popViewController(animated: true)
+        if let navigationController = self.navigationController {
+            _ = navigationController.popViewController(animated: true)
         } else {
             self.dismiss(animated: true)
         }
@@ -363,19 +377,15 @@ extension SPBaseViewController {
 extension SPBaseViewController: CNPPopupControllerDelegate {
     
     public func popupControllerDidDismiss(_ controller: CNPPopupController) {
-        
     }
     
     public func popupControllerWillDismiss(_ controller: CNPPopupController) {
-        
     }
     
     public func popupControllerDidPresent(_ controller: CNPPopupController) {
-        
     }
     
     public func popupControllerWillPresent(_ controller: CNPPopupController) {
-        
     }
 }
 
@@ -406,12 +416,12 @@ extension SPBaseViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     }
 }
 
-
 private let maxHeightPopupButton: CGFloat = 40
 //For fix cornerRadius issue when using button on UIStackView
 extension CNPPopupButton {
     open override func layoutSubviews() {
         super.layoutSubviews()
+        
         self.layer.cornerRadius = 1
     }
 }
@@ -426,7 +436,11 @@ public struct SPAlertAction {
     
     public init() {}
     
-    public init(title: String?, backgroundColor: UIColor?, textColor: UIColor?, showDurationStatus: Bool = false, action: (() -> Void)?) {
+    public init(title: String? = nil,
+                backgroundColor: UIColor? = nil,
+                textColor: UIColor? = nil,
+                showDurationStatus: Bool = false,
+                action: (() -> Void)? = nil) {
         self.title = title
         self.backgroundColor = backgroundColor
         self.textColor = textColor

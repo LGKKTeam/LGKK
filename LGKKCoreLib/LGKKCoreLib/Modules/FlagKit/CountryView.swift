@@ -12,9 +12,9 @@ let flagSheet = FlagIcons.loadDefault()
 
 open class CountryView: UIView {
     
-    @IBOutlet weak var flagImageView: UIImageView!
-    @IBOutlet weak var countryNameLabel: UILabel!
-    @IBOutlet weak var countryCodeLabel: UILabel!
+    @IBOutlet fileprivate weak var flagImageView: UIImageView!
+    @IBOutlet fileprivate weak var countryNameLabel: UILabel!
+    @IBOutlet fileprivate weak var countryCodeLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,7 +40,7 @@ open class CountryView: UIView {
             flagImageView.layer.masksToBounds = true
             flagImageView.image = getFlag(with: countryCode)
         }
-        countryNameLabel.text = country.name!
-        countryCodeLabel.text = country.phoneCode!
+        countryNameLabel.text = country.name
+        countryCodeLabel.text = country.phoneCode
     }
 }

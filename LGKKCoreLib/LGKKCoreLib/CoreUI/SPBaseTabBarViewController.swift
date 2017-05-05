@@ -12,8 +12,8 @@ open class SPBaseTabBarViewController: UITabBarController {
     
     open func goto(classVC: AnyClass, animated: Bool) {
         if let arrayVc = self.viewControllers {
-            //BFS
-            for (index,vc) in arrayVc.enumerated() {
+            // BFS
+            for (index, vc) in arrayVc.enumerated() {
                 if vc.isKind(of: classVC) {
                     self.selectedIndex = index
                     return
@@ -29,7 +29,6 @@ open class SPBaseTabBarViewController: UITabBarController {
                             return
                         }
                     }
-                    
                 } else if let vc = vc as? UIPageViewController {
                     if let arrayLv1 = vc.viewControllers {
                         for vcLv1 in arrayLv1 {
@@ -42,7 +41,6 @@ open class SPBaseTabBarViewController: UITabBarController {
                     }
                 }
             }
-            
         } else {
             print("Invalid viewcontroller class")
         }
