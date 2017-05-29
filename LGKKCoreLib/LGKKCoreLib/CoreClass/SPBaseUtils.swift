@@ -16,7 +16,7 @@ public struct Platform {
 }
 
 public enum CreditCardType: String {
-    case none //pay at pickup
+    case none // pay at pickup
     case visa
     case master
     case jcb
@@ -28,14 +28,14 @@ public enum CreditCardType: String {
     
     public init(brand: String) {
         let brand = brand.lowercased()
-        if brand.contains("visa") {self = .visa}
-        else if brand.contains("master") {self = .master}
-        else if brand.contains("jcb") {self = .jcb}
-        else if brand.contains("discover") {self = .discover}
-        else if brand.contains("diner") {self = .diners}
-        else if brand.contains("apple") {self = .applepay}
-        else if brand.contains("amex") {self = .amex}
-        else {self = .unknow}
+        if brand.contains("visa") { self = .visa
+        } else if brand.contains("master") { self = .master
+        } else if brand.contains("jcb") { self = .jcb
+        } else if brand.contains("discover") { self = .discover
+        } else if brand.contains("diner") { self = .diners
+        } else if brand.contains("apple") { self = .applepay
+        } else if brand.contains("amex") { self = .amex
+        } else { self = .unknow }
     }
 }
 
@@ -65,5 +65,4 @@ public struct SPBaseUtils {
         }
         return STPImageLibrary.brandImage(for: brand)
     }
-    
 }

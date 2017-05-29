@@ -35,109 +35,44 @@ open class SPBaseSideMenuViewController: LGSideMenuController {
 
     override open func viewDidLoad() {
         super.viewDidLoad()
+        
         setupSideMenu(type: .normal)
     }
 }
 
 extension SPBaseSideMenuViewController {
-    fileprivate func setupSideMenu(type: SPSideMenuStyle) {
-        self.type = type
-        
-        let greenCoverColor = UIColor(red: 0.0, green: 0.1, blue: 0.0, alpha: 0.3)
-        let purpleCoverColor = UIColor(red: 0.1, green: 0.0, blue: 0.1, alpha: 0.3)
-        let regularStyle: UIBlurEffectStyle
-        
-        if #available(iOS 10.0, *) {
-            regularStyle = .regular
-        }
-        else {
-            regularStyle = .light
-        }
-        
-        leftViewWidth = UIScreen.main.bounds.size.width*0.8;
-        leftViewBackgroundColor = UIColor(red: 0.5, green: 0.6, blue: 0.5, alpha: 0.9)
-        
-        rightViewWidth = 100.0;
-        rightViewBackgroundColor = UIColor(red: 0.6, green: 0.5, blue: 0.6, alpha: 0.9)
-        rootViewCoverColorForRightView = UIColor(red: 1.0, green: 0.0, blue: 1.0, alpha: 0.05)
-        
+    private func decoSomeType(_ type: SPSideMenuStyle) {
         switch type {
         case .scaleFromBig:
             leftViewPresentationStyle = .scaleFromBig
             rightViewPresentationStyle = .scaleFromBig
             break
-        case .slideAbove:
-            leftViewPresentationStyle = .slideAbove
-            rootViewCoverColorForLeftView = greenCoverColor
-            
-            rightViewPresentationStyle = .slideAbove
-            rootViewCoverColorForRightView = purpleCoverColor
-            
-            break
         case .slideBelow:
             leftViewPresentationStyle = .slideBelow
             rightViewPresentationStyle = .slideBelow
-            
             break
         case .scaleFromLitter:
             leftViewPresentationStyle = .scaleFromLittle
             rightViewPresentationStyle = .scaleFromLittle
-            
-            break
-        case .blurredRootViewCover:
-            leftViewPresentationStyle = .scaleFromBig
-            rootViewCoverBlurEffectForLeftView = UIBlurEffect(style: regularStyle)
-            rootViewCoverAlphaForLeftView = 0.8
-            
-            rightViewPresentationStyle = .scaleFromBig
-            rootViewCoverBlurEffectForRightView = UIBlurEffect(style: regularStyle)
-            rootViewCoverAlphaForRightView = 0.8
-            
             break
         case .blurrSideViewCover:
             leftViewPresentationStyle = .scaleFromBig
             leftViewCoverBlurEffect = UIBlurEffect(style: .dark)
             leftViewCoverColor = nil
-            
             rightViewPresentationStyle = .scaleFromBig
             rightViewCoverBlurEffect = UIBlurEffect(style: .dark)
             rightViewCoverColor = nil
-            
-            break
-        case .blurrSideViewBackground:
-            leftViewPresentationStyle = .slideAbove
-            leftViewBackgroundBlurEffect = UIBlurEffect(style: regularStyle)
-            leftViewBackgroundColor = UIColor(red: 0.0, green: 1.0, blue: 0.0, alpha: 0.05)
-            rootViewCoverColorForLeftView = greenCoverColor
-            
-            rightViewPresentationStyle = .slideAbove
-            rightViewBackgroundBlurEffect = UIBlurEffect(style: regularStyle)
-            rightViewBackgroundColor = UIColor(red: 1.0, green: 0.0, blue: 1.0, alpha: 0.05)
-            rootViewCoverColorForRightView = purpleCoverColor
-            
-            break
-        case .lanscapeAlwayVisible:
-            leftViewPresentationStyle = .slideAbove
-            leftViewAlwaysVisibleOptions = [.onPhoneLandscape, .onPadLandscape]
-            
-            rightViewPresentationStyle = .slideBelow
-            rightViewAlwaysVisibleOptions = [.onPhoneLandscape, .onPadLandscape]
-            
             break
         case .statusBarAlwayVisible:
             leftViewPresentationStyle = .scaleFromBig
             leftViewStatusBarStyle = .lightContent
-            
             rightViewPresentationStyle = .scaleFromBig
             rightViewStatusBarStyle = .lightContent
-            
             break
         case .gestureAreaFullScreen:
             swipeGestureArea = .full
-            
             leftViewPresentationStyle = .scaleFromBig
             rightViewPresentationStyle = .scaleFromBig
-            
             break
         case .custom:
             leftViewSwipeGestureRange = LGSideMenuSwipeGestureRangeMake(0.0, 88.0)
@@ -146,11 +81,66 @@ extension SPBaseSideMenuViewController {
             leftViewInitialOffsetX = 100
             rootViewScaleForLeftView = 1
             break
+        default: break
+        }
+    }
+    
+    private func decoView(type: SPSideMenuStyle, regularStyle: UIBlurEffectStyle) {
+        let greenCoverColor = UIColor.green.withAlphaComponent(0.3)
+        let purpleCoverColor = UIColor.purple.withAlphaComponent(0.3)
+        decoSomeType(type)
+        
+        switch type {
+        case .slideAbove:
+            leftViewPresentationStyle = .slideAbove
+            rootViewCoverColorForLeftView = greenCoverColor
+            rightViewPresentationStyle = .slideAbove
+            rootViewCoverColorForRightView = purpleCoverColor
+            break
+        case .blurredRootViewCover:
+            leftViewPresentationStyle = .scaleFromBig
+            rootViewCoverBlurEffectForLeftView = UIBlurEffect(style: regularStyle)
+            rootViewCoverAlphaForLeftView = 0.8
+            rightViewPresentationStyle = .scaleFromBig
+            rootViewCoverBlurEffectForRightView = UIBlurEffect(style: regularStyle)
+            rootViewCoverAlphaForRightView = 0.8
+            break
+        case .blurrSideViewBackground:
+            leftViewPresentationStyle = .slideAbove
+            leftViewBackgroundBlurEffect = UIBlurEffect(style: regularStyle)
+            leftViewBackgroundColor = UIColor.green.withAlphaComponent(0.05)
+            rootViewCoverColorForLeftView = greenCoverColor
+            rightViewPresentationStyle = .slideAbove
+            rightViewBackgroundBlurEffect = UIBlurEffect(style: regularStyle)
+            rightViewBackgroundColor = UIColor.purple.withAlphaComponent(0.05)
+            rootViewCoverColorForRightView = purpleCoverColor
+            break
+        case .lanscapeAlwayVisible:
+            leftViewPresentationStyle = .slideAbove
+            leftViewAlwaysVisibleOptions = [.onPhoneLandscape, .onPadLandscape]
+            rightViewPresentationStyle = .slideBelow
+            rightViewAlwaysVisibleOptions = [.onPhoneLandscape, .onPadLandscape]
+            break
         default:
             leftViewPresentationStyle = .slideBelow
             rightViewPresentationStyle = .slideBelow
-            break
         }
+    }
+    
+    fileprivate func setupSideMenu(type: SPSideMenuStyle) {
+        let regularStyle: UIBlurEffectStyle
+        if #available(iOS 10.0, *) {
+            regularStyle = .regular
+        } else {
+            regularStyle = .light
+        }
+        self.type = type
+        leftViewWidth = UIScreen.main.bounds.size.width * 0.8
+        leftViewBackgroundColor = UIColor.gray.withAlphaComponent(0.9)
+        rightViewWidth = 100.0
+        rightViewBackgroundColor = UIColor.gray.withAlphaComponent(0.9)
+        rootViewCoverColorForRightView = UIColor.purple.withAlphaComponent(0.05)
+        decoView(type: type, regularStyle: regularStyle)
     }
     
     override open func leftViewWillLayoutSubviews(with size: CGSize) {
@@ -172,10 +162,15 @@ extension SPBaseSideMenuViewController {
         }
     }
     
+    private func isLandscape(orientaion: UIInterfaceOrientation) -> Bool {
+        return UIInterfaceOrientationIsLandscape(orientaion)
+    }
+    
     override open var isLeftViewStatusBarHidden: Bool {
         get {
             if (self.type == SPSideMenuStyle.statusBarAlwayVisible) {
-                return UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation) && UI_USER_INTERFACE_IDIOM() == .phone
+                let statusBarOrientation = UIApplication.shared.statusBarOrientation
+                return isLandscape(orientaion: statusBarOrientation) && UI_USER_INTERFACE_IDIOM() == .phone
             }
             
             return super.isLeftViewStatusBarHidden
@@ -189,7 +184,8 @@ extension SPBaseSideMenuViewController {
     override open var isRightViewStatusBarHidden: Bool {
         get {
             if (self.type == SPSideMenuStyle.statusBarAlwayVisible) {
-                return UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation) && UI_USER_INTERFACE_IDIOM() == .phone
+                let statusBarOrientation = UIApplication.shared.statusBarOrientation
+                return isLandscape(orientaion: statusBarOrientation) && UI_USER_INTERFACE_IDIOM() == .phone
             }
             
             return super.isRightViewStatusBarHidden

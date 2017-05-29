@@ -46,7 +46,12 @@ public extension String {
         case .crc32(seed: let seed, reflect: let reflect):
             return self.crc32(seed: seed, reflect: reflect)
         case .encrypt(cipher: let cipher):
-            return try! self.encrypt(cipher: cipher)
+            do {
+                return try self.encrypt(cipher: cipher)
+            } catch {
+                fatalError("encrypt failed with cipher: \(cipher)")
+            }
+            
         default:
             return self
         }

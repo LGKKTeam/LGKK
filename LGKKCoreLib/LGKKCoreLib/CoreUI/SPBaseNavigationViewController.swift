@@ -15,6 +15,6 @@ open class SPBaseNavigationViewController: UINavigationController {
     }
     
     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return topViewController!.supportedInterfaceOrientations
+        return topViewController?.supportedInterfaceOrientations ?? .all
     }
 }

@@ -69,3 +69,5 @@ Podfile
 Podfile.lock
 contents.xcworkspacedata
 DemoVideoByGPU/Pods
+Manifest.lock
+SwiftLint/DemoSwiftLint/Pods

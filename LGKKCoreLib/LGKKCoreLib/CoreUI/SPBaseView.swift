@@ -9,6 +9,4 @@
 import UIKit
 
 open class SPBaseView: UIView {
-    
 }
-

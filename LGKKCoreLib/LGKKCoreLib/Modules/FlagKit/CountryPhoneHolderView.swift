@@ -24,37 +24,41 @@ open class CountryPhoneHolderView: SPBaseView, NibOwnerLoadable {
     
     open weak var delegate: CountryPhoneHolderDelegate?
     private var hiddenTfChooseCountry: UITextField?
-    open var phoneCode: String? = "+1" //US default
+    open var phoneCode: String? = "+1" // US default
     
     open var phone: String? {
-        get {
-            return tfPhone.text
-        }
+        return tfPhone.text
     }
     
     open var fullPhone: String? {
-        get {
-            return "\(phoneCode!)\(tfPhone.text!)"
+        if let phoneCode = phoneCode, let text = tfPhone.text {
+            return "\(phoneCode)\(text)"
+        } else {
+            return nil
         }
     }
     
     init() {
         let rect = CGRect(x: 0, y: 0, width: 100, height: 30)
         super.init(frame: rect)
+        
         self.loadNibContent()
         setUI()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
         self.loadNibContent()
         setUI()
     }
     
     func setUI() {
-        //Trick:
+        // Trick:
         hiddenTfChooseCountry = UITextField()
-        addSubview(hiddenTfChooseCountry!)
+        if let hiddenTfChooseCountry = hiddenTfChooseCountry {
+            addSubview(hiddenTfChooseCountry)
+        }
         
         backgroundColor = .clear
         tfPhone.delegate = self
@@ -82,17 +86,19 @@ open class CountryPhoneHolderView: SPBaseView, NibOwnerLoadable {
     }
 }
 
-//MARK: - Country picker delegate
+// MARK: - Country picker delegate
 extension CountryPhoneHolderView: CountryPickerDelegate {
-    func countryPhoneCodePicker(picker: CountryPicker, didSelectCountryCountryWithName name: String, countryCode: String, phoneCode: String) {
-        
+    func countryPhoneCodePicker(picker: CountryPicker,
+                                didSelectCountryCountryWithName name: String,
+                                countryCode: String,
+                                phoneCode: String) {
         setFlag(with: countryCode)
         self.phoneCode = phoneCode
         lblPhoneCode.text = phoneCode
     }
 }
 
-//MARK: - UITextFieldDelegate
+// MARK: - UITextFieldDelegate
 extension CountryPhoneHolderView: UITextFieldDelegate {
     
     public func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -103,7 +109,7 @@ extension CountryPhoneHolderView: UITextFieldDelegate {
         }
     }
     
-    //Pair becomeFirstResponder & countryPhoneShouldReturn
+    // Pair becomeFirstResponder & countryPhoneShouldReturn
     override open func becomeFirstResponder() -> Bool {
         return tfPhone.becomeFirstResponder()
     }
@@ -114,17 +120,19 @@ extension CountryPhoneHolderView: UITextFieldDelegate {
         return true
     }
     
-    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if textField == tfPhone {
-            return textField.text!.characters.count + (string.characters.count - range.length) <= 15
+    public func textField(_ textField: UITextField,
+                          shouldChangeCharactersIn range: NSRange,
+                          replacementString string: String) -> Bool {
+        if textField == tfPhone, let text = textField.text {
+            return text.characters.count + (string.characters.count - range.length) <= 15
         }
         return true
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == tfPhone {
+        if textField == tfPhone, let text = textField.text {
             line.backgroundColor = UIColor.lightGray
-            lineHeight.constant = (textField.text?.characters.count)! > 0 ? 2.0 : 0.5
+            lineHeight.constant = text.isEmpty ? 2.0 : 0.5
             line.updateConstraints()
         }
     }

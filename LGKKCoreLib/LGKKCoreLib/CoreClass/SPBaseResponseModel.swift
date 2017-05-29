@@ -14,14 +14,14 @@ import RealmSwift
 open class SPBaseResponseModel: SPBaseModel {
     open var code: SPAPICode? {
         get { return SPAPICode(rawValue: privateCode) }
-        set { privateCode = newValue?.rawValue ?? SPAPICode.NONE.rawValue }
+        set { privateCode = newValue?.rawValue ?? SPAPICode.none.rawValue }
     }
     open var status: SPAPIStatus? {
-        get { return SPAPIStatus(rawValue: privateStatus)}
+        get { return SPAPIStatus(rawValue: privateStatus) }
         set { privateStatus = newValue?.rawValue ?? SPAPIStatus.statusSuccess.rawValue }
     }
     
-    private dynamic var privateCode = SPAPICode.NONE.rawValue
+    private dynamic var privateCode = SPAPICode.none.rawValue
     private dynamic var privateStatus = SPAPIStatus.statusSuccess.rawValue
     open dynamic var message: String?
     open dynamic var pattern: String?

@@ -48,6 +48,7 @@
 		E5481E8A1EA296A800315060 /* UIWindow+SPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5481E661EA296A700315060 /* UIWindow+SPExtension.swift */; };
 		E5481E8B1EA296A800315060 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = E5481E681EA296A700315060 /* back.png */; };
 		E5481E8C1EA296A800315060 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = E5481E691EA296A700315060 /* delete.png */; };
+		E5EB2C551EDBD75900FC0A88 /* SPLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EB2C541EDBD75900FC0A88 /* SPLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		E5481E661EA296A700315060 /* UIWindow+SPExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+SPExtension.swift"; sourceTree = "<group>"; };
 		E5481E681EA296A700315060 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		E5481E691EA296A700315060 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		E5EB2C541EDBD75900FC0A88 /* SPLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPLoader.swift; sourceTree = "<group>"; };
 		F5DC9003BD244CF1BDF4571A /* Pods-LGKKCoreLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LGKKCoreLibTests.debug.xcconfig"; path = "../MobileTrading/Pods/Target Support Files/Pods-LGKKCoreLibTests/Pods-LGKKCoreLibTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,6 +231,7 @@
 				E5481E4F1EA296A700315060 /* SPBaseTableViewCell.swift */,
 				E5481E501EA296A700315060 /* SPBaseView.swift */,
 				E5481E511EA296A700315060 /* SPBaseViewController.swift */,
+				E5EB2C541EDBD75900FC0A88 /* SPLoader.swift */,
 			);
 			path = CoreUI;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				E5481E221EA28F1A00315060 /* Headers */,
 				E5481E231EA28F1A00315060 /* Resources */,
 				9AE2E9EB3650212CA657AB94 /* [CP] Copy Pods Resources */,
+				E518EF651EBB5D3200D57AA4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -429,7 +433,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9AE2E9EB3650212CA657AB94 /* [CP] Copy Pods Resources */ = {
@@ -459,7 +463,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		DF91B075FD285D1A77470965 /* [CP] Copy Pods Resources */ = {
@@ -476,6 +480,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../MobileTrading/Pods/Target Support Files/Pods-LGKKCoreLibTests/Pods-LGKKCoreLibTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E518EF651EBB5D3200D57AA4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		EFD6199154D7F7C13F566B0F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -510,6 +527,7 @@
 				E5481E8A1EA296A800315060 /* UIWindow+SPExtension.swift in Sources */,
 				E5481E7F1EA296A800315060 /* CountryPhoneHolderView.swift in Sources */,
 				E5481E7D1EA296A800315060 /* NSString+Currency.m in Sources */,
+				E5EB2C551EDBD75900FC0A88 /* SPLoader.swift in Sources */,
 				E5481E711EA296A800315060 /* SPBaseRouting.swift in Sources */,
 				E5481E6A1EA296A700315060 /* SPBaseEntite.swift in Sources */,
 				E5481E731EA296A800315060 /* SPBaseUtils.swift in Sources */,
@@ -692,7 +710,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F5DC9003BD244CF1BDF4571A /* Pods-LGKKCoreLibTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LGKKCoreLibTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahdenglish.LGKKCoreLibTests;
@@ -705,7 +722,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DE7C2E4FA5C6D9961B6B5D4E /* Pods-LGKKCoreLibTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LGKKCoreLibTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahdenglish.LGKKCoreLibTests;
