@@ -30,12 +30,12 @@ import MGSwipeTableCell
 open class FoldingCell: MGSwipeTableCell {
     
     /// UIView whitch display when cell open
-    @IBOutlet weak fileprivate var containerView: UIView!
-    @IBOutlet weak fileprivate var containerViewTop: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var containerView: UIView!
+    @IBOutlet fileprivate weak var containerViewTop: NSLayoutConstraint!
     
     /// UIView whitch display when cell close
-    @IBOutlet weak fileprivate var foregroundView: RotatedView!
-    @IBOutlet weak fileprivate var foregroundViewTop: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var foregroundView: RotatedView!
+    @IBOutlet fileprivate weak var foregroundViewTop: NSLayoutConstraint!
     var animationView: UIView?
     
     ///  the number of folding elements. Default 2
@@ -45,6 +45,7 @@ open class FoldingCell: MGSwipeTableCell {
     @IBInspectable open var backViewColor: UIColor = UIColor.brown
     
     var animationItemViews: [RotatedView]?
+    fileprivate var isAnimationPrivate: Bool = false
     
     /**
      Folding animation types
@@ -89,18 +90,17 @@ open class FoldingCell: MGSwipeTableCell {
     
     func configureDefaultState() {
         
-        guard let foregroundViewTop = self.foregroundViewTop, let containerViewTop = self.containerViewTop else {
-            
-            fatalError("set constratins outlets")
+        guard let foregroundViewTop = self.foregroundViewTop,
+            let containerViewTop = self.containerViewTop else {
+                fatalError("set constratins outlets")
         }
         
         containerViewTop.constant = foregroundViewTop.constant
         containerView.alpha = 0
-        let constant = (foregroundView.constraints.filter {
-            $0.firstAttribute == .height && $0.secondItem == nil
-        }).first?.constant
         
-        if let height = constant {
+        if let height = (foregroundView.constraints.filter {
+            $0.firstAttribute == .height && $0.secondItem == nil
+        }).first?.constant {
             foregroundView.layer.anchorPoint = CGPoint(x: 0.5, y: 1)
             foregroundViewTop.constant += height / 2
         }
@@ -112,15 +112,15 @@ open class FoldingCell: MGSwipeTableCell {
     
     func createAnimationItemView() -> [RotatedView] {
         guard let animationView = self.animationView else {
-            
             fatalError("animationView nil")
         }
         
         var items = [RotatedView]()
         items.append(foregroundView)
         var rotatedViews = [RotatedView]()
-        let array = animationView.subviews.filter({ $0 is RotatedView }).sorted(by: { $0.tag < $1.tag })
-        for case let itemView as RotatedView in array {
+        for case let itemView as RotatedView in animationView.subviews.filter({
+            $0 is RotatedView
+        }).sorted(by: { $0.tag < $1.tag }) {
             rotatedViews.append(itemView)
             if let backView = itemView.backView {
                 rotatedViews.append(backView)
@@ -133,8 +133,7 @@ open class FoldingCell: MGSwipeTableCell {
     func configureAnimationItems(_ animationType: AnimationType) {
         
         guard let animationViewSuperView = animationView?.subviews else {
-            
-            fatalError("animationViewSuperView # animationView?.subviews")
+            fatalError("animationViewSuperView nil")
         }
         
         if animationType == .open {
@@ -160,6 +159,7 @@ open class FoldingCell: MGSwipeTableCell {
         animationView?.backgroundColor = .clear
         animationView?.translatesAutoresizingMaskIntoConstraints = false
         animationView?.alpha = 0
+        isAnimationPrivate = false
         
         guard let animationView = self.animationView else { return }
         
@@ -169,24 +169,26 @@ open class FoldingCell: MGSwipeTableCell {
         var newConstraints = [NSLayoutConstraint]()
         for constraint in self.contentView.constraints {
             if let item = constraint.firstItem as? UIView, item == containerView {
-                let newConstraint = NSLayoutConstraint(item: animationView,
-                                                       attribute: constraint.firstAttribute,
-                                                       relatedBy: constraint.relation,
-                                                       toItem: constraint.secondItem,
-                                                       attribute: constraint.secondAttribute,
-                                                        multiplier: constraint.multiplier,
-                                                        constant: constraint.constant)
-                
+                let newConstraint = NSLayoutConstraint(
+                    item: animationView,
+                    attribute: constraint.firstAttribute,
+                    relatedBy: constraint.relation,
+                    toItem: constraint.secondItem,
+                    attribute: constraint.secondAttribute,
+                    multiplier: constraint.multiplier,
+                    constant: constraint.constant
+                )
                 newConstraints.append(newConstraint)
             } else if let item: UIView = constraint.secondItem as? UIView, item == containerView {
-                let newConstraint = NSLayoutConstraint(item: constraint.firstItem,
-                                                       attribute: constraint.firstAttribute,
-                                                       relatedBy: constraint.relation,
-                                                       toItem: animationView,
-                                                       attribute: constraint.secondAttribute,
-                                                       multiplier: constraint.multiplier,
-                                                       constant: constraint.constant)
-                
+                let newConstraint = NSLayoutConstraint(
+                    item: constraint.firstItem,
+                    attribute: constraint.firstAttribute,
+                    relatedBy: constraint.relation,
+                    toItem: animationView,
+                    attribute: constraint.secondAttribute,
+                    multiplier: constraint.multiplier,
+                    constant: constraint.constant
+                )
                 newConstraints.append(newConstraint)
             }
         }
@@ -194,13 +196,15 @@ open class FoldingCell: MGSwipeTableCell {
         
         for constraint in containerView.constraints where constraint.firstAttribute == .height {
             // added height constraint
-            let newConstraint = NSLayoutConstraint(item: animationView,
-                                                   attribute: constraint.firstAttribute,
-                                                   relatedBy: constraint.relation,
-                                                   toItem: nil,
-                                                   attribute: constraint.secondAttribute,
-                                                   multiplier: constraint.multiplier,
-                                                   constant: constraint.constant)
+            let newConstraint = NSLayoutConstraint(
+                item: animationView,
+                attribute: constraint.firstAttribute,
+                relatedBy: constraint.relation,
+                toItem: nil,
+                attribute: constraint.secondAttribute,
+                multiplier: constraint.multiplier,
+                constant: constraint.constant
+            )
             animationView.addConstraint(newConstraint)
         }
     }
@@ -229,13 +233,10 @@ open class FoldingCell: MGSwipeTableCell {
         
         rotatedView.addSubview(imageView)
         animationView?.addSubview(rotatedView)
-        let newRect = CGRect(x: imageView.frame.origin.x,
-                             y: forgSize.height,
-                             width: contSize.width,
-                             height: forgSize.height)
-        rotatedView.frame = newRect
+        rotatedView.frame = CGRect(x: imageView.frame.origin.x, y: forgSize.height,
+                                   width: contSize.width, height: forgSize.height)
         
-        // Added other view
+        // added other view
         // Hotfix exception divide for 0 -> Ok, it' work well, so I keep track more and will remove this line after.
         let itemHeight = itemCount == 2 ? 0 : (contSize.height - 2 * forgSize.height) / CGFloat(itemCount - 2)
         
@@ -297,7 +298,8 @@ open class FoldingCell: MGSwipeTableCell {
      Open or close cell
      
      - parameter isSelected: Specify true if you want to open cell or false if you close cell.
-     - parameter animated: Specify true if you want to animate the change in visibility or false if you want immediately
+     - parameter animated:   Specify true if you want to animate the change in
+     visibility or false if you want immediately.
      - parameter completion: A block object to be executed when the animation sequence ends.
      */
     open func selectedAnimation(_ isSelected: Bool, animated: Bool, completion: ((Void) -> Void)?) {
@@ -322,7 +324,7 @@ open class FoldingCell: MGSwipeTableCell {
     }
     
     open func isAnimating() -> Bool {
-        return animationView?.alpha == 1 ? true : false
+        return isAnimationPrivate
     }
     
     // MARK: animations
@@ -351,6 +353,7 @@ open class FoldingCell: MGSwipeTableCell {
         }
         
         animationView.alpha = 1
+        isAnimationPrivate = true
         containerView.alpha = 0
         
         let durations = durationSequence(.open)
@@ -378,8 +381,11 @@ open class FoldingCell: MGSwipeTableCell {
             
             from = from == 0.0 ? CGFloat(Double.pi / 2) : 0.0
             to = to == 0.0 ? CGFloat(-Double.pi / 2) : 0.0
-            let condition = timing == kCAMediaTimingFunctionEaseIn
-            timing = condition ? kCAMediaTimingFunctionEaseOut : kCAMediaTimingFunctionEaseIn
+            if timing == kCAMediaTimingFunctionEaseIn {
+                timing = kCAMediaTimingFunctionEaseOut
+            } else {
+                timing = kCAMediaTimingFunctionEaseIn
+            }
             hidden = !hidden
             delay += durations[index]
         }
@@ -393,6 +399,7 @@ open class FoldingCell: MGSwipeTableCell {
         let time = DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
         DispatchQueue.main.asyncAfter(deadline: time, execute: {
             self.animationView?.alpha = 0
+            self.isAnimationPrivate = false
             self.containerView.alpha = 1
             completion?()
         })
@@ -404,11 +411,11 @@ open class FoldingCell: MGSwipeTableCell {
         addImageItemsToAnimationView()
         
         guard let animationItemViews = self.animationItemViews else {
-            
             fatalError("animationItemViews nil")
         }
         
         animationView?.alpha = 1
+        isAnimationPrivate = true
         containerView.alpha = 0
         
         var durations: [TimeInterval] = durationSequence(.close).reversed()
@@ -421,7 +428,8 @@ open class FoldingCell: MGSwipeTableCell {
         configureAnimationItems(.close)
         
         if durations.count < animationItemViews.count {
-            fatalError("wrong override func animationDuration(itemIndex:NSInteger, type:AnimationType)->NSTimeInterval")
+            let msg = "wrong override func animationDuration(itemIndex:NSInteger, type:AnimationType)-> NSTimeInterval"
+            fatalError(msg)
         }
         for index in 0..<animationItemViews.count {
             let animatedView = animationItemViews.reversed()[index]
@@ -435,13 +443,17 @@ open class FoldingCell: MGSwipeTableCell {
             
             to = to == 0.0 ? CGFloat(Double.pi / 2) : 0.0
             from = from == 0.0 ? CGFloat(-Double.pi / 2) : 0.0
-            let contidition = timing == kCAMediaTimingFunctionEaseIn
-            timing = contidition ? kCAMediaTimingFunctionEaseOut : kCAMediaTimingFunctionEaseIn
+            if timing == kCAMediaTimingFunctionEaseIn {
+                timing = kCAMediaTimingFunctionEaseOut
+            } else {
+                timing = kCAMediaTimingFunctionEaseIn
+            }
             hidden = !hidden
             delay += durations[index]
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
             self.animationView?.alpha = 0
+            self.isAnimationPrivate = false
             completion?()
         })
         
@@ -472,37 +484,44 @@ open class RotatedView: UIView {
         self.addSubview(view)
         backView = view
         
-        view.addConstraint(NSLayoutConstraint(item: view,
-                                              attribute: .height,
-                                              relatedBy: .equal,
-                                              toItem: nil,
-                                              attribute: .height,
-                                              multiplier: 1,
-                                              constant: height))
-        
+        view.addConstraint(NSLayoutConstraint(
+            item: view,
+            attribute: .height,
+            relatedBy: .equal,
+            toItem: nil,
+            attribute: .height,
+            multiplier: 1,
+            constant: height)
+        )
         self.addConstraints([
-            NSLayoutConstraint(item: view,
-                               attribute: .top,
-                               relatedBy: .equal,
-                               toItem: self,
-                               attribute: .top,
-                               multiplier: 1,
-                               constant: self.bounds.size.height - height + height / 2),
-            NSLayoutConstraint(item: view,
-                               attribute: .leading,
-                               relatedBy: .equal,
-                               toItem: self,
-                               attribute: .leading,
-                               multiplier: 1,
-                               constant: 0),
-            NSLayoutConstraint(item: view,
-                               attribute: .trailing,
-                               relatedBy: .equal,
-                               toItem: self,
-                               attribute: .trailing,
-                               multiplier: 1,
-                               constant: 0)
-            ])
+            NSLayoutConstraint(
+                item: view,
+                attribute: .top,
+                relatedBy: .equal,
+                toItem: self,
+                attribute: .top,
+                multiplier: 1,
+                constant: self.bounds.size.height - height + height / 2
+            ),
+            NSLayoutConstraint(
+                item: view,
+                attribute: .leading,
+                relatedBy: .equal,
+                toItem: self,
+                attribute: .leading,
+                multiplier: 1,
+                constant: 0
+            ),
+            NSLayoutConstraint(
+                item: view,
+                attribute: .trailing,
+                relatedBy: .equal,
+                toItem: self,
+                attribute: .trailing,
+                multiplier: 1,
+                constant: 0
+            )]
+        )
     }
 }
 
@@ -527,8 +546,8 @@ extension RotatedView: CAAnimationDelegate {
                           from: CGFloat,
                           to: CGFloat,
                           duration: TimeInterval,
-                          delay: TimeInterval,
-                          hidden: Bool) {
+                          delay:TimeInterval,
+                          hidden:Bool) {
         
         let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation.x")
         rotateAnimation.timingFunction = CAMediaTimingFunction(name: timing)
@@ -551,9 +570,7 @@ extension RotatedView: CAAnimationDelegate {
     }
     
     public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        if hiddenAfterAnimation {
-            self.alpha = 0
-        }
+        if hiddenAfterAnimation { self.alpha = 0 }
         self.layer.removeAllAnimations()
         self.layer.shouldRasterize = false
         self.rotatedX(CGFloat(0))
@@ -564,9 +581,10 @@ extension UIView {
     func pb_takeSnapshot(_ frame: CGRect) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(frame.size, false, 0.0)
         
-        if let context = UIGraphicsGetCurrentContext() {
-            context.translateBy(x: frame.origin.x * -1, y: frame.origin.y * -1)
+        guard let context = UIGraphicsGetCurrentContext() else {
+            fatalError("Error while init context by UIGraphicsGetCurrentContext")
         }
+        context.translateBy(x: frame.origin.x * -1, y: frame.origin.y * -1)
         
         guard let currentContext = UIGraphicsGetCurrentContext() else {
             return nil

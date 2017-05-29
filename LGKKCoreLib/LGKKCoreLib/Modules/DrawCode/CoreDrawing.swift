@@ -1089,241 +1089,275 @@ public class CoreDrawing : NSObject {
     }
     
     public dynamic class var imageOfPause: UIImage {
-        if Cache.imageOfPause != nil {
-            return Cache.imageOfPause!
+        if Cache.imageOfPause == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 90, height: 180), false, 0)
+            CoreDrawing.drawPause()
+            
+            Cache.imageOfPause = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 90, height: 180), false, 0)
-        CoreDrawing.drawPause()
-        
-        Cache.imageOfPause = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfPause!
+        if let imageOfPause = Cache.imageOfPause {
+            return imageOfPause
+        } else {
+            fatalError("imageOfPause is nil")
+        }
     }
     
     public dynamic class var imageOfFastBackward: UIImage {
-        if Cache.imageOfFastBackward != nil {
-            return Cache.imageOfFastBackward!
+        if Cache.imageOfFastBackward == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 200, height: 180), false, 0)
+            CoreDrawing.drawFastBackward()
+            
+            Cache.imageOfFastBackward = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 200, height: 180), false, 0)
-        CoreDrawing.drawFastBackward()
-        
-        Cache.imageOfFastBackward = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfFastBackward!
+        if let imageOfFastBackward = Cache.imageOfFastBackward {
+            return imageOfFastBackward
+        } else {
+            fatalError("imageOfFastBackward is nil")
+        }
     }
     
     public dynamic class var imageOfFoward: UIImage {
-        if Cache.imageOfFoward != nil {
-            return Cache.imageOfFoward!
+        if Cache.imageOfFoward == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 150, height: 180), false, 0)
+            CoreDrawing.drawFoward()
+            
+            Cache.imageOfFoward = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 150, height: 180), false, 0)
-        CoreDrawing.drawFoward()
-        
-        Cache.imageOfFoward = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfFoward!
+        if let imageOfFoward = Cache.imageOfFoward {
+            return imageOfFoward
+        } else {
+            fatalError("imageOfFoward is nil")
+        }
     }
     
     public dynamic class var imageOfVolumeMin: UIImage {
-        if Cache.imageOfVolumeMin != nil {
-            return Cache.imageOfVolumeMin!
+        if Cache.imageOfVolumeMin == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 102, height: 128), false, 0)
+            CoreDrawing.drawVolumeMin()
+            
+            Cache.imageOfVolumeMin = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 102, height: 128), false, 0)
-        CoreDrawing.drawVolumeMin()
-        
-        Cache.imageOfVolumeMin = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfVolumeMin!
+        if let imageOfVolumeMin = Cache.imageOfVolumeMin {
+            return imageOfVolumeMin
+        } else {
+            fatalError("imageOfVolumeMin is nil")
+        }
     }
     
     public dynamic class var imageOfBackward: UIImage {
-        if Cache.imageOfBackward != nil {
-            return Cache.imageOfBackward!
+        if Cache.imageOfBackward == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 150, height: 180), false, 0)
+            CoreDrawing.drawBackward()
+            
+            Cache.imageOfBackward = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 150, height: 180), false, 0)
-        CoreDrawing.drawBackward()
-        
-        Cache.imageOfBackward = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfBackward!
+        if let imageOfBackward = Cache.imageOfBackward {
+            return imageOfBackward
+        } else {
+            fatalError("imageOfBackward is nil")
+        }
     }
     
     public dynamic class var imageOfPlayNext: UIImage {
-        if Cache.imageOfPlayNext != nil {
-            return Cache.imageOfPlayNext!
+        if Cache.imageOfPlayNext == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 115, height: 180), false, 0)
+            CoreDrawing.drawPlayNext()
+            
+            Cache.imageOfPlayNext = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 115, height: 180), false, 0)
-        CoreDrawing.drawPlayNext()
-        
-        Cache.imageOfPlayNext = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfPlayNext!
+        if let imageOfPlayNext = Cache.imageOfPlayNext {
+            return imageOfPlayNext
+        } else {
+            fatalError("imageOfPlayNext is nil")
+        }
     }
     
     public dynamic class var imageOfFastFoward: UIImage {
-        if Cache.imageOfFastFoward != nil {
-            return Cache.imageOfFastFoward!
+        if Cache.imageOfFastFoward == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 200, height: 180), false, 0)
+            CoreDrawing.drawFastFoward()
+            
+            Cache.imageOfFastFoward = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 200, height: 180), false, 0)
-        CoreDrawing.drawFastFoward()
-        
-        Cache.imageOfFastFoward = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfFastFoward!
+        if let imageOfFastFoward = Cache.imageOfFastFoward {
+            return imageOfFastFoward
+        } else {
+            fatalError("imageOfFastFoward is nil")
+        }
     }
     
     public dynamic class var imageOfBack: UIImage {
-        if Cache.imageOfBack != nil {
-            return Cache.imageOfBack!
+        if Cache.imageOfBack == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 100, height: 180), false, 0)
+            CoreDrawing.drawBack()
+            
+            Cache.imageOfBack = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 100, height: 180), false, 0)
-        CoreDrawing.drawBack()
-        
-        Cache.imageOfBack = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfBack!
+        if let imageOfBack = Cache.imageOfBack {
+            return imageOfBack
+        } else {
+            fatalError("imageOfBack is nil")
+        }
     }
     
     public dynamic class var imageOfPlay: UIImage {
-        if Cache.imageOfPlay != nil {
-            return Cache.imageOfPlay!
+        if Cache.imageOfPlay == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 90, height: 180), false, 0)
+            CoreDrawing.drawPlay()
+            
+            Cache.imageOfPlay = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 90, height: 180), false, 0)
-        CoreDrawing.drawPlay()
-        
-        Cache.imageOfPlay = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfPlay!
+        if let imageOfPlay = Cache.imageOfPlay {
+            return imageOfPlay
+        } else {
+            fatalError("imageOfPlay is nil")
+        }
     }
     
     public dynamic class var imageOfFullScreen: UIImage {
-        if Cache.imageOfFullScreen != nil {
-            return Cache.imageOfFullScreen!
+        if Cache.imageOfFullScreen == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 128), false, 0)
+            CoreDrawing.drawFullScreen()
+            
+            Cache.imageOfFullScreen = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 128), false, 0)
-        CoreDrawing.drawFullScreen()
-        
-        Cache.imageOfFullScreen = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfFullScreen!
+        if let imageOfFullScreen = Cache.imageOfFullScreen {
+            return imageOfFullScreen
+        } else {
+            fatalError("imageOfFullScreen is nil")
+        }
     }
     
     public dynamic class var imageOfExitFullScreen: UIImage {
-        if Cache.imageOfExitFullScreen != nil {
-            return Cache.imageOfExitFullScreen!
+        if Cache.imageOfExitFullScreen == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 128), false, 0)
+            CoreDrawing.drawExitFullScreen()
+            
+            Cache.imageOfExitFullScreen = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 128), false, 0)
-        CoreDrawing.drawExitFullScreen()
-        
-        Cache.imageOfExitFullScreen = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfExitFullScreen!
+        if let imageOfExitFullScreen = Cache.imageOfExitFullScreen {
+            return imageOfExitFullScreen
+        } else {
+            fatalError("imageOfExitFullScreen is nil")
+        }
     }
     
     public dynamic class var imageOfDefaultView: UIImage {
-        if Cache.imageOfDefaultView != nil {
-            return Cache.imageOfDefaultView!
+        if Cache.imageOfDefaultView == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 73), false, 0)
+            CoreDrawing.drawDefaultView()
+            
+            Cache.imageOfDefaultView = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 73), false, 0)
-        CoreDrawing.drawDefaultView()
-        
-        Cache.imageOfDefaultView = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfDefaultView!
+        if let imageOfDefaultView = Cache.imageOfDefaultView {
+            return imageOfDefaultView
+        } else {
+            fatalError("imageOfDefaultView is nil")
+        }
     }
     
     public dynamic class var imageOfCheckmark: UIImage {
-        if Cache.imageOfCheckmark != nil {
-            return Cache.imageOfCheckmark!
+        if Cache.imageOfCheckmark == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 64, height: 64), false, 0)
+            CoreDrawing.drawCheckmark()
+            
+            Cache.imageOfCheckmark = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 64, height: 64), false, 0)
-        CoreDrawing.drawCheckmark()
-        
-        Cache.imageOfCheckmark = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfCheckmark!
+        if let imageOfCheckmark = Cache.imageOfCheckmark {
+            return imageOfCheckmark
+        } else {
+            fatalError("imageOfCheckmark is nil")
+        }
     }
     
     public dynamic class var imageOfSettingsFilled: UIImage {
-        if Cache.imageOfSettingsFilled != nil {
-            return Cache.imageOfSettingsFilled!
+        if Cache.imageOfSettingsFilled == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 500, height: 500), false, 0)
+            CoreDrawing.drawSettingsFilled()
+            
+            Cache.imageOfSettingsFilled = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 500, height: 500), false, 0)
-        CoreDrawing.drawSettingsFilled()
-        
-        Cache.imageOfSettingsFilled = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfSettingsFilled!
+        if let imageOfSettingsFilled = Cache.imageOfSettingsFilled {
+            return imageOfSettingsFilled
+        } else {
+            fatalError("imageOfSettingsFilled is nil")
+        }
     }
     
     public dynamic class var imageOfSettings: UIImage {
-        if Cache.imageOfSettings != nil {
-            return Cache.imageOfSettings!
+        if Cache.imageOfSettings == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 500, height: 500), false, 0)
+            CoreDrawing.drawSettings()
+            
+            Cache.imageOfSettings = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 500, height: 500), false, 0)
-        CoreDrawing.drawSettings()
-        
-        Cache.imageOfSettings = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfSettings!
+        if let imageOfSettings = Cache.imageOfSettings {
+            return imageOfSettings
+        } else {
+            fatalError("imageOfSettings is nil")
+        }
     }
     
     public dynamic class var imageOfTheaterMode: UIImage {
-        if Cache.imageOfTheaterMode != nil {
-            return Cache.imageOfTheaterMode!
+        if Cache.imageOfTheaterMode == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 73), false, 0)
+            CoreDrawing.drawTheaterMode()
+            
+            Cache.imageOfTheaterMode = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 73), false, 0)
-        CoreDrawing.drawTheaterMode()
-        
-        Cache.imageOfTheaterMode = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfTheaterMode!
+        if let imageOfTheaterMode = Cache.imageOfTheaterMode {
+            return imageOfTheaterMode
+        } else {
+            fatalError("imageOfTheaterMode is nil")
+        }
     }
     
     public dynamic class var imageOfSoundMuted: UIImage {
-        if Cache.imageOfSoundMuted != nil {
-            return Cache.imageOfSoundMuted!
+        if Cache.imageOfSoundMuted == nil {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 128), false, 0)
+            CoreDrawing.drawSoundMuted()
+            
+            Cache.imageOfSoundMuted = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 128), false, 0)
-        CoreDrawing.drawSoundMuted()
-        
-        Cache.imageOfSoundMuted = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return Cache.imageOfSoundMuted!
+        if let imageOfSoundMuted = Cache.imageOfSoundMuted {
+            return imageOfSoundMuted
+        } else {
+            fatalError("imageOfSoundMuted is nil")
+        }
     }
 
     // MARK: - Customization Infrastructure
